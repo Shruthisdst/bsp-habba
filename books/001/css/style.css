@@ -1,0 +1,67 @@
+@font-face {
+ font-family: 'Gubbi';
+ src: url('Gubbi.ttf');
+}
+
+body{
+  height: 100%;
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  font-family: 'Gubbi';
+}
+.subhead{
+	margin: 2em 0em 0 0em;
+	text-align: center;
+	font-size: 1.5em;
+	color: #cc6600;
+}
+.title
+{
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #e68a00;
+}
+h1{
+	font-size: 1.8em;
+}
+p{
+	text-align: justify;
+}
+.text{
+	margin-left: 15em;
+	font-size: 0.9em;
+}
+.shloka{
+	font-size: 0.9em;
+	margin-left: 2em;
+}
+.gap{
+	float: right;
+	padding-right: 30em;
+	font-size: 0.9em;
+}
+.textRight{
+	font-size: 0.85em;
+	float: right;
+	font-weight: bold;
+}
+.bigfont{
+	font-size: 2em
+}
+ol li{
+	padding-bottom: 1em;
+}
+ul li{
+	padding-bottom: 1em;
+}
+.small-gap{
+	float: right;
+	padding-right: 40em;
+}
+.smalltext{
+	font-size: 0.9em;
+}

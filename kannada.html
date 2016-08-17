@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Bharatha Samskruthi Prakashana</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" id="royal_enqueue_Lato-css" href="http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&amp;ver=1.0.0" type="text/css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- Javascript calls
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/flat.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/aux.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav class="navbar navbar-default navbar-fixed-top wider">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#"><img src="images/logo.png" alt="Bharatha Samskruthi Prakashana" class="logo"></a></li>
+                    <li class="active"><a href="books.html">Books</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-12 text-center">
+                <ul class="list-inline sub-nav">
+                    <li><a href="kannada.html">Kannada</a></li>
+                    <li><a>·</a></li>
+                    <li><a href="english.html">English</a></li>
+                    <li><a>·</a></li>
+                    <li><a>Search</a></li>
+                    <li id="searchForm">
+                        <form class="navbar-form" role="search" action="<?=BASE_URL?>search/field/" method="get">
+                            <div class="input-group add-on">
+                                <input type="text" class="form-control" placeholder="Word" name="word" id="word">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+			<h3>ಭಾರತ ಸಂಸ್ಕೃತಿ ಪ್ರಕಾಶನ</h3>
+			<h4>ಭಾರತೀಯರ ಹಬ್ಬ-ಹರಿದಿನಗಳು</h4>
+		</div>
+	</div><hr />
+	<div class="row">
+		<div class="col-md-6">
+			<div class="left">
+				<p><a href="#"><img src="images/001/01.jpg" alt="ಅಕ್ಷಯ ತೃತೀಯಾ" title="ಅಕ್ಷಯ ತೃತೀಯಾ"/>ಅಕ್ಷಯ ತೃತೀಯಾ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/02.jpg" alt="ಅನಂತಪದ್ಮನಾಭವ್ರತ" title="ಅನಂತಪದ್ಮನಾಭವ್ರತ"/>ಅನಂತಪದ್ಮನಾಭವ್ರತ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/03.jpg" alt="ಚಾತುರ್ಮಾಸ್ಯ" title="ಚಾತುರ್ಮಾಸ್ಯ"/>ಚಾತುರ್ಮಾಸ್ಯ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/04.jpg" alt="ದೀಪಾವಳಿ" title="ದೀಪಾವಳಿ"/>ದೀಪಾವಳಿ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/05.jpg" alt="ಗಣೇಶ ಚತುರ್ಥೀ" title="ಗಣೇಶ ಚತುರ್ಥೀ"/>ಗಣೇಶ ಚತುರ್ಥೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/06.jpg" alt="ಗೌರೀಹಬ್ಬ" title="ಗೌರೀಹಬ್ಬ"/>ಗೌರೀಹಬ್ಬ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/07.jpg" alt="ಹನುಮಜ್ಜಯನ್ತೀ" title="ಹನುಮಜ್ಜಯನ್ತೀ"/>ಹನುಮಜ್ಜಯನ್ತೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/08.jpg" alt="ಹೋಳಿಕೋತ್ಸವ" title="ಹೋಳಿಕೋತ್ಸವ"/>ಹೋಳಿಕೋತ್ಸವ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/09.jpg" alt="ಶ್ರೀಗುರು-ಆಚಾರ್ಯರ ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು" title="ಶ್ರೀಗುರು-ಆಚಾರ್ಯರ ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು"/>ಶ್ರೀಗುರು-ಆಚಾರ್ಯರ ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/10.jpg" alt="ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ" title="ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ"/>ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/11.jpg" alt="ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ" title="ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ"/>ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/12.jpg" alt="ಮಹಾಶಿವರಾತ್ರಿ" title="ಮಹಾಶಿವರಾತ್ರಿ"/>ಮಹಾಶಿವರಾತ್ರಿ</a></p><br />
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="left">
+				<p><a href="#"><img src="images/001/13.jpg" alt="ಸಂಕ್ರಾಂತಿ" title="ಸಂಕ್ರಾಂತಿ"/>ಸಂಕ್ರಾಂತಿ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/14.jpg" alt="ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ" title="ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ"/>ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/15.jpg" alt="ನರಸಿಹ್ಮ ಜಯನ್ತೀ" title="ನರಸಿಹ್ಮ ಜಯನ್ತೀ"/>ನರಸಿಹ್ಮ ಜಯನ್ತೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/16.jpg" alt="ನವರಾತ್ರ ಮಹೋತ್ಸವ" title="ನವರಾತ್ರ ಮಹೋತ್ಸವ"/>ನವರಾತ್ರ ಮಹೋತ್ಸವ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/17.jpg" alt="ಪ್ರಥಮೈಕಾದಶೀ" title="ಪ್ರಥಮೈಕಾದಶೀ"/>ಪ್ರಥಮೈಕಾದಶೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/18.jpg" alt="ಶ್ರೀರಾಮನವಮೀ" title="ಶ್ರೀರಾಮನವಮೀ"/>ಶ್ರೀರಾಮನವಮೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/19.jpg" alt="ರಥಸಪ್ತಮೀ" title="ರಥಸಪ್ತಮೀ"/>ರಥಸಪ್ತಮೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/20.jpg" alt="ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ" title="ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ"/>ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/21.jpg" alt="ಯುಗಾದಿ ಹಬ್ಬ" title="ಯುಗಾದಿ ಹಬ್ಬ"/>ಯುಗಾದಿ ಹಬ್ಬ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/22.jpg" alt="ಉಪಾಕರ್ಮ" title="ಉಪಾಕರ್ಮ"/>ಉಪಾಕರ್ಮ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/23.jpg" alt="ಉತ್ಥಾನದ್ವಾದಶೀ" title="ಉತ್ಥಾನದ್ವಾದಶೀ"/>ಉತ್ಥಾನದ್ವಾದಶೀ</a></p><br />
+			</div>
+			<div class="left">
+				<p><a href="#"><img src="images/001/24.jpg" alt="ವರಮಹಾಲಕ್ಷ್ಮೀ" title="ವರಮಹಾಲಕ್ಷ್ಮೀ"/>ವರಮಹಾಲಕ್ಷ್ಮೀ</a></p><br />
+			</div>
+<!--
+			<ul>
+				<li><p></p></li>
+				<li><p></p></li>
+			</ul>
+-->
+		</div>
+	</div><hr />
+</div>
+
+    <!-- Footer -->
+    <div id="k-subfooter">
+        <div class="container"><!-- container -->
+            <div class="row"><!-- row -->
+                <div class="col-lg-6">
+<!--
+                    <p class="copy-text text-left">
+                        © 2016 University of Mysore.
+                    </p>
+-->
+                </div>
+                <div class="col-lg-6">
+                    <p class="copy-text text-right">
+                        <!-- <a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Sitemap</a> -->
+<!--
+                        <a href="<?=BASE_URL?>About_IASc/Contact_details/">Contact</a> | 
+                        <a href="<?=BASE_URL?>About_IASc/Site_Index">Site index</a>
+-->
+                    </p>
+                </div>
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </div>
+
+    <!-- End Main page layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*styles for Dictionary words*/
+.subhead{
+	margin: 2em 0em 0 0em;
+	text-align: center;
+	font-size: 1.5em;
+	color: #cc6600;
+}
+.title
+{
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #e68a00;
+}
+
+p{
+	text-align: justify;
+}
+.text{
+	margin-left: 15em;
+}
+.shloka{
+	font-size: 0.95em;
+}
+.gap{
+	margin-left: 3em;
+}
+ol li{
+	padding-bottom: 1em;
+}
+ul li{
+	padding-bottom: 1em;
+}
+.textRight{
+	float: right;
+	font-weight: bold;
+}
+
+.left{
+	width: 100%;
+	text-align: left;
+	float: left;
+	margin: 1em 0em 1em 0em;
+}
+.left a{
+	font-weight: 700;
+	color: #636363;
+}
+.left img{
+	margin: 0em 1.5em 2em 0;
+	float: left;
+	border: 2px solid #636363;
+}
