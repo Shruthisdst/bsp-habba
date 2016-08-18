@@ -1,236 +1,377 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Hanumajjayantī</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/style.css">
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Bharatha Samskruthi Prakashana</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" id="royal_enqueue_Lato-css" href="http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&amp;ver=1.0.0" type="text/css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- Javascript calls
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+    
+    <script type="text/javascript" src="../../js/common.js"></script>
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/carousel.css">
+    <link rel="stylesheet" href="../../css/page.css">
+    <link rel="stylesheet" href="../../css/archive.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/flat.css">
+    <link rel="stylesheet" href="../../css/form.css">
+    <link rel="stylesheet" href="../../css/aux.css">
+    <link rel="stylesheet" href="../../css/social.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/lightbox.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-<div class="body">
-	<div class="subhead">Yogic &amp;Vedic Heritage</div>
-	<div class="title">FESTIVALS OF BHĀRATA</div>
-	<h1>Hanumajjayantī</h1>
+    <!-- Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav class="navbar navbar-default navbar-fixed-top wider">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="#"><img src="../../images/logo.png" alt="Bharatha Samskruthi Prakashana" class="logo"></a></li>
+                    <li class="active"><a href="../../books.html">Books</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-12 text-center">
+                <ul class="list-inline sub-nav">
+                    <li><a href="../../kannada.html">Kannada</a></li>
+                    <li><a>·</a></li>
+                    <li><a href="../../english.html">English</a></li>
+                    <li><a>·</a></li>
+                    <li><a>Search</a></li>
+                    <li id="searchForm">
+                        <form class="navbar-form" role="search" action="<?=BASE_URL?>search/field/" method="get">
+                            <div class="input-group add-on">
+                                <input type="text" class="form-control" placeholder="Word" name="word" id="word">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="container english">
+    <div class="row">
+        <div class="col-md-8">
+			<h3>Bharatha Samskruthi Prakashana</h3>
+			<h4>Festivals of Bharata</h4>
+		</div>
+	</div><hr />
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Hanumajjayantī</h1>
 
-	<p><i>Hanumajjayantī</i> is an important festival celebrated in the  month of <i>Caitra</i>, after <i>ŚrīRāmanavami</i>. The deity worshipped on that day is <i>Hanumān</i>. He is a <i>mahātma</i>, famously known by names such as <i>Āñjaneya</i>, <i>Māruti</i>, <i>Prāṇadevaru</i>, <i>Tiruvadi</i>, <i>Mahāvīra</i> etc, in the literature of <i>jnānis</i> and devotees. It is but natural that, after the  worship of <i>Śrī Rāma</i> on <i>Rāmanavami</i> and on a day very close to <i>Śrī Rāmanavami</i>, the custom of worshipping this God who is the greatest among the retinue of <i>ŚrīRāma</i>, who is dear to devotees, dear to scholars and who is very popular, continues even to this day. Not just in the <i>Rāmāyaṇa</i>, <i>Mahābhārata</i>, <i>Purāṇas</i>, <i>Dharmaśāstras</i>  and musical and poetic compositions, even in folk literature and sayings such as</p> 
-	<p><i>&#x2018;Rāmana banṭa Hanumanta Tirupatiyembude Vaikunṭha&#x2019;</i></p>
-	<p>(<i>Rāma&#x2019;s</i> slave is <i>Hanumanta</i>, <i>Tirupati</i> is <i>Vaikunṭha</i> (Abode of <i>Vishṇu</i>)</p>
-	<p><i>&#x2018;Hanumanillada haḷḷiye? Gaṇapanillada grāmave?&#x2019;</i></p>
-	<p>(Can there be a village without <i>Hanumān</i> or <i>Gaṇapa?</i>),</p>
-	<p>and also his splendid images in various postures, his pictures and temples and towers, show the influence he has cast on the minds of our people. Only those devotees who worship <i>Hanumān</i> as the principal deity, celebrate this festival in a special way. Even then, we consider this an important festival and shall discuss it, as this is a festival of that God who is adored in all parts of the country, and who is omnipresent.</p>
-	<p>When we begin to discuss about this festival we are faced with hundreds of questions pertaining to <i>Hanumān</i>, the reigning deity of this festival. Is <i>Hanumān</i> just a fiction? Or a real object? Is he an historical person? Or a great power? Is he a God worthy of worship? etc. This is because, though the custom of worshipping him with great faith and devotion is prevailing from centuries, we have been hearing of late, many arguments which are aiming at slackening the very root of such beliefs. So let us examine some important opinions expressed by scholars regarding this.</p>
-	<p>1. One argument is as follows. &#x201c;The imagination of a shadow ghost which was causing fear in the forest dwellers of the <i>Vindhya</i> mountains took the shape of <i>Hanumān</i>. He is basically a god of the wild people. During the time of the merging of cultures and civilizations of <i>Ārya</i> and <i>Anārya</i> clans, he was included in the category of Hindu deities&#x201d; -</p> 
-	<p>2. &#x201c;<i>Hanumān</i> is a symbol of a fiction but not of a fiction of a very high order. He is the symbol of slavery which arose during the conflict between <i>Ārya</i> and <i>Drāviḍa</i> races in India, when the <i>drāviḍa</i> leaders joined hands with the <i>Āryan</i> king betraying their own people.&#x201d; Some also say that he stands for a symbol, which begets no respect from men who love freedom.</p>
-	<p>3. There is a view that he is just an apeman animal.</p>
-	<p>4. &#x201c;<i>Hanumān</i> is not a product of imagination. He is a historical person. He is not a monkey as ordinary people surmise. He was a leader of a forest dwelling group whose logo was a monkey. He, like his master <i>ŚrīRāma</i>, came to be included in the class of gods in course of time&#x201d;—is the opinion of some.</p>
-	<p>5. Some even praise him thus - &#x201c;He is not a mere leader of the clan of the forest people. He is a leader of the civilized people. And that too, he is bright man of the <i>kannada</i> country and a <i>kannadiga</i> warrior.&#x201d;</p>
-	<p>6. According to <i>Vālmīki Rāmāyaṇa</i> the ancient most work which introduces <i>Hanumān</i> to us, he was a leader of the <i>vānaras</i>, was both a wise and a well-wisher minister of monkey king <i>Sugrīva</i> who was the ruler of <i>Kishkindhā</i>. He was born to <i>Añjanādevi</i>, wife of <i>Vānara</i> chief <i>Kesari</i>, from the power of <i>Vāyudeva</i>.</p>
-	<p class="shloka">
-		﻿अहं सुग्रीवसचिवः हनूमान्नाम वानरः ।<br />
-		﻿यत्र राज्यं प्रशास्त्यस्य केसरी नाम वै पिता ॥
-	</p>
-	<p class="shloka">
-		﻿तस्य भार्या बभूवैषा ह्यञ्जनेति परिश्रुता ।<br />
-		﻿जनयामास तस्यां वै वायुरात्मजमुत्तमम् ॥ <span class="gap">(सुन्दर 34-41)</span>
-	</p>
-	<p>He was the foremost among the bold and the heroic, ready witted and a statesman.</p>
-	<p class="shloka">
-		तेजो धृतिः यशो दाक्ष्यं सामर्थ्यं विनयो नयः ।<br />
-		﻿पौरुषं विक्रमो बुद्धिः यस्मिन्नेतानि नित्यदा ॥ <span class="gap">(युद्ध ﻿128-78)</span>
-	</p>
-	<p class="shloka">
-		﻿यो हि भृत्यो नियुक्तस्सन् भर्त्रा कर्मणि दुष्करे ।<br />
-		﻿कुर्यात्तदनुरागेण तमाहुः पुरुषोत्तमम् ॥ <span class="gap">(युद्ध 1-8)</span>
-	</p>
-	<p class="shloka">
-		﻿त्वय्येव हनुमन्नस्ति बलं बुद्धिः पराक्रमः ।<br />
-		﻿देशकालानुवृत्तिश्च नयश्च नयपण्डित ॥ <span class="gap">(किष्किन्धा ﻿44-7)</span>
-	</p>
-	<p>He is the foremost among those who have conquered their senses. न तु मे मनसा किञ्चित् वैकृत्यमुपपद्यते&#x201d; (सुन्दर 11-40)</p>
-	<p>All his great deeds, such as crossing the ocean, searching for <i>Sītādevi</i>, vanquishing of the <i>rākshasas</i>, burning of <i>Lankā</i> and carrying the mountain etc. are thrilling adventures. He was endowed with the extraordinary boons given by important <i>devas</i> such as Lord <i>Brahma</i> and others. In spite of all these, he was unusually humble and the best servant of <i>Rāma</i> who took great pride in calling himself a slave of <i>Śrī Rāmacandra</i>.</p>
-	<p>Though he possesses the form and nature of a <i>Vānara</i>, he is, in fact the son of a god, endowed with supernatural faculties and a <i>Kāmarūpi</i> (one who can assume any form at pleasure)</p>
-	<p class="shloka">
-		मानुषं धारयन्रूपमयोध्यां त्वरितो ययौ ﻿<span class="gap">(युद्ध ﻿128-19)</span>
-	</p>
-	<p class="shloka">
-		﻿भिक्षुरूपं ततो भेजे शठबुद्धितया कपिः <span class="gap">(किष्किन्धा-32)</span>
-	</p>
-	<p>7. The <i>Mahābhārata</i> too, a gem of an <i>itihāsa</i>, supports the very same ideas the <i>Rāmāyaṇa</i> states on <i>Māruti</i>, and makes a reference to the great favour rendered by him to <i>Bhīma</i> and <i>Arjuna</i>.</p>
-	<p class="shloka">
-		﻿यदा सिह्मरवं वीर करिष्यसि महाबल ।<br />
-		﻿तदाहं बृंहयिष्यामि स्वरवेण परन्तप ॥<br />
-		﻿विजयस्य ध्वजस्थश्च नादान्योक्ष्यामि दारुणान्” <span class="gap">(म. भा. वन ﻿151-16)</span>
-	</p>
-	<p>8. <i>ŚrīmadbhāgavataPurāṇa</i> refers to him as a <i>Paramabhāgavata</i> (devotee of the highest order) who is constantly absorbed in worshipping <i>ŚrīRāma</i> and <i>Sīta</i> in the <i>Kimpurusha</i> mountain.</p>
-	<p class="shloka">
-		किम्पुरुषे वर्षे भगवन्तमादिपुरुषं लक्ष्मणाग्रजम् ।<br />
-		﻿सीताभिरामं रामं तच्चरणसन्निकर्षाभिरतः ।<br />
-		﻿परमभागवतो हनुमान् सह किम्पुरुषैरविरतभकिरुपास्ते <span class="gap">(भाग ﻿5-19-1)</span>
-	</p>
-	<p>9. The <i>Śivapurāṇa</i> also praises the divine greatness of <i>Māruti</i> declaring him an incarnation of Lord <i>Rudra</i>.</p>
-	<p class="shloka">
-		“रुद्रावतारो भगवान् भक्तोद्धारकरस्स वै”<br />
-		﻿“सर्वसैन्यं ररक्षासौ महादेवात्मजः कपिः”<br />
-		﻿“मातुराज्ञामनुप्राप्य रुद्रांशः कपिसत्तमः” <span class="gap">(शतरुद्रसंहिता अ. ﻿20)</span>
-	</p>
-	<p>The rest of the <i>Purāṇas</i> also refer to him as an incarnation with a divine element, brave, heroic, wise, long lived, a <i>Mahāyogi</i> and the heir apparent to the position of the next <i>Brahma</i>.</p>
-	<p>10. Upholding the opinion expressed by the great religious works referred to above, our tradition has also been worshipping him as god.</p>
-	<p>In tune with the saying &#x201c;हनुमान् दास्ये च सख्येऽर्जुनः&#x201d;, (our tradition) worships him as a bright example of <i>Bhakti</i> of the slave form. Once Lord <i>Śrī Hari</i> came to him in the guise of <i>Śrī Kṛshṇa</i> to give him <i>darsan</i>. Then that great devotee implored the Lord. &#x201c;Lord, I want you to assume the form of <i>Śrī Rāma</i>, your <i>Rukminī</i> should take the form of <i>Sītā</i>. You have to have the bow <i>Kodanḍa</i> instead of the flute and only then I shall prostrate before you.&#x201d; This is a delectable story. Devotees place a separate <i>maṇe</i> (a low wooden seat, called as <i>Hanumān&#x2019;s</i> seat) while doing the <i>Pārāyaṇa</i> of <i>Rāmāyaṇa</i>, with the sentimental feeling that he stays in such places with folded hands, enjoying the divine bliss (of listening to the story of <i>Śrī Rāma</i>). We come across many devotional stories which say that he keeps himself present in a disguised form in the assembly where <i>Rāma&#x2019;s</i> story is narrated, and blesses the devotees who recognize him. Devotees pray Lord <i>Māruti</i> for benefits such as cessation of bad dreams, removal of afflictions from evil spirits, victory in wars, health, eloquence and unstinted to devotion to <i>ŚrīRāma</i> etc.</p>
-	<p>Weighing all these opinions on the balance of judgment, we can have a comprehension of he matter as follows:-</p>
-	<p>There is no scientific evidence to the opinions that he was a devil in the <i>Vindhya</i> forests, or a monkeyman, or a human being with the symbol of a monkey. These opinions are a stuff of pure conjecture based on the colour of the skin and the physique of people (of some regions like <i>Vindhya</i> etc.), and also they are nothing but fictitious imaginations emerging from verbal jugglery. The very same weak evidence is advanced to state that Dravidians are none other than <i>Dasyus</i> stated in the <i>vedas</i> and the Āryans attacked their land and culture, and ultimately both the cultures merged. Our own <i>Arthaśāstra</i> (the science of polity) and history tell us that <i>Dasyus</i> are those who cause destruction of materials and religious wealth and <i>Kshatrīyas</i> are appointed to punish them and to protect the bridge of <i>Dharma</i>. This opinion is one which is natural, simple and pleasing. Such <i>dasyus</i> may exist in any society at any time in any country. Without taking note of this spirit, religious fanatics from other countries indulge in branding <i>Dasyus</i> as a race, and the conflict between them and another race itself is history of ancient India. Authentic evidences are available to show that this has been done by many (vested interests) to sow the seeds of enmity in the minds of people belonging to different provinces in our country. We shall mention these aspects when we take up for discussion, the great festival of <i>Śivarātri</i>.</p>
-	<p>For now, we wish to state that tradition can be taken as an authority, as there are no contradicting evidences. We need not accept all clever stories and popular legends as authoritative. But we also need not reject the tradition and beliefs (opinions) in aspects where no contradictions exist.</p>
-	<p>Can a <i>Vānara</i> conduct himself like a human being? It is possible for such a being to have divine powers?-These questions are satisfactorily answered in the first ever epic itself (ie. the <i>Rāmāyaṇa</i>). It proclaims him as no ordinary <i>Vānara</i>, but a divine being who took birth to assist <i>Vishṇu</i> who incarnated in the form of <i>ŚrīRāma</i>. Nothing is impossible as deities have divine powers. Aspects such as <i>avatāra</i> and its meaning, the necessity of an <i>avatāra</i> to God and whether such a thing is possible have been dealt with in the discussion of <i>Śrī Rāmanavami</i>. When viewed in this perspective, there will be no need to conceptualise <i>Hanumān</i> as a monkeyman or a person with the logo of an ape. Now the question whether <i>Hanumān</i> is a historical character or a figment of imagination. The <i>Śāstras</i> categorically say that he is a form of <i>prāṇatattva</i>. We wish to ask whether <i>praṇatattva</i> is a mere imagination or a reality. If the reply is that it is only an imagination, we can only say that there is no <i>prāṇa</i> for both, i.e. the person who puts this question and the one who answers that. (Here <i>Prāṇa</i> word is used in the colloquial sense that there is no strength or paver either in the questioner or answerer)</p>
-	<p><i>Hanumān</i> is not a historic person in the ordinary sense such as a person bearing that name took birth in a certain year, did not exist before that year and died in some year etc. He is a form of <i>praṇatattva</i> which existed in the past, continues to exist now and forever, and, that power might have manifested in the physical world in the form of <i>Hanumān</i> once in the past, and may do so from time to time also. But we have to understand the fact that it is eternal in the form of a principle.</p>
-	<p>We see <i>Māruti</i> in the posture of folded hands in some idols and pictures. Seeing this some have gone to the extent of saying thus - &#x201c;He is a symbol of slavery. He cannot be an ideal for freedom loving people like us. So we should never worship him.&#x201d; But we wish to say that such an utterance is only a rave of rage and not a statement borne out of experience, and also not a wise instruction. This can be analysed as follows:—</p>
-	<p>Everyone in this world is a slave. Some are slaves of sense organs. Some are slaves of the mind and the intellect. Some others are slaves of all these. They see only what the <i>jnānendriyas</i>, (viz. the eyes, the ear, the nose, the skin and the tongue), the <i>Karmendriyas</i>, (viz. the speech, the hands, the feet, the anus and the procreating organ), the mind, and the intellect show them. They dance, jump and somersault to the tune of these (senses). They work overtime to supply whatever these senses desire for. Those who claim &#x201c;We stand on our own legs. We act according to our own light (wisdom)&#x201d;, also fall under this category. But our <i>Hanumān</i> is a slave of <i>ŚrīRāma</i> who is an embodiment of <i>Satya</i>, <i>Jnāna</i> and <i>ānanda</i> and who is an <i>ĀtmāRāma</i>. Among these two kinds of slaves, the ones belonging to the first kind reap exhaustion, momentary happiness, little happiness and happiness mixed with misery, as a price for the hard work done and slavery, (of the senses), whereas <i>Hanumān</i>, who belongs to the second category, and who observes servitude out of pure love, reaps pure happiness, permanent happiness, peace, bliss, prosperity and immortality. So, when slavery becomes inevitable, the wise should decide for themselves, the one which is ideal and acceptable among the two categories.</p>
-	<p>Some people say that he is a great historical person and not an imaginary character. The question whether he is a principle or a historical person has been touched upon already.</p>
-	<p>In reality, he is a form of <i>prāṇatattva</i>. It is not impossible that this <i>prāṇatattva</i> has manifested at times in history. When such a manifestation occurs, and if (such marks) appear in literature, sculpture and edicts (inscriptions) to suggest the special appearance in a certain part of the world, people say that he belongs to that particular region. In this sense <i>Hanumān</i> might have illuminated a region which is now called <i>Karṇāṭaka</i>. People of that region may take pride in that. But great men just do not belong to one country or race. There is no harm in nurturing this pride along with the discernment that great persons do not just belong to a certain country but belong to the entire universe. Just as <i>ŚrīRāmacandra</i> of <i>Ayodhyā</i> of northern India, the <i>Āñjaneya</i> of <i>Kishkindhā</i> from southern India belongs to the entire universe by his preeminence.</p>
-	<p>Thus, even if <i>Śrī Rāma</i> and <i>Hanumān</i> were indeed (great) preeminent historical persons who lived and went back to their place long time ago, they are still venerable. When their memory appears to our minds through literature, sculpture, pictures etc. it inspires us to follow the good deeds shown by them by their actual life. But <i>Śrī Rāma</i> and <i>Hanumān</i>, described vividly by <i>jnānis</i>, are not just historical persons who lived for some time and disappeared. They are images for both external and internal meditations and worship. A place called <i>Daharāyodhyā</i> near <i>Nandigrāma</i> is renowned as the birthplace of <i>ŚrīRāma</i>. And <i>Hanumān</i> is the <i>prāṇa mūrtī</i> who has <i>nityayoga</i> with <i>Ātmārāma</i> there. Practically speaking, <i>Hanumān</i> hails from <i>Kishkindhā</i> of south India. And for his ordinary dwelling, Lord <i>Rāma</i> has bestowed upon him the region called <i>Kimpurushavarsha</i>, which is located between the two eyebrows being the central spot of the meditational area of the <i>yogis</i>. The vivid depiction of <i>ŚrīRāma</i> and <i>Hanumān</i> displaying oneness with regard to both the inner principles and history of the outside world provided by the <i>jnānis</i>, is not to create any confusion in the minds. It is for the sake of bliss of both the realms, which can be experienced by making the inner culture blossom in the external civilization and making the external civilization merge in the inner culture. It will be our own fault if we misuse the contribution of the sages for nurturing doubts and for restlessness, while in actuality, they are intended to clear the doubts and bestow bliss.</p>
-	<p>The argument that <i>Hanumān</i> was respected in the beginning as a great person and later he was attributed with divinity, and the other argument that <i>ŚrīRāma</i> was considered an ideal personage and later was elevated as God, belong to the same category. Of these two, the second argument has been answered in the discussion of the <i>Rāmanavami festival</i>. This answer itself can provide the reply for the objection that <i>Hanumān</i> was attributed with Godhood later.</p>
-	<p><i>Hanumān</i> is one of the <i>cirañjīvis</i> such as emperor <i>Bali</i>, great sage <i>Vyāsa</i> and others.</p> 
-	<p class="shloka">
-		अश्वत्थामा बलिर्व्यासः हनूमांश्च विभीषणः ।<br />
-		﻿कृपः परशुरामश्च सप्तैते चिरजीविनः ॥
-	</p>
-	<p>is a famous <i>śloka</i>. The question arises as to what does the word &#x201c;<i>Cirañjīvi</i>&#x201d; mean? Ordinary people think that they are immortal and live forever with no destruction of the body. But the actual meaning of that word is that the one who lives for a very long time. The word does not mean that he is the one who lives forever. The <i>Cirañjīvis</i> are those who live for a very long time compared to ordinary human beings. The duration of the long life of <i>Hanumān</i> is the present <i>Brahma Kalpa</i>. Can anyone live with his physical body for such a long time which can be calculated only arithmetically? The answer is, it is not possible for all. But it is possible in some special situations for some distinguished persons. It is possible (for such persons) to create for themselves a body out of the subtle principles after crossing some layers of time, either by their power of penance of by the special will of God. For instance, it is well known that things kept in the cold environs of the poles remain without any change even after a very long time. Similarly things kept in a refrigerator do not get stale for a long time. Also, the substances which become stale in the ordinary climate, do not become so when they are given some treatment. For example, a substance kept in salt lasts longer without becoming stal. In the same way, it is possible for the body to remain (in tact) for a very long time, by the coordinations provided by nature itself, and also by the situations and special effects caused by penance.</p>
-	<p>Some may say - &#x201c;O.K. It may become possible to live for such a long time. But does it not cause boredom?&#x201d; Some (others) may reply &#x201c;One may get disgusted in a life laden with (the experiences of) sufferings and penure. But why should one get disgusted, if his life is full (of joy) with wife, children and sensual objects? Our <i>Hanumān</i> has no such possessions and wealth. So, it should be boring to him (to live a long life.&#x201d; - Like this, the debate may continue. But the fact is, even if all the sensual enjoyments are at one&#x2019;s disposal, he may get bored at least after some time. For this specific reason only, even though <i>Yamadharmarāja</i> promised <i>Naciketa</i> and said—&#x201c;I will make you the owner of all (pleasures) and make the very pleasures themselves to seek you. (कामानां त्वा कामभाजं करोमि)&#x201d;, the wise <i>Nachiketha</i> replies &#x201c;No one likes to live for a long time&#x201d; &#x201c;अतिदीर्घे जीविते को रमेत?&#x201d;. In the society, a person though possessed with all the sensual enjoyments, may feel tired with his long life, when he witnesses the sufferings of people in the society. And some <i>Dharmanishṭhas</i> on seeing the waxing of <i>Adharma</i> in this world may feel &#x201c;I cannot bear witnessing this growth of unrighteousness. Neither am I capable of routing it. So this long life is like a curse.&#x201d; So, any how, long life should be causing boredom, is n&#x2019;t it? Then Why did <i>Hanumān</i> desire for that? The answer is, he did not get it by desiring for it. <i>Śrī Rāma</i> ordained long life to him, wanting him to remain as a pillar of (HIS) fame for a very long time on this earth.&#x201d;</p>
-	<p>&#x201c;जीविते कृतबुद्धिस्त्वं मा प्रतिज्ञां विलोपय । मत्कथाः प्रचरिष्यन्ति यावल्लोके ﻿हरीश्वर । तावद्रमस्व सुप्रीतो मद्वाक्यमनुपालयन्&#x201d;</p> 
-	<p>Would Lord <i>ŚrīRāma</i> who ordered <i>Hanumān</i> to remain in the physical world for a very long time, bestow that command to a person who does not have the ability to carry out that order? <i>Anjaneya</i> who was the foremost among the <i>jnānis</i> by the grace of <i>ŚrīRāma</i> had this capability. What he experienced was extraordinary divine bliss. A supreme divine bliss that never causes boredom. The <i>Ātmānanda</i>. And, a Supreme bliss. As evident by the words—</p>
-	<p>&#x201c;सदा रामरामेति रामामृतं ते । सदा रामनामानन्दनिष्यन्दकन्दम् । पिबन्तं नमन्तं सुदन्तं हसन्तम् । हनूमन्तमन्तर्भजे तं नितान्तम्&#x201d; he sees the whole world pervaded by <i>Rāma</i> and so, there can be no cause for boredom for him, who is always immersed in the bliss of <i>Rāmadhyāna</i>.</p>
-	<p>&#x201c;﻿ततो न विजुगुप्सते&#x201d; It is sufficient to say that to <i>Hanumān</i>, who is the supreme among the <i>Siddhas</i>, the most magnificent among the servants of <i>Rāma</i> devoted to the execution of the work of his master, and a preeminent <i>jnāni</i> who always experiences the divine bliss, long life will not be a cause of disgust. This is the essence of his long life.</p>
-	<p>Some <i>śāstras</i> say that <i>Āñjaneya</i> is the son of <i>Prāṇadeva</i>. Also we come across references in some <i>śāstras</i> that state he was born from the <i>amśa</i> of <i>Rudra deva</i>. We see that his devotees praise him with the words <i>&#x201c;Roma romagaḷalli Koti Koti shivalingagaḷa Udbhavavannu hondiruva Mahāmahima&#x201d;</i> (He is great soul with manifestation of crores and crores of <i>Śivaliṅgas</i> in the innumerable hairs of his body) When such is the case, some may question.—&#x201c;Which god&#x2019;s <i>amśa</i> is he? Is he a strange offspring born to two fathers.?&#x201d; We should not perceive the relationships of husband and wife and father and son of the deities and mysticisms associated with them, on par with similar relationships seen in the external world. There won&#x2019;t be any room for misgivings if it taken in the sense which is <i>tattvasammata</i> (i.e. agreeing principlewise), that he is a manifested deity of great <i>mahimā</i> (divine power) endowed with the strength and nature of both the deities viz <i>prāṇa</i> and <i>Rudra</i>. Some may deride saying that he is a whoreson born to <i>Vāyu</i> in <i>Añjana</i> the wife of the monkey warrior <i>Kesarī</i>. &#x201c;Why should the well born worship him?&#x201d;—they may ask. Such people should take note of the abovesaid principle. In fact, all men and women are being touched by many deities who abound both inside the body and outside, and so, all creatures are nothing but misbegottens only. It should be construed that it is sheer mischief to compare an event which was effected because of an extraordinary divine grace, with wordly lecherousness. The impurities associated with the mind (and body) of human beings do not apply to divinities. Same rules should not be applied to both.</p>
-	<p>Some say cleverly - &#x201c;In the <i>Ṛgveda</i>, God <i>Vāyu</i> is the friend of <i>Indra</i> (<i>Indra</i> is also called <i>Hari</i>). In course time, the preeminence of <i>Indra</i> faded and his prominence came to his younger brother <i>Upendra</i>, who is none other than <i>Vishṇu</i>. So <i>Vāyu</i> came to be honoured as a friend of <i>Vishṇu</i>. So, <i>Vāyu</i> and <i>Prāṇa</i> are different.&#x201d; But <i>Vāyu</i> is the evolution of the (life force) <i>prāṇa</i> of the <i>paramapurusha&#x201d;</i>. These critics should note the Ṛgvedic hymn &#x201c;प्राणाद्वायुरजायत.&#x201d; <i>Vāyu</i> is a friend <i>Indra</i> and he is both a friend and a servant of <i>Vishṇu</i>. They should take note of the statements of the <i>Srutis</i> also viz.</p>
-	<p>&#x201c;﻿वाताद्विष्णोर्बलमाहुः प्राणशरीरो भूरूपः&#x201d;, &#x201c;सप्तप्राणाः प्रभवन्ति&#x201d;</p>
-	<p><i>Paramātma</i> is the master life force and the spirit of even the <i>prāṇa</i>. And (the fact) that <i>Hanumān</i> a form of <i>Prāṇa</i> is the <i>śesha</i> of <i>HIM</i>, is quite in accordance with the vedic principles.</p>
-	<p>Scriptural evidences may be there to say that <i>Hanumān</i> is <i>Prāṇatattva</i>. They can be substantiated by reason also. But a question arises whether it is possible to visualize that <i>Prāṇatattva</i> in the attributed and the embodied form viz. <i>Hanumān</i>, or whether all this is simply a figment of imagination. Let us be rest assured that the sages themselves who have visualized him in the abovesaid form, have provided us the picture of <i>Hanumān</i>.</p> 
-	<p>&#x201c;﻿ततः पश्यति धर्मात्मा तत्सर्वं योगमास्थितः&#x201d;, &#x201c;तत्सर्वं तत्त्वतो दृष्ट्वा धर्मेण ﻿स महाद्युतिः&#x201d;</p>
-	<p>We too can see him in the same way if we acquire the <i>śuddha dṛshṭi</i> and <i>satyadṛshṭi</i> of those <i>Maharshis</i>. These words are not utterances of lunatics, or a propaganda of propagandists or poetic fancies or fanciful imaginations. But a universal truth which can be experienced by all cultured and refined people.</p>
-	<p>We would like to respectfully remember here a sentimentful context which emerged when our Mahārguru worshipped Hanumān through a stotragāna of Hanūmatpañcaratna after experiencing in the inner visions during the Brahmī state, both Lord Hanumān who is the attributed and embodied form of ŚrīRāma, along with ŚrīRāma, who in turn is the prāṇa of prāṇas. He had said &#x201c;He is the master who can not only help in conquering the external enemies but also in conquering mighty wrestlers in the form of Yogavighnas. Characters such as Simhika, Akshakumāra etc., whom the Rāmayaṇa describes as the ones conquered by Hanumān are nothing but Yogavighnas. He is the one who grants siddhis. He is also a great help to the attainment of Moksha, by brining about the samādhi of Rāmabhakti Samrājya.</p>
-	<p>Thus, we have discussed about Lord <i>Hanumān</i>. We shall now take up the discussion on the celebration. (of <i>Hanumajjayanti</i>.)</p>
-	<h3>The day and time of the festival</h3>
-	<p>When should this festival be celebrated? This topic can be discussed in two parts, viz the month, the day and the star on which it should be celebrated and precisely at what time of that day.</p>
-	<p>The three traditions that are in vouge in the celebration of Hanumajjayantī are as follows:</p>
-	<ol>
-		<li>Celebrating on <i>Caitra Pūrṇimā</i>.</li>
-		<li>Celebrating on <i>Kārtika Kṛshṇa Caturdaśī</i></li>
-		<li>Celebrating on <i>Margaśira śukla trayodaśī</i>.</li>
-	</ol>
-	<p>The last one is more in vogue in South India. The other two are more prevalent in North India. Moreover there is a custom of celebrating this festival on <i>Vaiśakha Kṛshṇa Trayodashī</i> also in South India.</p>
-	<p>Let us first have a look at the contents in the texts such as <i>Purāṇas, Pūjākalpas</i> etc. which are supportive of the above traditions, and later we shall take up the propriety of reasoning etc.</p>
-	<p><i>Uthsava Sindhu</i> a book on <i>pūjākalpas</i> tells us that Lord <i>Śiva</i> himself took birth as a leader of the monkeys, in the womb of <i>Añjanā Devī</i> on a Tuesday in <i>Mesha lagna</i> and <i>Svāti nakshatra</i>, in the dark half of the <i>kārtika māsa</i>.</p>
-	<p class="shloka">
-		﻿ऊर्जस्य चासिते पक्षे स्वात्यां भौमे कपीश्वरः ।<br />
-		﻿मेषलग्नेऽञ्जनीगर्भात् शिवः प्रादुरभूत् स्वयम् ॥
-	</p>
-	<p><i>Vrata Ratnākara</i> expresses the same opinion in different words. The details of <i>Añjaneya&#x2019;s</i> birth and childhood plays provided in the <i>Uttarakānḍa</i> of <i>Valmiki Rāmāyaṇa</i> also support the above said purport. In the book we see a verse as below -</p>
-	<p class="shloka">
-		यमेव दिवसं ह्येष ग्रहीतुं भास्करं प्लुतः ।<br />
-		﻿तमेव दिवसं राहुः जिघृक्षति दिवाकरम् ॥ <span class="gap">(रामा.  उत्तरकाण्ड ﻿35-31)</span>
-	</p>
-	<p><i>Añjanādevī</i> had moved away to fetch food for the newborn baby <i>Āñjaneya</i>. At that time, the baby mistaking the rising sun for a fruit jumped to the skies to grab him. The same day <i>Rāhu</i> also wanted to seize the sun.</p>
-	<p>The solar eclipse takes place on a new moon day. <i>Mesha lagna</i> occurs only in the night of <i>Kārtikamāsa</i>. So we can guess that <i>Hanumān</i> was born on the night of <i>caturdaśī</i> of the <i>Kārtika</i> month. And the next day was <i>Amāvāsya</i>, on which the event of <i>Hanumān</i> leaping to catch the sun took place.</p>
-	<p>Then why did the tradition of worshipping <i>Āñjaneya</i> specially on <i>caitraśukla pūrṇimā</i> come into vogue? It is so because, festivities like the <i>Rāmanavamī</i>, the divine marriage between <i>Sītā</i> and <i>Rāma</i> and the coronation of <i>ŚrīRāma</i> are very close to <i>caitra pūrnimā</i>, and so it is quite natural to specially celebrate the festival of <i>Hanumān</i> who was the supreme devotee of <i>Rāma.</i> We can guess that this <i>Hanumāntotsava</i> itself was in course of time came to be celebrated as <i>Hanumajjayanthi</i>. Also, previously we have discerned at the <i>ślokas</i> of the <i>Purāṇas</i> which state that <i>Āñjaneya</i> was born as a partial incarnation of <i>Śiva</i>. The <i>Vāyavīya purāṇa</i> states that a special <i>pūja</i> called <i>&#x2018;Damanotsava&#x2019;</i> should be offered to all the deities, and especially to <i>Śiva</i> on the day of <i>Caitra Śukla Pūrṇimā.</i></p>
-	<p class="shloka">
-		﻿संवत्सरकृतार्चायाः साफल्यायाखिलान् सुरान् ।<br />
-		﻿दमनेनार्चयेच्चैत्र्यां विशेषेण सदाशिवम्” <span class="gap">﻿(वा. पु.  परि ﻿11, पुट ﻿- 62)</span>
-	</p>
-	<p>Thus, this day on which a special <i>pūja</i> was offered to <i>Āñjaneya</i> who is revered as a partial incarnation of <i>Śiva</i>, later came to be known as <i>Hanumajjayantī</i> in traditon. In North India, this day is called <i>Pajūno Pūno</i>, and celebrated as a birthday of a prince by name <i>Pajūno</i> who was a <i>siddhapurusha</i>.</p>
-	<p>In South India, the thirteenth day of <i>Margaśira Śuddha māsa</i> is marked as <i>&#x2018;Hanumad Vratam&#x2019;</i>. On the preceeding two days, <i>Vaikunṭha Ekadaśī</i> and <i>Dvadaśī</i> worships which are dear to <i>Mahāvishṇu</i> have been over. And on the full moon day, the grand festival of <i>Śiva</i> viz. <i>Andhakāsurasamhāra</i> have been over. And on the day of <i>trayodaśī</i> which falls between the two, it is but natural to worship <i>Hanumān</i> the brave super devotee, who is intimately connected to both <i>Vishṇu</i> and <i>Śiva</i>. It is possible that this day of worship itself was latter called as <i>Hanumajjayantī</i>.</p>
-	<p>Among these three different days of celebration, the second one i.e. the precept that <i>Hanumajjayantī</i> should be observed on <i>Kārtika Kṛshṇa Caturdaśi tithi</i> is in accordance with the clear statements of <i>ŚrīmadRāmāyaṇa</i> and the rule in the <i>Pūjaśāstras</i>. The month of <i>Kārtika</i> is dear to <i>Śiva</i>. And <i>Caturdaśī</i> of the dark half is even dearer. Therefore this is the day best suited for the worship of <i>Hanumān</i> also who is respected as the partial incarnation of <i>Śiva</i>. Thus, by the view points of both the <i>Śāstras</i> and the connection with the original deity (i.e. <i>Śiva</i>), it is most appropriate to consider <i>kārtika śukla caturdashi tithi</i> itself as the (right) day for (the observation of) <i>Hanumajjayanti</i>. The other two days proposed are also considered excellent for the worship of <i>Hanumān</i>. We have to understand that <i>KārtikaKṛshṇa Caturdaśī</i> is more preferable compared to the other two days for the worship of <i>Hanumān</i> as his birth day.</p>
-	<p>&#x201c;When we came across contradictory statements in the <i>Purāṇas</i> with regard to any subject matter, we have to resolve the contradictions by concluding that the event occurred in one <i>kalpa</i> as per that <i>purāṇa</i> and the other occurred in another <i>kalpa</i> according to this <i>purāṇa</i>.&#x201d; says a <i>purāṇa</i> precept.</p>
-	<p class="shloka">
-		﻿क्वचित् क्वचित्पुराणेषु विरोधे यदि लभ्यते ।<br />
-		﻿कल्पभेदादिभिस्तत्र व्यवस्था सद्भिरिष्यते&#x201d; ॥
-	</p>
-	<p>Thus all the three factions can be satisfied by holding that <i>Hanumāns&#x2019;</i> birth took place on the fourteenth day of the <i>Kṛshṇapaksha</i> in the month of <i>Kārtika</i> in a certain <i>Kalpa</i>; in another <i>kalpa</i> it happened in <i>Mārgaśira Śuddha pūrnimā</i> and in yet in another <i>Kalpa</i> it took place on <i>Caitra Śuddha pūrnimā</i>. But many interpolations are seen in the statements of <i>Purāṇas</i>. Some statements give the purports which are not in tune with the main meaning. Also, as there are no clear <i>śāstravacanas</i> to state that the birth of <i>Hanumān</i> took place either in <i>Caitra</i> or <i>margaśira</i> we honour the tradition of celebrating the day on the <i>Kārtika Kṛshṇa caturdaśi</i> itself. It is popular to celebrate <i>Hanumajjayanthi</i> on <i>Vaiśakha Kṛshṇa daśami</i> in South India.</p>
-	<p>And at what time should the special <i>pūja</i> of <i>Hanumān</i> be performed on the day of <i>KarthikaKṛshṇa caturdaśī</i>? &#x201c;His incarnation took place in the <i>Meshalagna</i>&#x201d; say the <i>śāstras</i>. <i>Mesha lagna</i> occurs at night and on that night, that time happens to be <i>Māsaśivarātri</i> also. Therefore the special worship pertaining to his <i>avatāra</i> should be done in the night. And, it should be supposed that the day of worship shall be only on the day when <i>Caturdaśī tithi</i> extends through the night.</p>
-	<h3>Pūja Vidhi: (Precepts of worship)</h3>
-	<p>Those who perform the <i>Vrata</i> should observe fast on that day. Those who cannot afford to fast may take <i>sāttvik</i> food such fruits, tubers, milk, etc., which have been offered to God. Those who just perform the <i>pūja</i> of <i>Hanumān</i> without the vows of the <i>vrata</i>, should be on fast until the <i>pūja</i> is over and take the <i>prasāda</i> afterwards. But those who do it as a <i>vrata</i> should be in observance for the whole day, in accordance to the vows made. And after the worship of <i>ŚrīRāma</i> in the night, the worship of <i>Prāṇadevaru</i>, his greatest servant, should be done. <i>Pañcopacāra pūja</i> or <i>shoḍaśopacāra pūja</i> should be offered, as per scriptural precepts. It is best to do <i>Pañcāmṛta abhisheka</i> in the <i>upacāra</i> of bath to the Lord. For decorating the Lord, applying of fragrant oil and <i>kuṅkuma</i> should be specially done. The best among <i>naivedyas</i> would be the preparation made with Bengal gram and jaggery. As part of <i>pūja</i>, just as music and dance are offered to the Lord, the offering of wrestling and gymnastics in the presence of the Lord as a form of <i>seva</i> is also in vogue. Those who are able (bodied), should keep awake for the whole night and keep singing the glories of the Lord.</p>
-	<h3><i>Pūja</i> Rules and the Science behind that</h3>
-	<p>1. As <i>Hanumān</i> is the preeminent servitor of <i>Parabrahmamūrtī ŚrīRāma</i>, it is proper that the <i>prasāda</i> that has been offered to <i>ŚrīRāma</i> is offered to <i>Hanumān</i> also. As proclaimed in the statements—</p>
-	<p class="shloka">
-		&#x201c;दासोऽहं कोसलेन्द्रस्य रामस्याकिष्टकर्मणः&#x201d;<br />
-		&#x201c;अक्रूरस्त्वभिवन्दनेऽथ हनुमान् दास्ये च सख्येर्जुनः&#x201d;
-	</p>
-	<p><i>Hanumān</i> is the ultimate in <i>Dāsabhakti</i>. Devotees are indeed the seekers of <i>Prasāda</i> of Gods as is evident from &#x201c;प्रसादं वाञ्छद्भिः&#x201d; And it is right indeed to offer the <i>Prasāda</i> of <i>Rāma</i> who is the Lord of <i>Hanumān&#x2019;s Prāṇa</i> and who is also a <i>prāṇārāma</i>.</p>
-	<p>Why is <i>Pañcamṛuta Abhisheka</i> specially prescribed to (the worship of) <i>Hanumān</i>? It is because, just like Lord <i>Śiva</i>, <i>Hanumān</i> is also <i>Abhishekapriya</i>. As he is the form of <i>pañcaprāṇas</i>, it is appropriate that he is given a holy bath of <i>pañcāmṛtas</i>. The five holy things are <i>kshīra</i> (milk) <i>dadhi</i>, (curds), <i>ghṛta</i> (ghee), <i>madhu</i> (honey) and sugar. These are called <i>pañcāmṛtas</i>. Each one of them has a special sweetness but all are tasty. Similarly, though there is a diversity in the five different worships to the Lord, all are dear (tasty) to god. All lead to happiness, both in this world and in the next. From the physical point of view also, they are great tonics for the cure of bodily and mental ailments.</p>
-	<p>a) Cow&#x2019;s milk is the best among milks. <i>Caraka Samhit</i> a describes this substance as one which is sweet cool, soft, oily, thick, sticky, heavy and pleasant; it increases vitality and it is the greatest elixir.</p>
-	<p class="shloka">
-		﻿स्वादु शीतं मृदु स्निग्धं गाढं च श्लक्ष्णपिच्छिलम् ।<br />
-		﻿गुरु मन्दं प्रसन्नं च गव्यं दशगुणं पयः ॥
-	</p>
-	<p class="shloka">
-		﻿तदेवं गुणमेवौजः सामान्यादभिवर्धयेत् ।<br />
-		﻿प्रवरं जीवनीयानां क्षीरमुक्तं रसायनम् ॥ <span class="gap">चरक.  सू. (27, 217-218)</span>
-	</p>
-	<p>b) &#x201c;Cow&#x2019;s Curd is very tasty, increases heat, increases virility, unctuousness and increases strength. While being cooked, it produces sourness and heat. It removes rheumatism., It is auspicious and brings robustness, And cures a number of diseases like catarrh, diarrhea, cough, and remittent fever, tastelessness, urinary difficulties and weakness, says the same work.</p>
-	<p class="shloka">
-		रोचनं दीपनं वृष्यं स्नेहनं बलवर्धनम् ।<br />
-		﻿पाकेऽम्लमुष्णं वातघ्नं मङ्गल्यं बृंहणं दधि ॥<br />
-		﻿पीनसे चातिसारे च शीतके विषमज्वरे ।<br />
-		﻿अरुचौ मूत्रकृच्छ्रे च कार्श्ये च दधि शस्यते ॥ <span class="gap">(चरक, सू ﻿27, 225-226)</span>
-	</p>
-	<p><strong>c) Ghee:</strong> &#x201c;Cow&#x2019;s ghee brightens intelligence, improves memory, provides strength, brings comprehending intelligence, is a purifier, removes rheumatism and exhaustion, sets right the voice, is antibilious, is a nourisher, improves digestion, is sweetish after digestion, increases vitality and causes firmness of the body. Cows&#x2019; ghee when freshly clarified has curative qualities. It is like nectar, antitoxic, good for the eyes, healthy and increases longevity of life, improves strength and intelligence and is the greatest elixir&#x201d; says the <i>Yogaratnākara</i>.</p>
-	<p class="shloka">
-		﻿धीकान्तिस्मृतिकारकं बलकरं मेधाकरं शुद्धिकृत् ।<br />
-		﻿वातघ्नं श्रमनाशनं स्वरकरं पित्तापहं पुष्टिदम् ॥
-	</p>
-	<p class="shloka">
-		﻿वह्नेः वृद्धिकरं विपाकमधुरं वृष्यं वपुःस्थैर्यदम् ।<br />
-		﻿सेव्यं गव्यघृतोत्तमं बहुगुणं सद्यः समावर्तितम् ॥
-	</p>
-	<p class="shloka">
-		﻿सर्पिर्गवां चामृतकं विषघ्नम्
-	</p>
-	<p class="shloka">
-		﻿चक्षुष्यमारोग्यकरं च वृष्यम् ।<br />
-		﻿रसायनं मन्दमतीव मेध्यम्<br />
-		﻿स्नेहोत्तमं चेति बुधाः स्तुवन्ति ॥
-	</p>
-	<p><strong>d) Honey:</strong> &#x201c;Honey causes rheumatism, is heavy, cool, removes hemorrhages and phlegm, and heals cuts and wounds in the body. It has both sweetish and astringent tastes&#x201d; says the <i>carakasamhitā</i></p>
-	<p class="shloka">
-		वातलं गुरु शीतं च रक्तपित्तकफापहम् ।<br />
-		﻿सन्धातृच्छेदनं रूक्षं कषायमधुरं मधु <span class="gap">﻿(चरक सू. ﻿27-244)</span>
-	</p>
-	<p><strong>e) Sugar:</strong> All types of sugar remove thirst, hermorrhages, and heat in the body.</p>
-	<p class="shloka">
-		तृष्णाऽसृक्पित्तदाहेषु प्रशस्ताः सर्वशर्कराः ॥ <span class="gap">﻿(चरक.  सू. ﻿27-241)</span>
-	</p>
-	<p>When we look at the qualities of these above five things, we find that every one of them has medicinal value, and, with a suitable combination, can remove defects mutually, (if any). For example, fasting increases acidity. But ghee and honey can remove acidity. Honey causes rheumatism, but curds removes it. <i>&#x201c;Dadhi vātajit&#x201d;.</i> It is well known that milk and ghee help to effectively get over many imbalances, produced by fasting.</p>
-	<p class="shloka">
-		&#x201c;गव्ये क्षीरघृते श्रेष्ठे&#x201d; <span class="gap">(अष्टांङ्ग - 5-41)</span>
-	</p>
-	<p class="shloka">
-		﻿उपवासाध्वभाष्यस्त्रीमारुतातपकर्मभिः क्लान्तानाम्<br />
-		﻿अनुपानार्थं पयः पथ्यं यथामृतम् ” <span class="gap">(चरक सू. ﻿27-320)</span>
-	</p>
-	<p>Thus when with these things, which have great curative properties materially speaking, the graceful Lord is bathed and when the <i>Prasāda</i> is taken with a sense of devotion, the <i>prasāda</i> will bring about the tranquil of elements (<i>dhātu prasannathe</i>). Also, as these facilitate immortality they are appropriately called <i>Amṛta</i>.</p>
-	<p>(A word of caution here please. This <i>prasāda</i> should be taken immediately after the <i>pūja</i> and not after a big time gap. If the gap is more, the consuming of the <i>Prasāda</i> may cause ill health.)</p>
-	<p>2. Likewise the combination of Bengal gram and jaggery is an item which is highly recommended as a special <i>naivedya</i> to Lord <i>Hanumān</i>, is one which can bring about great benefits, in the wordly sense also.</p>
-	<p>&#x201c;﻿चणकः शीतलो रूक्षः पित्तरक्तकफापहः । लघुः कषायो विष्टम्भी वातलो ﻿ज्वरनाशनः ॥</p>
-	<p>says <i>Bhāvaprakāśa</i></p>
-	<p>This substance is a coolant, effective in curing dryness, bile and phlegm. It makes the body (feel) light, is astringent and prevents the passage of stools, causes gas and cures fever. Raw Bengal gram is tender, very tasty, removes <i>Pittaśukra</i> and is a salutary foodstuff. Jaggery gives strength, causes heaviness of the body, is oily, removes rheumatism and purifies urine. Though Bengalgram is full of many qualities, it causes gas. But when added with jaggery, gas formation is prevented. By the combination of these two, benefits will increase and harmful effects vanish. When taken as a <i>prasāda</i>, afflictions of the mind also got removed. By taking this <i>naivedya</i>, the strengths of the body, mind and the self are brought about undoubtedly.</p>
-	<p>Why this Bengalgram and jaggery are specially suggested for <i>naivedya</i> to <i>Āñjaneyasvāmī</i>? Some may casually reply to this saying that they are liked very much by monkeys and as it is dear to God in the form of monkey, so they are recommended. This is not correct. Then, why not ground-nuts and jaggery which are loved more? Not only this. When monkies stoke each other&#x2019;s body, they eat insects like the lice etc., found in the hairs. Some may even ask - why not that lice also be recommended as <i>naivedya</i> to <i>Hanumān</i> who has the form of a monkey? It is not for these reasons that the offering of Bengalgram and jaggery are recommended. So, we have to find out which offering helps to obtain the experience of the divine blissful form of <i>Hanumān</i>. The actual reason is, such an offering when taken (by the devotees), helps in the opening up of the centers which help the visualization of <i>Āñjaneya</i> and this can be known by the seekers of <i>Prakrti</i> &amp; <i>Purusha</i>. The practice of offering garlands of betel leaves and garlands of <i>Uddina Vade (a fried prepration of the common pulse)</i> for the warding off evils, is also in vogue.</p>
-	<p>Now, regarding the display of wrestling and gymastic feats infront of <i>Hanumān</i>. <i>Hanumān</i> is the supreme wrestler in all the three worlds. By his grace, the art of wrestling can be mastered. It is but appropriate, that the display of that art is done before him as a form of <i>seva</i>. At the time of that offering one has to reflect that <i>Hanumān</i> is unequalled in conquering the wrestlers not only in the external world but also the demoniacal wrestlers in the inner world who are in the form of obstacles that impede the spiritual advancement of the <i>sādhakas</i>.</p>
-	<p>It is quite natural to reflect upon his story for the whole day and night on <i>Hanumajjayanti</i>. The <i>Sundarakānḍa</i> of the <i>Rāmāyaṇa</i> is aptly named as <i>&#x2018;Hanumadvijaya.&#x2019;</i> Throughout this canto of the epic, the Joy of his great supremacy and successive victories shine forth.</p>
-	<p class="shloka">
-		&#x201c;श्रुत्वा तु पञ्चमं काण्डं हनुमद्विजयाङ्कितम् ।&#x201d;<br />
-		&#x201c;हनुमद्विजयं काण्डं यः पारायणमाचरेत्॥&#x201d;
-	</p>
-	<p>People chant this gem of an epic on that day with great devotion. Parts from other <i>Purāṇas</i> and <i>Itihāsas</i> which sing his glory can also be contemplated. When done so, all the <i>purushārthas</i> will be accomplished by the grace of that great Lord&#x2019;s divine qualities and capabilities.</p>
-	<p><i>Hanumān</i> who is worshipped as per the modalities stated above on the great day of <i>Hanumajjayanti</i>, is the supreme devotee of <i>ŚrīRāma</i> and the one who has <i>ananyabhāva</i> with <i>ŚrīRāma</i>.</p>
-	<p>When devotees worship him as stated in the following lines—</p>
-	<p class="shloka">	
-		<i>&#x201c;Tanna bhaktara jeevanave tanna jeevanam</i><br />
-		<i>Tanna bhaktar tiḷiye tām bereyalla&#x201d;</i><br />
-		<i>&#x201c;Hanumana matave hariya mata&#x201d;</i>
-	</p>
-	<p>&#x201c;The life of his devotees is his own life.</p>
-	<p>If the devotees understand him, he won&#x2019;t be different&#x201d;</p>
-	<p>&#x201c;The thought of <i>Hanumān</i> itself is the thought of <i>Hari</i>&#x201d;</p>
-	<p>and become one with his spirit, they undoubtedly attain <i>samādhi</i> in <i>ŚrīRāma</i>, who is the Lord of <i>Hanumān&#x2019;s</i> soul.</p>
-	<p>Thus, <i>Hanumajjayanti</i> is one among the auspicious festivals which should be observed by all, who aspire for <i>śreyas</i> and <i>preyas</i>, as the celebration of the <i>jayantī</i> of <i>Hanumān</i> who was the supreme servitor and dear to <i>ŚrīRāma</i> and <i>Sītamāta</i>, pleases the Lord, and brings about the removal of bodily and mental ailments.</p>
-	<p>In addition to the important festivals described earlier, there are a number of festivals in the month of <i>Caitra</i> such as <i>Vasanta Navarātradurgāpūja</i> (From the first day of <i>Caitra</i> for nine days, day and night) <i>Bhrātṛdvitīya (Caitra śuddha dvitīya) Jagadiśa Vrata</i>, (Four Mondays of <i>Caitra</i>), <i>Arundhatī Vrata</i> (From the first day of <i>Caitra</i> to the third) <i>GaṇaGauriVrata</i> (<i>Caitra śuddha Tṛitīya</i>) <i>Śītalāshṭmī</i> (<i>Caitra Kṛshṇa Ashṭamī</i>) <i>Anaṅga Trayodaśī</i>, (<i>Caitra śukla Trayodaśi</i>,) etc. which are being observed. But only the most important festivals are discussed here, as examples. All festivals are important from the view point of devotees who celebrate them with devotion and enthusiasm and according to the precepts. Even so, only the most important festivals have been selected for discussion, keeping in mind the references in <i>śāstras</i> pertaining to those festivals, their range, depth, the people and their number who are entitled to observe them.</p>
-	<div class="subhead">*********</div>
+			<p><i>Hanumajjayantī</i> is an important festival celebrated in the  month of <i>Caitra</i>, after <i>ŚrīRāmanavami</i>. The deity worshipped on that day is <i>Hanumān</i>. He is a <i>mahātma</i>, famously known by names such as <i>Āñjaneya</i>, <i>Māruti</i>, <i>Prāṇadevaru</i>, <i>Tiruvadi</i>, <i>Mahāvīra</i> etc, in the literature of <i>jnānis</i> and devotees. It is but natural that, after the  worship of <i>Śrī Rāma</i> on <i>Rāmanavami</i> and on a day very close to <i>Śrī Rāmanavami</i>, the custom of worshipping this God who is the greatest among the retinue of <i>ŚrīRāma</i>, who is dear to devotees, dear to scholars and who is very popular, continues even to this day. Not just in the <i>Rāmāyaṇa</i>, <i>Mahābhārata</i>, <i>Purāṇas</i>, <i>Dharmaśāstras</i>  and musical and poetic compositions, even in folk literature and sayings such as</p> 
+			<p><i>&#x2018;Rāmana banṭa Hanumanta Tirupatiyembude Vaikunṭha&#x2019;</i></p>
+			<p>(<i>Rāma&#x2019;s</i> slave is <i>Hanumanta</i>, <i>Tirupati</i> is <i>Vaikunṭha</i> (Abode of <i>Vishṇu</i>)</p>
+			<p><i>&#x2018;Hanumanillada haḷḷiye? Gaṇapanillada grāmave?&#x2019;</i></p>
+			<p>(Can there be a village without <i>Hanumān</i> or <i>Gaṇapa?</i>),</p>
+			<p>and also his splendid images in various postures, his pictures and temples and towers, show the influence he has cast on the minds of our people. Only those devotees who worship <i>Hanumān</i> as the principal deity, celebrate this festival in a special way. Even then, we consider this an important festival and shall discuss it, as this is a festival of that God who is adored in all parts of the country, and who is omnipresent.</p>
+			<p>When we begin to discuss about this festival we are faced with hundreds of questions pertaining to <i>Hanumān</i>, the reigning deity of this festival. Is <i>Hanumān</i> just a fiction? Or a real object? Is he an historical person? Or a great power? Is he a God worthy of worship? etc. This is because, though the custom of worshipping him with great faith and devotion is prevailing from centuries, we have been hearing of late, many arguments which are aiming at slackening the very root of such beliefs. So let us examine some important opinions expressed by scholars regarding this.</p>
+			<p>1. One argument is as follows. &#x201c;The imagination of a shadow ghost which was causing fear in the forest dwellers of the <i>Vindhya</i> mountains took the shape of <i>Hanumān</i>. He is basically a god of the wild people. During the time of the merging of cultures and civilizations of <i>Ārya</i> and <i>Anārya</i> clans, he was included in the category of Hindu deities&#x201d; -</p> 
+			<p>2. &#x201c;<i>Hanumān</i> is a symbol of a fiction but not of a fiction of a very high order. He is the symbol of slavery which arose during the conflict between <i>Ārya</i> and <i>Drāviḍa</i> races in India, when the <i>drāviḍa</i> leaders joined hands with the <i>Āryan</i> king betraying their own people.&#x201d; Some also say that he stands for a symbol, which begets no respect from men who love freedom.</p>
+			<p>3. There is a view that he is just an apeman animal.</p>
+			<p>4. &#x201c;<i>Hanumān</i> is not a product of imagination. He is a historical person. He is not a monkey as ordinary people surmise. He was a leader of a forest dwelling group whose logo was a monkey. He, like his master <i>ŚrīRāma</i>, came to be included in the class of gods in course of time&#x201d;—is the opinion of some.</p>
+			<p>5. Some even praise him thus - &#x201c;He is not a mere leader of the clan of the forest people. He is a leader of the civilized people. And that too, he is bright man of the <i>kannada</i> country and a <i>kannadiga</i> warrior.&#x201d;</p>
+			<p>6. According to <i>Vālmīki Rāmāyaṇa</i> the ancient most work which introduces <i>Hanumān</i> to us, he was a leader of the <i>vānaras</i>, was both a wise and a well-wisher minister of monkey king <i>Sugrīva</i> who was the ruler of <i>Kishkindhā</i>. He was born to <i>Añjanādevi</i>, wife of <i>Vānara</i> chief <i>Kesari</i>, from the power of <i>Vāyudeva</i>.</p>
+			<p class="shloka">
+				﻿अहं सुग्रीवसचिवः हनूमान्नाम वानरः ।<br />
+				﻿यत्र राज्यं प्रशास्त्यस्य केसरी नाम वै पिता ॥
+			</p>
+			<p class="shloka">
+				﻿तस्य भार्या बभूवैषा ह्यञ्जनेति परिश्रुता ।<br />
+				﻿जनयामास तस्यां वै वायुरात्मजमुत्तमम् ॥ <span class="gap">(सुन्दर 34-41)</span>
+			</p>
+			<p>He was the foremost among the bold and the heroic, ready witted and a statesman.</p>
+			<p class="shloka">
+				तेजो धृतिः यशो दाक्ष्यं सामर्थ्यं विनयो नयः ।<br />
+				﻿पौरुषं विक्रमो बुद्धिः यस्मिन्नेतानि नित्यदा ॥ <span class="gap">(युद्ध ﻿128-78)</span>
+			</p>
+			<p class="shloka">
+				﻿यो हि भृत्यो नियुक्तस्सन् भर्त्रा कर्मणि दुष्करे ।<br />
+				﻿कुर्यात्तदनुरागेण तमाहुः पुरुषोत्तमम् ॥ <span class="gap">(युद्ध 1-8)</span>
+			</p>
+			<p class="shloka">
+				﻿त्वय्येव हनुमन्नस्ति बलं बुद्धिः पराक्रमः ।<br />
+				﻿देशकालानुवृत्तिश्च नयश्च नयपण्डित ॥ <span class="gap">(किष्किन्धा ﻿44-7)</span>
+			</p>
+			<p>He is the foremost among those who have conquered their senses. न तु मे मनसा किञ्चित् वैकृत्यमुपपद्यते&#x201d; (सुन्दर 11-40)</p>
+			<p>All his great deeds, such as crossing the ocean, searching for <i>Sītādevi</i>, vanquishing of the <i>rākshasas</i>, burning of <i>Lankā</i> and carrying the mountain etc. are thrilling adventures. He was endowed with the extraordinary boons given by important <i>devas</i> such as Lord <i>Brahma</i> and others. In spite of all these, he was unusually humble and the best servant of <i>Rāma</i> who took great pride in calling himself a slave of <i>Śrī Rāmacandra</i>.</p>
+			<p>Though he possesses the form and nature of a <i>Vānara</i>, he is, in fact the son of a god, endowed with supernatural faculties and a <i>Kāmarūpi</i> (one who can assume any form at pleasure)</p>
+			<p class="shloka">
+				मानुषं धारयन्रूपमयोध्यां त्वरितो ययौ ﻿<span class="gap">(युद्ध ﻿128-19)</span>
+			</p>
+			<p class="shloka">
+				﻿भिक्षुरूपं ततो भेजे शठबुद्धितया कपिः <span class="gap">(किष्किन्धा-32)</span>
+			</p>
+			<p>7. The <i>Mahābhārata</i> too, a gem of an <i>itihāsa</i>, supports the very same ideas the <i>Rāmāyaṇa</i> states on <i>Māruti</i>, and makes a reference to the great favour rendered by him to <i>Bhīma</i> and <i>Arjuna</i>.</p>
+			<p class="shloka">
+				﻿यदा सिह्मरवं वीर करिष्यसि महाबल ।<br />
+				﻿तदाहं बृंहयिष्यामि स्वरवेण परन्तप ॥<br />
+				﻿विजयस्य ध्वजस्थश्च नादान्योक्ष्यामि दारुणान्” <span class="gap">(म. भा. वन ﻿151-16)</span>
+			</p>
+			<p>8. <i>ŚrīmadbhāgavataPurāṇa</i> refers to him as a <i>Paramabhāgavata</i> (devotee of the highest order) who is constantly absorbed in worshipping <i>ŚrīRāma</i> and <i>Sīta</i> in the <i>Kimpurusha</i> mountain.</p>
+			<p class="shloka">
+				किम्पुरुषे वर्षे भगवन्तमादिपुरुषं लक्ष्मणाग्रजम् ।<br />
+				﻿सीताभिरामं रामं तच्चरणसन्निकर्षाभिरतः ।<br />
+				﻿परमभागवतो हनुमान् सह किम्पुरुषैरविरतभकिरुपास्ते <span class="gap">(भाग ﻿5-19-1)</span>
+			</p>
+			<p>9. The <i>Śivapurāṇa</i> also praises the divine greatness of <i>Māruti</i> declaring him an incarnation of Lord <i>Rudra</i>.</p>
+			<p class="shloka">
+				“रुद्रावतारो भगवान् भक्तोद्धारकरस्स वै”<br />
+				﻿“सर्वसैन्यं ररक्षासौ महादेवात्मजः कपिः”<br />
+				﻿“मातुराज्ञामनुप्राप्य रुद्रांशः कपिसत्तमः” <span class="gap">(शतरुद्रसंहिता अ. ﻿20)</span>
+			</p>
+			<p>The rest of the <i>Purāṇas</i> also refer to him as an incarnation with a divine element, brave, heroic, wise, long lived, a <i>Mahāyogi</i> and the heir apparent to the position of the next <i>Brahma</i>.</p>
+			<p>10. Upholding the opinion expressed by the great religious works referred to above, our tradition has also been worshipping him as god.</p>
+			<p>In tune with the saying &#x201c;हनुमान् दास्ये च सख्येऽर्जुनः&#x201d;, (our tradition) worships him as a bright example of <i>Bhakti</i> of the slave form. Once Lord <i>Śrī Hari</i> came to him in the guise of <i>Śrī Kṛshṇa</i> to give him <i>darsan</i>. Then that great devotee implored the Lord. &#x201c;Lord, I want you to assume the form of <i>Śrī Rāma</i>, your <i>Rukminī</i> should take the form of <i>Sītā</i>. You have to have the bow <i>Kodanḍa</i> instead of the flute and only then I shall prostrate before you.&#x201d; This is a delectable story. Devotees place a separate <i>maṇe</i> (a low wooden seat, called as <i>Hanumān&#x2019;s</i> seat) while doing the <i>Pārāyaṇa</i> of <i>Rāmāyaṇa</i>, with the sentimental feeling that he stays in such places with folded hands, enjoying the divine bliss (of listening to the story of <i>Śrī Rāma</i>). We come across many devotional stories which say that he keeps himself present in a disguised form in the assembly where <i>Rāma&#x2019;s</i> story is narrated, and blesses the devotees who recognize him. Devotees pray Lord <i>Māruti</i> for benefits such as cessation of bad dreams, removal of afflictions from evil spirits, victory in wars, health, eloquence and unstinted to devotion to <i>ŚrīRāma</i> etc.</p>
+			<p>Weighing all these opinions on the balance of judgment, we can have a comprehension of he matter as follows:-</p>
+			<p>There is no scientific evidence to the opinions that he was a devil in the <i>Vindhya</i> forests, or a monkeyman, or a human being with the symbol of a monkey. These opinions are a stuff of pure conjecture based on the colour of the skin and the physique of people (of some regions like <i>Vindhya</i> etc.), and also they are nothing but fictitious imaginations emerging from verbal jugglery. The very same weak evidence is advanced to state that Dravidians are none other than <i>Dasyus</i> stated in the <i>vedas</i> and the Āryans attacked their land and culture, and ultimately both the cultures merged. Our own <i>Arthaśāstra</i> (the science of polity) and history tell us that <i>Dasyus</i> are those who cause destruction of materials and religious wealth and <i>Kshatrīyas</i> are appointed to punish them and to protect the bridge of <i>Dharma</i>. This opinion is one which is natural, simple and pleasing. Such <i>dasyus</i> may exist in any society at any time in any country. Without taking note of this spirit, religious fanatics from other countries indulge in branding <i>Dasyus</i> as a race, and the conflict between them and another race itself is history of ancient India. Authentic evidences are available to show that this has been done by many (vested interests) to sow the seeds of enmity in the minds of people belonging to different provinces in our country. We shall mention these aspects when we take up for discussion, the great festival of <i>Śivarātri</i>.</p>
+			<p>For now, we wish to state that tradition can be taken as an authority, as there are no contradicting evidences. We need not accept all clever stories and popular legends as authoritative. But we also need not reject the tradition and beliefs (opinions) in aspects where no contradictions exist.</p>
+			<p>Can a <i>Vānara</i> conduct himself like a human being? It is possible for such a being to have divine powers?-These questions are satisfactorily answered in the first ever epic itself (ie. the <i>Rāmāyaṇa</i>). It proclaims him as no ordinary <i>Vānara</i>, but a divine being who took birth to assist <i>Vishṇu</i> who incarnated in the form of <i>ŚrīRāma</i>. Nothing is impossible as deities have divine powers. Aspects such as <i>avatāra</i> and its meaning, the necessity of an <i>avatāra</i> to God and whether such a thing is possible have been dealt with in the discussion of <i>Śrī Rāmanavami</i>. When viewed in this perspective, there will be no need to conceptualise <i>Hanumān</i> as a monkeyman or a person with the logo of an ape. Now the question whether <i>Hanumān</i> is a historical character or a figment of imagination. The <i>Śāstras</i> categorically say that he is a form of <i>prāṇatattva</i>. We wish to ask whether <i>praṇatattva</i> is a mere imagination or a reality. If the reply is that it is only an imagination, we can only say that there is no <i>prāṇa</i> for both, i.e. the person who puts this question and the one who answers that. (Here <i>Prāṇa</i> word is used in the colloquial sense that there is no strength or paver either in the questioner or answerer)</p>
+			<p><i>Hanumān</i> is not a historic person in the ordinary sense such as a person bearing that name took birth in a certain year, did not exist before that year and died in some year etc. He is a form of <i>praṇatattva</i> which existed in the past, continues to exist now and forever, and, that power might have manifested in the physical world in the form of <i>Hanumān</i> once in the past, and may do so from time to time also. But we have to understand the fact that it is eternal in the form of a principle.</p>
+			<p>We see <i>Māruti</i> in the posture of folded hands in some idols and pictures. Seeing this some have gone to the extent of saying thus - &#x201c;He is a symbol of slavery. He cannot be an ideal for freedom loving people like us. So we should never worship him.&#x201d; But we wish to say that such an utterance is only a rave of rage and not a statement borne out of experience, and also not a wise instruction. This can be analysed as follows:—</p>
+			<p>Everyone in this world is a slave. Some are slaves of sense organs. Some are slaves of the mind and the intellect. Some others are slaves of all these. They see only what the <i>jnānendriyas</i>, (viz. the eyes, the ear, the nose, the skin and the tongue), the <i>Karmendriyas</i>, (viz. the speech, the hands, the feet, the anus and the procreating organ), the mind, and the intellect show them. They dance, jump and somersault to the tune of these (senses). They work overtime to supply whatever these senses desire for. Those who claim &#x201c;We stand on our own legs. We act according to our own light (wisdom)&#x201d;, also fall under this category. But our <i>Hanumān</i> is a slave of <i>ŚrīRāma</i> who is an embodiment of <i>Satya</i>, <i>Jnāna</i> and <i>ānanda</i> and who is an <i>ĀtmāRāma</i>. Among these two kinds of slaves, the ones belonging to the first kind reap exhaustion, momentary happiness, little happiness and happiness mixed with misery, as a price for the hard work done and slavery, (of the senses), whereas <i>Hanumān</i>, who belongs to the second category, and who observes servitude out of pure love, reaps pure happiness, permanent happiness, peace, bliss, prosperity and immortality. So, when slavery becomes inevitable, the wise should decide for themselves, the one which is ideal and acceptable among the two categories.</p>
+			<p>Some people say that he is a great historical person and not an imaginary character. The question whether he is a principle or a historical person has been touched upon already.</p>
+			<p>In reality, he is a form of <i>prāṇatattva</i>. It is not impossible that this <i>prāṇatattva</i> has manifested at times in history. When such a manifestation occurs, and if (such marks) appear in literature, sculpture and edicts (inscriptions) to suggest the special appearance in a certain part of the world, people say that he belongs to that particular region. In this sense <i>Hanumān</i> might have illuminated a region which is now called <i>Karṇāṭaka</i>. People of that region may take pride in that. But great men just do not belong to one country or race. There is no harm in nurturing this pride along with the discernment that great persons do not just belong to a certain country but belong to the entire universe. Just as <i>ŚrīRāmacandra</i> of <i>Ayodhyā</i> of northern India, the <i>Āñjaneya</i> of <i>Kishkindhā</i> from southern India belongs to the entire universe by his preeminence.</p>
+			<p>Thus, even if <i>Śrī Rāma</i> and <i>Hanumān</i> were indeed (great) preeminent historical persons who lived and went back to their place long time ago, they are still venerable. When their memory appears to our minds through literature, sculpture, pictures etc. it inspires us to follow the good deeds shown by them by their actual life. But <i>Śrī Rāma</i> and <i>Hanumān</i>, described vividly by <i>jnānis</i>, are not just historical persons who lived for some time and disappeared. They are images for both external and internal meditations and worship. A place called <i>Daharāyodhyā</i> near <i>Nandigrāma</i> is renowned as the birthplace of <i>ŚrīRāma</i>. And <i>Hanumān</i> is the <i>prāṇa mūrtī</i> who has <i>nityayoga</i> with <i>Ātmārāma</i> there. Practically speaking, <i>Hanumān</i> hails from <i>Kishkindhā</i> of south India. And for his ordinary dwelling, Lord <i>Rāma</i> has bestowed upon him the region called <i>Kimpurushavarsha</i>, which is located between the two eyebrows being the central spot of the meditational area of the <i>yogis</i>. The vivid depiction of <i>ŚrīRāma</i> and <i>Hanumān</i> displaying oneness with regard to both the inner principles and history of the outside world provided by the <i>jnānis</i>, is not to create any confusion in the minds. It is for the sake of bliss of both the realms, which can be experienced by making the inner culture blossom in the external civilization and making the external civilization merge in the inner culture. It will be our own fault if we misuse the contribution of the sages for nurturing doubts and for restlessness, while in actuality, they are intended to clear the doubts and bestow bliss.</p>
+			<p>The argument that <i>Hanumān</i> was respected in the beginning as a great person and later he was attributed with divinity, and the other argument that <i>ŚrīRāma</i> was considered an ideal personage and later was elevated as God, belong to the same category. Of these two, the second argument has been answered in the discussion of the <i>Rāmanavami festival</i>. This answer itself can provide the reply for the objection that <i>Hanumān</i> was attributed with Godhood later.</p>
+			<p><i>Hanumān</i> is one of the <i>cirañjīvis</i> such as emperor <i>Bali</i>, great sage <i>Vyāsa</i> and others.</p> 
+			<p class="shloka">
+				अश्वत्थामा बलिर्व्यासः हनूमांश्च विभीषणः ।<br />
+				﻿कृपः परशुरामश्च सप्तैते चिरजीविनः ॥
+			</p>
+			<p>is a famous <i>śloka</i>. The question arises as to what does the word &#x201c;<i>Cirañjīvi</i>&#x201d; mean? Ordinary people think that they are immortal and live forever with no destruction of the body. But the actual meaning of that word is that the one who lives for a very long time. The word does not mean that he is the one who lives forever. The <i>Cirañjīvis</i> are those who live for a very long time compared to ordinary human beings. The duration of the long life of <i>Hanumān</i> is the present <i>Brahma Kalpa</i>. Can anyone live with his physical body for such a long time which can be calculated only arithmetically? The answer is, it is not possible for all. But it is possible in some special situations for some distinguished persons. It is possible (for such persons) to create for themselves a body out of the subtle principles after crossing some layers of time, either by their power of penance of by the special will of God. For instance, it is well known that things kept in the cold environs of the poles remain without any change even after a very long time. Similarly things kept in a refrigerator do not get stale for a long time. Also, the substances which become stale in the ordinary climate, do not become so when they are given some treatment. For example, a substance kept in salt lasts longer without becoming stal. In the same way, it is possible for the body to remain (in tact) for a very long time, by the coordinations provided by nature itself, and also by the situations and special effects caused by penance.</p>
+			<p>Some may say - &#x201c;O.K. It may become possible to live for such a long time. But does it not cause boredom?&#x201d; Some (others) may reply &#x201c;One may get disgusted in a life laden with (the experiences of) sufferings and penure. But why should one get disgusted, if his life is full (of joy) with wife, children and sensual objects? Our <i>Hanumān</i> has no such possessions and wealth. So, it should be boring to him (to live a long life.&#x201d; - Like this, the debate may continue. But the fact is, even if all the sensual enjoyments are at one&#x2019;s disposal, he may get bored at least after some time. For this specific reason only, even though <i>Yamadharmarāja</i> promised <i>Naciketa</i> and said—&#x201c;I will make you the owner of all (pleasures) and make the very pleasures themselves to seek you. (कामानां त्वा कामभाजं करोमि)&#x201d;, the wise <i>Nachiketha</i> replies &#x201c;No one likes to live for a long time&#x201d; &#x201c;अतिदीर्घे जीविते को रमेत?&#x201d;. In the society, a person though possessed with all the sensual enjoyments, may feel tired with his long life, when he witnesses the sufferings of people in the society. And some <i>Dharmanishṭhas</i> on seeing the waxing of <i>Adharma</i> in this world may feel &#x201c;I cannot bear witnessing this growth of unrighteousness. Neither am I capable of routing it. So this long life is like a curse.&#x201d; So, any how, long life should be causing boredom, is n&#x2019;t it? Then Why did <i>Hanumān</i> desire for that? The answer is, he did not get it by desiring for it. <i>Śrī Rāma</i> ordained long life to him, wanting him to remain as a pillar of (HIS) fame for a very long time on this earth.&#x201d;</p>
+			<p>&#x201c;जीविते कृतबुद्धिस्त्वं मा प्रतिज्ञां विलोपय । मत्कथाः प्रचरिष्यन्ति यावल्लोके ﻿हरीश्वर । तावद्रमस्व सुप्रीतो मद्वाक्यमनुपालयन्&#x201d;</p> 
+			<p>Would Lord <i>ŚrīRāma</i> who ordered <i>Hanumān</i> to remain in the physical world for a very long time, bestow that command to a person who does not have the ability to carry out that order? <i>Anjaneya</i> who was the foremost among the <i>jnānis</i> by the grace of <i>ŚrīRāma</i> had this capability. What he experienced was extraordinary divine bliss. A supreme divine bliss that never causes boredom. The <i>Ātmānanda</i>. And, a Supreme bliss. As evident by the words—</p>
+			<p>&#x201c;सदा रामरामेति रामामृतं ते । सदा रामनामानन्दनिष्यन्दकन्दम् । पिबन्तं नमन्तं सुदन्तं हसन्तम् । हनूमन्तमन्तर्भजे तं नितान्तम्&#x201d; he sees the whole world pervaded by <i>Rāma</i> and so, there can be no cause for boredom for him, who is always immersed in the bliss of <i>Rāmadhyāna</i>.</p>
+			<p>&#x201c;﻿ततो न विजुगुप्सते&#x201d; It is sufficient to say that to <i>Hanumān</i>, who is the supreme among the <i>Siddhas</i>, the most magnificent among the servants of <i>Rāma</i> devoted to the execution of the work of his master, and a preeminent <i>jnāni</i> who always experiences the divine bliss, long life will not be a cause of disgust. This is the essence of his long life.</p>
+			<p>Some <i>śāstras</i> say that <i>Āñjaneya</i> is the son of <i>Prāṇadeva</i>. Also we come across references in some <i>śāstras</i> that state he was born from the <i>amśa</i> of <i>Rudra deva</i>. We see that his devotees praise him with the words <i>&#x201c;Roma romagaḷalli Koti Koti shivalingagaḷa Udbhavavannu hondiruva Mahāmahima&#x201d;</i> (He is great soul with manifestation of crores and crores of <i>Śivaliṅgas</i> in the innumerable hairs of his body) When such is the case, some may question.—&#x201c;Which god&#x2019;s <i>amśa</i> is he? Is he a strange offspring born to two fathers.?&#x201d; We should not perceive the relationships of husband and wife and father and son of the deities and mysticisms associated with them, on par with similar relationships seen in the external world. There won&#x2019;t be any room for misgivings if it taken in the sense which is <i>tattvasammata</i> (i.e. agreeing principlewise), that he is a manifested deity of great <i>mahimā</i> (divine power) endowed with the strength and nature of both the deities viz <i>prāṇa</i> and <i>Rudra</i>. Some may deride saying that he is a whoreson born to <i>Vāyu</i> in <i>Añjana</i> the wife of the monkey warrior <i>Kesarī</i>. &#x201c;Why should the well born worship him?&#x201d;—they may ask. Such people should take note of the abovesaid principle. In fact, all men and women are being touched by many deities who abound both inside the body and outside, and so, all creatures are nothing but misbegottens only. It should be construed that it is sheer mischief to compare an event which was effected because of an extraordinary divine grace, with wordly lecherousness. The impurities associated with the mind (and body) of human beings do not apply to divinities. Same rules should not be applied to both.</p>
+			<p>Some say cleverly - &#x201c;In the <i>Ṛgveda</i>, God <i>Vāyu</i> is the friend of <i>Indra</i> (<i>Indra</i> is also called <i>Hari</i>). In course time, the preeminence of <i>Indra</i> faded and his prominence came to his younger brother <i>Upendra</i>, who is none other than <i>Vishṇu</i>. So <i>Vāyu</i> came to be honoured as a friend of <i>Vishṇu</i>. So, <i>Vāyu</i> and <i>Prāṇa</i> are different.&#x201d; But <i>Vāyu</i> is the evolution of the (life force) <i>prāṇa</i> of the <i>paramapurusha&#x201d;</i>. These critics should note the Ṛgvedic hymn &#x201c;प्राणाद्वायुरजायत.&#x201d; <i>Vāyu</i> is a friend <i>Indra</i> and he is both a friend and a servant of <i>Vishṇu</i>. They should take note of the statements of the <i>Srutis</i> also viz.</p>
+			<p>&#x201c;﻿वाताद्विष्णोर्बलमाहुः प्राणशरीरो भूरूपः&#x201d;, &#x201c;सप्तप्राणाः प्रभवन्ति&#x201d;</p>
+			<p><i>Paramātma</i> is the master life force and the spirit of even the <i>prāṇa</i>. And (the fact) that <i>Hanumān</i> a form of <i>Prāṇa</i> is the <i>śesha</i> of <i>HIM</i>, is quite in accordance with the vedic principles.</p>
+			<p>Scriptural evidences may be there to say that <i>Hanumān</i> is <i>Prāṇatattva</i>. They can be substantiated by reason also. But a question arises whether it is possible to visualize that <i>Prāṇatattva</i> in the attributed and the embodied form viz. <i>Hanumān</i>, or whether all this is simply a figment of imagination. Let us be rest assured that the sages themselves who have visualized him in the abovesaid form, have provided us the picture of <i>Hanumān</i>.</p> 
+			<p>&#x201c;﻿ततः पश्यति धर्मात्मा तत्सर्वं योगमास्थितः&#x201d;, &#x201c;तत्सर्वं तत्त्वतो दृष्ट्वा धर्मेण ﻿स महाद्युतिः&#x201d;</p>
+			<p>We too can see him in the same way if we acquire the <i>śuddha dṛshṭi</i> and <i>satyadṛshṭi</i> of those <i>Maharshis</i>. These words are not utterances of lunatics, or a propaganda of propagandists or poetic fancies or fanciful imaginations. But a universal truth which can be experienced by all cultured and refined people.</p>
+			<p>We would like to respectfully remember here a sentimentful context which emerged when our Mahārguru worshipped Hanumān through a stotragāna of Hanūmatpañcaratna after experiencing in the inner visions during the Brahmī state, both Lord Hanumān who is the attributed and embodied form of ŚrīRāma, along with ŚrīRāma, who in turn is the prāṇa of prāṇas. He had said &#x201c;He is the master who can not only help in conquering the external enemies but also in conquering mighty wrestlers in the form of Yogavighnas. Characters such as Simhika, Akshakumāra etc., whom the Rāmayaṇa describes as the ones conquered by Hanumān are nothing but Yogavighnas. He is the one who grants siddhis. He is also a great help to the attainment of Moksha, by brining about the samādhi of Rāmabhakti Samrājya.</p>
+			<p>Thus, we have discussed about Lord <i>Hanumān</i>. We shall now take up the discussion on the celebration. (of <i>Hanumajjayanti</i>.)</p>
+			<h3>The day and time of the festival</h3>
+			<p>When should this festival be celebrated? This topic can be discussed in two parts, viz the month, the day and the star on which it should be celebrated and precisely at what time of that day.</p>
+			<p>The three traditions that are in vouge in the celebration of Hanumajjayantī are as follows:</p>
+			<ol>
+				<li>Celebrating on <i>Caitra Pūrṇimā</i>.</li>
+				<li>Celebrating on <i>Kārtika Kṛshṇa Caturdaśī</i></li>
+				<li>Celebrating on <i>Margaśira śukla trayodaśī</i>.</li>
+			</ol>
+			<p>The last one is more in vogue in South India. The other two are more prevalent in North India. Moreover there is a custom of celebrating this festival on <i>Vaiśakha Kṛshṇa Trayodashī</i> also in South India.</p>
+			<p>Let us first have a look at the contents in the texts such as <i>Purāṇas, Pūjākalpas</i> etc. which are supportive of the above traditions, and later we shall take up the propriety of reasoning etc.</p>
+			<p><i>Uthsava Sindhu</i> a book on <i>pūjākalpas</i> tells us that Lord <i>Śiva</i> himself took birth as a leader of the monkeys, in the womb of <i>Añjanā Devī</i> on a Tuesday in <i>Mesha lagna</i> and <i>Svāti nakshatra</i>, in the dark half of the <i>kārtika māsa</i>.</p>
+			<p class="shloka">
+				﻿ऊर्जस्य चासिते पक्षे स्वात्यां भौमे कपीश्वरः ।<br />
+				﻿मेषलग्नेऽञ्जनीगर्भात् शिवः प्रादुरभूत् स्वयम् ॥
+			</p>
+			<p><i>Vrata Ratnākara</i> expresses the same opinion in different words. The details of <i>Añjaneya&#x2019;s</i> birth and childhood plays provided in the <i>Uttarakānḍa</i> of <i>Valmiki Rāmāyaṇa</i> also support the above said purport. In the book we see a verse as below -</p>
+			<p class="shloka">
+				यमेव दिवसं ह्येष ग्रहीतुं भास्करं प्लुतः ।<br />
+				﻿तमेव दिवसं राहुः जिघृक्षति दिवाकरम् ॥ <span class="gap">(रामा.  उत्तरकाण्ड ﻿35-31)</span>
+			</p>
+			<p><i>Añjanādevī</i> had moved away to fetch food for the newborn baby <i>Āñjaneya</i>. At that time, the baby mistaking the rising sun for a fruit jumped to the skies to grab him. The same day <i>Rāhu</i> also wanted to seize the sun.</p>
+			<p>The solar eclipse takes place on a new moon day. <i>Mesha lagna</i> occurs only in the night of <i>Kārtikamāsa</i>. So we can guess that <i>Hanumān</i> was born on the night of <i>caturdaśī</i> of the <i>Kārtika</i> month. And the next day was <i>Amāvāsya</i>, on which the event of <i>Hanumān</i> leaping to catch the sun took place.</p>
+			<p>Then why did the tradition of worshipping <i>Āñjaneya</i> specially on <i>caitraśukla pūrṇimā</i> come into vogue? It is so because, festivities like the <i>Rāmanavamī</i>, the divine marriage between <i>Sītā</i> and <i>Rāma</i> and the coronation of <i>ŚrīRāma</i> are very close to <i>caitra pūrnimā</i>, and so it is quite natural to specially celebrate the festival of <i>Hanumān</i> who was the supreme devotee of <i>Rāma.</i> We can guess that this <i>Hanumāntotsava</i> itself was in course of time came to be celebrated as <i>Hanumajjayanthi</i>. Also, previously we have discerned at the <i>ślokas</i> of the <i>Purāṇas</i> which state that <i>Āñjaneya</i> was born as a partial incarnation of <i>Śiva</i>. The <i>Vāyavīya purāṇa</i> states that a special <i>pūja</i> called <i>&#x2018;Damanotsava&#x2019;</i> should be offered to all the deities, and especially to <i>Śiva</i> on the day of <i>Caitra Śukla Pūrṇimā.</i></p>
+			<p class="shloka">
+				﻿संवत्सरकृतार्चायाः साफल्यायाखिलान् सुरान् ।<br />
+				﻿दमनेनार्चयेच्चैत्र्यां विशेषेण सदाशिवम्” <span class="gap">﻿(वा. पु.  परि ﻿11, पुट ﻿- 62)</span>
+			</p>
+			<p>Thus, this day on which a special <i>pūja</i> was offered to <i>Āñjaneya</i> who is revered as a partial incarnation of <i>Śiva</i>, later came to be known as <i>Hanumajjayantī</i> in traditon. In North India, this day is called <i>Pajūno Pūno</i>, and celebrated as a birthday of a prince by name <i>Pajūno</i> who was a <i>siddhapurusha</i>.</p>
+			<p>In South India, the thirteenth day of <i>Margaśira Śuddha māsa</i> is marked as <i>&#x2018;Hanumad Vratam&#x2019;</i>. On the preceeding two days, <i>Vaikunṭha Ekadaśī</i> and <i>Dvadaśī</i> worships which are dear to <i>Mahāvishṇu</i> have been over. And on the full moon day, the grand festival of <i>Śiva</i> viz. <i>Andhakāsurasamhāra</i> have been over. And on the day of <i>trayodaśī</i> which falls between the two, it is but natural to worship <i>Hanumān</i> the brave super devotee, who is intimately connected to both <i>Vishṇu</i> and <i>Śiva</i>. It is possible that this day of worship itself was latter called as <i>Hanumajjayantī</i>.</p>
+			<p>Among these three different days of celebration, the second one i.e. the precept that <i>Hanumajjayantī</i> should be observed on <i>Kārtika Kṛshṇa Caturdaśi tithi</i> is in accordance with the clear statements of <i>ŚrīmadRāmāyaṇa</i> and the rule in the <i>Pūjaśāstras</i>. The month of <i>Kārtika</i> is dear to <i>Śiva</i>. And <i>Caturdaśī</i> of the dark half is even dearer. Therefore this is the day best suited for the worship of <i>Hanumān</i> also who is respected as the partial incarnation of <i>Śiva</i>. Thus, by the view points of both the <i>Śāstras</i> and the connection with the original deity (i.e. <i>Śiva</i>), it is most appropriate to consider <i>kārtika śukla caturdashi tithi</i> itself as the (right) day for (the observation of) <i>Hanumajjayanti</i>. The other two days proposed are also considered excellent for the worship of <i>Hanumān</i>. We have to understand that <i>KārtikaKṛshṇa Caturdaśī</i> is more preferable compared to the other two days for the worship of <i>Hanumān</i> as his birth day.</p>
+			<p>&#x201c;When we came across contradictory statements in the <i>Purāṇas</i> with regard to any subject matter, we have to resolve the contradictions by concluding that the event occurred in one <i>kalpa</i> as per that <i>purāṇa</i> and the other occurred in another <i>kalpa</i> according to this <i>purāṇa</i>.&#x201d; says a <i>purāṇa</i> precept.</p>
+			<p class="shloka">
+				﻿क्वचित् क्वचित्पुराणेषु विरोधे यदि लभ्यते ।<br />
+				﻿कल्पभेदादिभिस्तत्र व्यवस्था सद्भिरिष्यते&#x201d; ॥
+			</p>
+			<p>Thus all the three factions can be satisfied by holding that <i>Hanumāns&#x2019;</i> birth took place on the fourteenth day of the <i>Kṛshṇapaksha</i> in the month of <i>Kārtika</i> in a certain <i>Kalpa</i>; in another <i>kalpa</i> it happened in <i>Mārgaśira Śuddha pūrnimā</i> and in yet in another <i>Kalpa</i> it took place on <i>Caitra Śuddha pūrnimā</i>. But many interpolations are seen in the statements of <i>Purāṇas</i>. Some statements give the purports which are not in tune with the main meaning. Also, as there are no clear <i>śāstravacanas</i> to state that the birth of <i>Hanumān</i> took place either in <i>Caitra</i> or <i>margaśira</i> we honour the tradition of celebrating the day on the <i>Kārtika Kṛshṇa caturdaśi</i> itself. It is popular to celebrate <i>Hanumajjayanthi</i> on <i>Vaiśakha Kṛshṇa daśami</i> in South India.</p>
+			<p>And at what time should the special <i>pūja</i> of <i>Hanumān</i> be performed on the day of <i>KarthikaKṛshṇa caturdaśī</i>? &#x201c;His incarnation took place in the <i>Meshalagna</i>&#x201d; say the <i>śāstras</i>. <i>Mesha lagna</i> occurs at night and on that night, that time happens to be <i>Māsaśivarātri</i> also. Therefore the special worship pertaining to his <i>avatāra</i> should be done in the night. And, it should be supposed that the day of worship shall be only on the day when <i>Caturdaśī tithi</i> extends through the night.</p>
+			<h3>Pūja Vidhi: (Precepts of worship)</h3>
+			<p>Those who perform the <i>Vrata</i> should observe fast on that day. Those who cannot afford to fast may take <i>sāttvik</i> food such fruits, tubers, milk, etc., which have been offered to God. Those who just perform the <i>pūja</i> of <i>Hanumān</i> without the vows of the <i>vrata</i>, should be on fast until the <i>pūja</i> is over and take the <i>prasāda</i> afterwards. But those who do it as a <i>vrata</i> should be in observance for the whole day, in accordance to the vows made. And after the worship of <i>ŚrīRāma</i> in the night, the worship of <i>Prāṇadevaru</i>, his greatest servant, should be done. <i>Pañcopacāra pūja</i> or <i>shoḍaśopacāra pūja</i> should be offered, as per scriptural precepts. It is best to do <i>Pañcāmṛta abhisheka</i> in the <i>upacāra</i> of bath to the Lord. For decorating the Lord, applying of fragrant oil and <i>kuṅkuma</i> should be specially done. The best among <i>naivedyas</i> would be the preparation made with Bengal gram and jaggery. As part of <i>pūja</i>, just as music and dance are offered to the Lord, the offering of wrestling and gymnastics in the presence of the Lord as a form of <i>seva</i> is also in vogue. Those who are able (bodied), should keep awake for the whole night and keep singing the glories of the Lord.</p>
+			<h3><i>Pūja</i> Rules and the Science behind that</h3>
+			<p>1. As <i>Hanumān</i> is the preeminent servitor of <i>Parabrahmamūrtī ŚrīRāma</i>, it is proper that the <i>prasāda</i> that has been offered to <i>ŚrīRāma</i> is offered to <i>Hanumān</i> also. As proclaimed in the statements—</p>
+			<p class="shloka">
+				&#x201c;दासोऽहं कोसलेन्द्रस्य रामस्याकिष्टकर्मणः&#x201d;<br />
+				&#x201c;अक्रूरस्त्वभिवन्दनेऽथ हनुमान् दास्ये च सख्येर्जुनः&#x201d;
+			</p>
+			<p><i>Hanumān</i> is the ultimate in <i>Dāsabhakti</i>. Devotees are indeed the seekers of <i>Prasāda</i> of Gods as is evident from &#x201c;प्रसादं वाञ्छद्भिः&#x201d; And it is right indeed to offer the <i>Prasāda</i> of <i>Rāma</i> who is the Lord of <i>Hanumān&#x2019;s Prāṇa</i> and who is also a <i>prāṇārāma</i>.</p>
+			<p>Why is <i>Pañcamṛuta Abhisheka</i> specially prescribed to (the worship of) <i>Hanumān</i>? It is because, just like Lord <i>Śiva</i>, <i>Hanumān</i> is also <i>Abhishekapriya</i>. As he is the form of <i>pañcaprāṇas</i>, it is appropriate that he is given a holy bath of <i>pañcāmṛtas</i>. The five holy things are <i>kshīra</i> (milk) <i>dadhi</i>, (curds), <i>ghṛta</i> (ghee), <i>madhu</i> (honey) and sugar. These are called <i>pañcāmṛtas</i>. Each one of them has a special sweetness but all are tasty. Similarly, though there is a diversity in the five different worships to the Lord, all are dear (tasty) to god. All lead to happiness, both in this world and in the next. From the physical point of view also, they are great tonics for the cure of bodily and mental ailments.</p>
+			<p>a) Cow&#x2019;s milk is the best among milks. <i>Caraka Samhit</i> a describes this substance as one which is sweet cool, soft, oily, thick, sticky, heavy and pleasant; it increases vitality and it is the greatest elixir.</p>
+			<p class="shloka">
+				﻿स्वादु शीतं मृदु स्निग्धं गाढं च श्लक्ष्णपिच्छिलम् ।<br />
+				﻿गुरु मन्दं प्रसन्नं च गव्यं दशगुणं पयः ॥
+			</p>
+			<p class="shloka">
+				﻿तदेवं गुणमेवौजः सामान्यादभिवर्धयेत् ।<br />
+				﻿प्रवरं जीवनीयानां क्षीरमुक्तं रसायनम् ॥ <span class="gap">चरक.  सू. (27, 217-218)</span>
+			</p>
+			<p>b) &#x201c;Cow&#x2019;s Curd is very tasty, increases heat, increases virility, unctuousness and increases strength. While being cooked, it produces sourness and heat. It removes rheumatism., It is auspicious and brings robustness, And cures a number of diseases like catarrh, diarrhea, cough, and remittent fever, tastelessness, urinary difficulties and weakness, says the same work.</p>
+			<p class="shloka">
+				रोचनं दीपनं वृष्यं स्नेहनं बलवर्धनम् ।<br />
+				﻿पाकेऽम्लमुष्णं वातघ्नं मङ्गल्यं बृंहणं दधि ॥<br />
+				﻿पीनसे चातिसारे च शीतके विषमज्वरे ।<br />
+				﻿अरुचौ मूत्रकृच्छ्रे च कार्श्ये च दधि शस्यते ॥ <span class="gap">(चरक, सू ﻿27, 225-226)</span>
+			</p>
+			<p><strong>c) Ghee:</strong> &#x201c;Cow&#x2019;s ghee brightens intelligence, improves memory, provides strength, brings comprehending intelligence, is a purifier, removes rheumatism and exhaustion, sets right the voice, is antibilious, is a nourisher, improves digestion, is sweetish after digestion, increases vitality and causes firmness of the body. Cows&#x2019; ghee when freshly clarified has curative qualities. It is like nectar, antitoxic, good for the eyes, healthy and increases longevity of life, improves strength and intelligence and is the greatest elixir&#x201d; says the <i>Yogaratnākara</i>.</p>
+			<p class="shloka">
+				﻿धीकान्तिस्मृतिकारकं बलकरं मेधाकरं शुद्धिकृत् ।<br />
+				﻿वातघ्नं श्रमनाशनं स्वरकरं पित्तापहं पुष्टिदम् ॥
+			</p>
+			<p class="shloka">
+				﻿वह्नेः वृद्धिकरं विपाकमधुरं वृष्यं वपुःस्थैर्यदम् ।<br />
+				﻿सेव्यं गव्यघृतोत्तमं बहुगुणं सद्यः समावर्तितम् ॥
+			</p>
+			<p class="shloka">
+				﻿सर्पिर्गवां चामृतकं विषघ्नम्
+			</p>
+			<p class="shloka">
+				﻿चक्षुष्यमारोग्यकरं च वृष्यम् ।<br />
+				﻿रसायनं मन्दमतीव मेध्यम्<br />
+				﻿स्नेहोत्तमं चेति बुधाः स्तुवन्ति ॥
+			</p>
+			<p><strong>d) Honey:</strong> &#x201c;Honey causes rheumatism, is heavy, cool, removes hemorrhages and phlegm, and heals cuts and wounds in the body. It has both sweetish and astringent tastes&#x201d; says the <i>carakasamhitā</i></p>
+			<p class="shloka">
+				वातलं गुरु शीतं च रक्तपित्तकफापहम् ।<br />
+				﻿सन्धातृच्छेदनं रूक्षं कषायमधुरं मधु <span class="gap">﻿(चरक सू. ﻿27-244)</span>
+			</p>
+			<p><strong>e) Sugar:</strong> All types of sugar remove thirst, hermorrhages, and heat in the body.</p>
+			<p class="shloka">
+				तृष्णाऽसृक्पित्तदाहेषु प्रशस्ताः सर्वशर्कराः ॥ <span class="gap">﻿(चरक.  सू. ﻿27-241)</span>
+			</p>
+			<p>When we look at the qualities of these above five things, we find that every one of them has medicinal value, and, with a suitable combination, can remove defects mutually, (if any). For example, fasting increases acidity. But ghee and honey can remove acidity. Honey causes rheumatism, but curds removes it. <i>&#x201c;Dadhi vātajit&#x201d;.</i> It is well known that milk and ghee help to effectively get over many imbalances, produced by fasting.</p>
+			<p class="shloka">
+				&#x201c;गव्ये क्षीरघृते श्रेष्ठे&#x201d; <span class="gap">(अष्टांङ्ग - 5-41)</span>
+			</p>
+			<p class="shloka">
+				﻿उपवासाध्वभाष्यस्त्रीमारुतातपकर्मभिः क्लान्तानाम्<br />
+				﻿अनुपानार्थं पयः पथ्यं यथामृतम् ” <span class="gap">(चरक सू. ﻿27-320)</span>
+			</p>
+			<p>Thus when with these things, which have great curative properties materially speaking, the graceful Lord is bathed and when the <i>Prasāda</i> is taken with a sense of devotion, the <i>prasāda</i> will bring about the tranquil of elements (<i>dhātu prasannathe</i>). Also, as these facilitate immortality they are appropriately called <i>Amṛta</i>.</p>
+			<p>(A word of caution here please. This <i>prasāda</i> should be taken immediately after the <i>pūja</i> and not after a big time gap. If the gap is more, the consuming of the <i>Prasāda</i> may cause ill health.)</p>
+			<p>2. Likewise the combination of Bengal gram and jaggery is an item which is highly recommended as a special <i>naivedya</i> to Lord <i>Hanumān</i>, is one which can bring about great benefits, in the wordly sense also.</p>
+			<p>&#x201c;﻿चणकः शीतलो रूक्षः पित्तरक्तकफापहः । लघुः कषायो विष्टम्भी वातलो ﻿ज्वरनाशनः ॥</p>
+			<p>says <i>Bhāvaprakāśa</i></p>
+			<p>This substance is a coolant, effective in curing dryness, bile and phlegm. It makes the body (feel) light, is astringent and prevents the passage of stools, causes gas and cures fever. Raw Bengal gram is tender, very tasty, removes <i>Pittaśukra</i> and is a salutary foodstuff. Jaggery gives strength, causes heaviness of the body, is oily, removes rheumatism and purifies urine. Though Bengalgram is full of many qualities, it causes gas. But when added with jaggery, gas formation is prevented. By the combination of these two, benefits will increase and harmful effects vanish. When taken as a <i>prasāda</i>, afflictions of the mind also got removed. By taking this <i>naivedya</i>, the strengths of the body, mind and the self are brought about undoubtedly.</p>
+			<p>Why this Bengalgram and jaggery are specially suggested for <i>naivedya</i> to <i>Āñjaneyasvāmī</i>? Some may casually reply to this saying that they are liked very much by monkeys and as it is dear to God in the form of monkey, so they are recommended. This is not correct. Then, why not ground-nuts and jaggery which are loved more? Not only this. When monkies stoke each other&#x2019;s body, they eat insects like the lice etc., found in the hairs. Some may even ask - why not that lice also be recommended as <i>naivedya</i> to <i>Hanumān</i> who has the form of a monkey? It is not for these reasons that the offering of Bengalgram and jaggery are recommended. So, we have to find out which offering helps to obtain the experience of the divine blissful form of <i>Hanumān</i>. The actual reason is, such an offering when taken (by the devotees), helps in the opening up of the centers which help the visualization of <i>Āñjaneya</i> and this can be known by the seekers of <i>Prakrti</i> &amp; <i>Purusha</i>. The practice of offering garlands of betel leaves and garlands of <i>Uddina Vade (a fried prepration of the common pulse)</i> for the warding off evils, is also in vogue.</p>
+			<p>Now, regarding the display of wrestling and gymastic feats infront of <i>Hanumān</i>. <i>Hanumān</i> is the supreme wrestler in all the three worlds. By his grace, the art of wrestling can be mastered. It is but appropriate, that the display of that art is done before him as a form of <i>seva</i>. At the time of that offering one has to reflect that <i>Hanumān</i> is unequalled in conquering the wrestlers not only in the external world but also the demoniacal wrestlers in the inner world who are in the form of obstacles that impede the spiritual advancement of the <i>sādhakas</i>.</p>
+			<p>It is quite natural to reflect upon his story for the whole day and night on <i>Hanumajjayanti</i>. The <i>Sundarakānḍa</i> of the <i>Rāmāyaṇa</i> is aptly named as <i>&#x2018;Hanumadvijaya.&#x2019;</i> Throughout this canto of the epic, the Joy of his great supremacy and successive victories shine forth.</p>
+			<p class="shloka">
+				&#x201c;श्रुत्वा तु पञ्चमं काण्डं हनुमद्विजयाङ्कितम् ।&#x201d;<br />
+				&#x201c;हनुमद्विजयं काण्डं यः पारायणमाचरेत्॥&#x201d;
+			</p>
+			<p>People chant this gem of an epic on that day with great devotion. Parts from other <i>Purāṇas</i> and <i>Itihāsas</i> which sing his glory can also be contemplated. When done so, all the <i>purushārthas</i> will be accomplished by the grace of that great Lord&#x2019;s divine qualities and capabilities.</p>
+			<p><i>Hanumān</i> who is worshipped as per the modalities stated above on the great day of <i>Hanumajjayanti</i>, is the supreme devotee of <i>ŚrīRāma</i> and the one who has <i>ananyabhāva</i> with <i>ŚrīRāma</i>.</p>
+			<p>When devotees worship him as stated in the following lines—</p>
+			<p class="shloka">	
+				<i>&#x201c;Tanna bhaktara jeevanave tanna jeevanam</i><br />
+				<i>Tanna bhaktar tiḷiye tām bereyalla&#x201d;</i><br />
+				<i>&#x201c;Hanumana matave hariya mata&#x201d;</i>
+			</p>
+			<p>&#x201c;The life of his devotees is his own life.</p>
+			<p>If the devotees understand him, he won&#x2019;t be different&#x201d;</p>
+			<p>&#x201c;The thought of <i>Hanumān</i> itself is the thought of <i>Hari</i>&#x201d;</p>
+			<p>and become one with his spirit, they undoubtedly attain <i>samādhi</i> in <i>ŚrīRāma</i>, who is the Lord of <i>Hanumān&#x2019;s</i> soul.</p>
+			<p>Thus, <i>Hanumajjayanti</i> is one among the auspicious festivals which should be observed by all, who aspire for <i>śreyas</i> and <i>preyas</i>, as the celebration of the <i>jayantī</i> of <i>Hanumān</i> who was the supreme servitor and dear to <i>ŚrīRāma</i> and <i>Sītamāta</i>, pleases the Lord, and brings about the removal of bodily and mental ailments.</p>
+			<p>In addition to the important festivals described earlier, there are a number of festivals in the month of <i>Caitra</i> such as <i>Vasanta Navarātradurgāpūja</i> (From the first day of <i>Caitra</i> for nine days, day and night) <i>Bhrātṛdvitīya (Caitra śuddha dvitīya) Jagadiśa Vrata</i>, (Four Mondays of <i>Caitra</i>), <i>Arundhatī Vrata</i> (From the first day of <i>Caitra</i> to the third) <i>GaṇaGauriVrata</i> (<i>Caitra śuddha Tṛitīya</i>) <i>Śītalāshṭmī</i> (<i>Caitra Kṛshṇa Ashṭamī</i>) <i>Anaṅga Trayodaśī</i>, (<i>Caitra śukla Trayodaśi</i>,) etc. which are being observed. But only the most important festivals are discussed here, as examples. All festivals are important from the view point of devotees who celebrate them with devotion and enthusiasm and according to the precepts. Even so, only the most important festivals have been selected for discussion, keeping in mind the references in <i>śāstras</i> pertaining to those festivals, their range, depth, the people and their number who are entitled to observe them.</p>
+			<div class="subhead">* * * * * * * * *</div>
+		</div>
+	</div><hr />
 </div>
+
+    <!-- Footer -->
+    <div id="k-subfooter">
+        <div class="container"><!-- container -->
+            <div class="row"><!-- row -->
+                <div class="col-lg-6">
+<!--
+                    <p class="copy-text text-left">
+                        © 2016 University of Mysore.
+                    </p>
+-->
+                </div>
+                <div class="col-lg-6">
+                    <p class="copy-text text-right">
+                        <!-- <a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Sitemap</a> -->
+<!--
+                        <a href="<?=BASE_URL?>About_IASc/Contact_details/">Contact</a> | 
+                        <a href="<?=BASE_URL?>About_IASc/Site_Index">Site index</a>
+-->
+                    </p>
+                </div>
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </div>
+
+    <!-- End Main page layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

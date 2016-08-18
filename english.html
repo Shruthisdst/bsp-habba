@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Bharatha Samskruthi Prakashana</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" id="royal_enqueue_Lato-css" href="http://fonts.googleapis.com/css?family=Lato%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&amp;ver=1.0.0" type="text/css" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- Javascript calls
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/archive.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/flat.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/aux.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav class="navbar navbar-default navbar-fixed-top wider">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#"><img src="images/logo.png" alt="Bharatha Samskruthi Prakashana" class="logo"></a></li>
+                    <li class="active"><a href="books.html">Books</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End Navigation
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-12 text-center">
+                <ul class="list-inline sub-nav">
+                    <li><a href="kannada.html">Kannada</a></li>
+                    <li><a>·</a></li>
+                    <li><a href="english.html">English</a></li>
+                    <li><a>·</a></li>
+                    <li><a>Search</a></li>
+                    <li id="searchForm">
+                        <form class="navbar-form" role="search" action="<?=BASE_URL?>search/field/" method="get">
+                            <div class="input-group add-on">
+                                <input type="text" class="form-control" placeholder="Word" name="word" id="word">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+			<h3>Bharatha Samskruthi Prakashana</h3>
+			<h4>Festivals of Bharata</h4>
+		</div>
+	</div><hr />
+	<div class="row">
+		<div class="col-md-12" id="snippet">
+			<div class="covers">
+				<a href="books/002/001.html" class="box-shadow-outset"><img src="images/002/01.jpg" alt="Akshaya Tṛtīyā" title="Akshaya Tṛtīyā"/>
+					<p>Akshaya Tṛtīyā</p>
+				</a>
+				<a href="books/002/002.html" class="box-shadow-outset"><img src="images/002/02.jpg" alt="Ananta Padmanābha Vrata" title="Ananta Padmanābha Vrata"/>
+					<p>Ananta Padmanābha Vrata</p>
+				</a>
+				<a href="books/002/003.html" class="box-shadow-outset"><img src="images/002/03.jpg" alt="Cāturmāsya" title="Cāturmāsya"/>
+					<p>Cāturmāsya</p>
+				</a>
+				<a href="books/002/004.html" class="box-shadow-outset"><img src="images/002/04.jpg" alt="Dīpāvaḷi" title="Dīpāvaḷi"/>
+					<p>Dīpāvaḷi</p>
+				</a>
+				<a href="books/002/005.html" class="box-shadow-outset"><img src="images/002/05.jpg" alt="Gaṇeśa Caturthī" title="Gaṇeśa Caturthī"/>
+					<p>Gaṇeśa Caturthī</p>
+				</a>
+				<a href="books/002/006.html" class="box-shadow-outset"><img src="images/002/06.jpg" alt="Gaurī Festival" title="Gaurī Festival"/>
+					<p>Gaurī Festival</p>
+				</a>
+				<a href="books/002/007.html" class="box-shadow-outset"><img src="images/002/07.jpg" alt="Hanumajjayantī" title="Hanumajjayantī"/>
+					<p>Hanumajjayantī</p>
+				</a>
+				<a href="books/002/008.html" class="box-shadow-outset"><img src="images/002/08.jpg" alt="Holi Festival" title="Holi Festival"/>
+					<p>Holi Festival</p>
+				</a>
+				<a href="books/002/009.html" class="box-shadow-outset"><img src="images/002/09.jpg" alt="Janma Dina and Puṇya Tithi of ŚrĪ Guru-Ācāryas" title="Janma Dina and Puṇya Tithi of ŚrĪ Guru-Ācāryas"/>
+					<p>Janma Dina and Puṇya Tithi</p>
+				</a>
+				<a href="books/002/010.html" class="box-shadow-outset"><img src="images/002/10.jpg" alt="Śrī Kṛshṇa Jayantī&#x2014;Janmāshṭamī" title="Śrī Kṛshṇa Jayantī&#x2014;Janmāshṭamī"/>
+					<p>Śrī Kṛshṇa Jayantī&#x2014;Janmāshṭamī</p>
+				</a>
+				<a href="books/002/011.html" class="box-shadow-outset"><img src="images/002/11.jpg" alt="Kṛttikā Dīpotsava" title="Kṛttikā Dīpotsava"/>
+					<p>Kṛttikā Dīpotsava</p>
+				</a>
+				<a href="books/002/012.html" class="box-shadow-outset"><img src="images/002/12.jpg" alt="Mahāśivarātri" title="Mahāśivarātri"/>
+					<p>Mahāśivarātri</p>
+				</a>
+				<a href="books/002/013.html" class="box-shadow-outset"><img src="images/002/13.jpg" alt="Makara Saṅkrānti" title="Makara Saṅkrānti"/>
+					<p>Makara Saṅkrānti</p>
+				</a>
+				<a href="books/002/014.html" class="box-shadow-outset"><img src="images/002/14.jpg" alt="Nāgapūjā-Nāgarapañcamī" title="Nāgapūjā-Nāgarapañcamī"/>
+					<p>Nāgapūjā-Nāgarapañcamī</p>
+				</a>
+				<a href="books/002/015.html" class="box-shadow-outset"><img src="images/002/15.jpg" alt="Narasimha Jayantī" title="Narasimha Jayantī"/>
+					<p>Narasimha Jayantī</p>
+				</a>
+				<a href="books/002/016.html" class="box-shadow-outset"><img src="images/002/16.jpg" alt="Navarātra Mahotsava" title="Navarātra Mahotsava"/>
+					<p>Navarātra Mahotsava</p>
+				</a>
+				<a href="books/002/017.html" class="box-shadow-outset"><img src="images/002/17.jpg" alt="Prathamaikādaśī" title="Prathamaikādaśī"/>
+					<p>Prathamaikādaśī</p>
+				</a>
+				<a href="books/002/018.html" class="box-shadow-outset"><img src="images/002/18.jpg" alt="Śrī Rāmanavamī" title="Śrī Rāmanavamī"/>
+					<p>Śrī Rāmanavamī</p>
+				</a>
+				<a href="books/002/019.html" class="box-shadow-outset"><img src="images/002/19.jpg" alt="Ratha Saptamī" title="Ratha Saptamī"/>
+					<p>Ratha Saptamī</p>
+				</a>
+				<a href="books/002/020.html" class="box-shadow-outset"><img src="images/002/20.jpg" alt="Subbarāyana Shashṭhī" title="Subbarāyana Shashṭhī"/>
+					<p>Subbarāyana Shashṭhī</p>
+				</a>
+				<a href="books/002/021.html" class="box-shadow-outset"><img src="images/002/21.jpg" alt="Ugādi Festival" title="Ugādi Festival"/>
+					<p>Ugādi Festival</p>
+				</a>
+				<a href="books/002/022.html" class="box-shadow-outset"><img src="images/002/22.jpg" alt="Upākarma" title="Upākarma"/>
+					<p>Upākarma</p>
+				</a>
+				<a href="books/002/023.html" class="box-shadow-outset"><img src="images/002/23.jpg" alt="Utthānadvādaśī" title="Utthānadvādaśī"/>
+					<p>Utthānadvādaśī</p>
+				</a>
+				<a href="books/002/024.html" class="box-shadow-outset"><img src="images/002/24.jpg" alt="Varamahālakshmīvrata" title="Varamahālakshmīvrata"/>
+					<p>Varamahālakshmīvrata</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <!-- Footer -->
+    <div id="k-subfooter">
+        <div class="container"><!-- container -->
+            <div class="row"><!-- row -->
+                <div class="col-lg-6">
+<!--
+                    <p class="copy-text text-left">
+                        © 2016 University of Mysore.
+                    </p>
+-->
+                </div>
+                <div class="col-lg-6">
+                    <p class="copy-text text-right">
+                        <!-- <a href="">Terms of Use</a> | <a href="">Privacy Policy</a> | <a href="">Sitemap</a> -->
+<!--
+                        <a href="<?=BASE_URL?>About_IASc/Contact_details/">Contact</a> | 
+                        <a href="<?=BASE_URL?>About_IASc/Site_Index">Site index</a>
+-->
+                    </p>
+                </div>
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </div>
+
+    <!-- End Main page layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
