@@ -54,7 +54,7 @@ ul li{
 }
 #snippet{
 	margin: 30px 0;
-    padding: 20px 22px 40px 22px;
+    padding: 20px 25px 40px 25px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
     line-height: 1.3;
     min-height: 200px;
@@ -78,8 +78,24 @@ ul li{
 .kannada h3{
 	font-size: 1.4em;
 }
+.kannada #snippet h3{
+	font-size: 1.25em;
+	color: #950C0C;
+}
+.english #snippet h3{
+	font-size: 1.5em;
+	color: #950C0C;
+}
 .english{
 	font-family: 'GentiumPlus-R';
+}
+.HabbaTitle{
+	text-align: center;
+	padding-bottom: 5px;
+    border-bottom: 1px solid #DEDEDE; 
+	margin-bottom: 1em;
+	font-size: 1.8em;
+	color: #cc6600;
 }
 .subhead{
 	margin: 2em 0em 0 0em;
@@ -87,15 +103,6 @@ ul li{
 	font-size: 1.5em;
 	color: #cc6600;
 }
-.title
-{
-	margin-bottom: 1em;
-	text-align: center;
-	font-size: 2.5em;
-	font-weight: bold;
-	color: #e68a00;
-}
-
 .text{
 	margin-left: 15em;
 	font-size: 0.9em;
@@ -103,6 +110,7 @@ ul li{
 .shloka{
 	font-size: 0.9em;
 	margin-left: 2em;
+	color: #262626;
 }
 /*
 .gap{
@@ -119,12 +127,28 @@ ul li{
 .bigfont{
 	font-size: 2em
 }
-ol li{
-	padding-bottom: 1em;
+/*
+ol{
+     padding:0;
+  counter-reset:item;
 }
-ul li{
-	padding-bottom: 1em;
+ol>li {
+  margin:0;
+  padding:0 0 0.7em 2em;
+  text-indent:-1.6em;
+  list-style-type:none;
+  counter-increment:item;
 }
+ol>li:before {
+  display:inline-block;	
+  width:1.5em;
+  padding-right:0.5em;
+  font-weight:bold;
+  text-align:right;
+  content:counter(item) ".";
+}
+*/
+
 .small-gap{
 	float: right;
 	padding-right: 40em;
