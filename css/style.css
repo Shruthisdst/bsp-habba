@@ -1,6 +1,20 @@
 /*styles for Dictionary words*/
-
-
+.head{
+	margin-bottom: 1.5em;
+	border-bottom: 1px solid #DEDEDE;
+}
+#title{
+	margin: 1em 0em 1em 0em;
+	
+}
+#lang{
+	float: right;
+	margin-top: 3em;
+}
+#right{
+	float: right;
+	margin-right: 3em;
+}
 p{
 	text-align: left;
 	line-height: 1.5em;
@@ -8,14 +22,14 @@ p{
 .text{
 	margin-left: 15em;
 }
-.shloka{
-	font-size: 0.95em;
-}
 .gap{
 	margin-left: 3em;
 }
 ol li{
 	padding-bottom: 1em;
+}
+.lower-alpha{
+	list-style-type: lower-alpha;
 }
 ul li{
 	padding-bottom: 1em;
@@ -59,7 +73,7 @@ ul li{
     line-height: 1.3;
     min-height: 200px;
 }
-#right{
+.right{
 	float: right;
 	margin-right: 3em;
 }
