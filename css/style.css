@@ -1,8 +1,16 @@
 /*styles for Dictionary words*/
 .head{
-	margin-bottom: 1.5em;
+	margin: 0em 0em 1.5em 0em;
 	border-bottom: 1px solid #DEDEDE;
+	font-family: 'Gubbi';
 }
+
+.engHead{
+	margin: 0em 0em 1.5em 0em;
+	border-bottom: 1px solid #DEDEDE;
+	font-family: 'GentiumPlus-R';
+}
+
 #title{
 	margin: 1em 0em 1em 0em;
 	
@@ -102,7 +110,9 @@ ul li{
 }
 .english{
 	font-family: 'GentiumPlus-R';
+	font-size: 1.13em;
 }
+
 .HabbaTitle{
 	text-align: center;
 	padding-bottom: 5px;
