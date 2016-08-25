@@ -13,7 +13,7 @@ $db = mysql_connect($host, $user, $password) or die("Not connected to database")
 $rs = mysql_select_db($database, $db) or die("No Database");
 mysql_query("set names utf8");
 mysql_query("DROP TABLE IF EXISTS habba");
-mysql_query("CREATE TABLE habba (book_id varchar(10), text varchar(500000)) ENGINE=MyISAM CHARACTER SET utf8 COLLATE utf8_general_ci");
+mysql_query("CREATE TABLE habba (book_id varchar(10), entry_id varchar(10), text varchar(500000)) ENGINE=MyISAM CHARACTER SET utf8 COLLATE utf8_general_ci");
 
 $books = scandir('books');
 foreach($books as $book)
@@ -38,10 +38,15 @@ foreach($books as $book)
 		}
 		else 
 		{
-			$doc = new DOMDocument();
-			$doc->loadHTMLFile($htmlFileName);
-			$text = addslashes($doc->saveHTML());
-			$query = "INSERT INTO habba VALUES('$bookid', '$text')";
+			$text = file_get_contents($htmlFileName);
+			//~ $doc = new DOMDocument();
+			//~ $doc->loadHTMLFile($htmlFileName);
+			//~ $text = addslashes($doc->saveXML());
+			//~ var_dump($text);
+			echo $file . "\n";
+			$text = str_replace("\n", "", $text);
+			$text = str_replace("\t", "", $text);
+			$query = "INSERT INTO habba VALUES('$bookid', '$name[0]', '$text')";
 			mysql_query($query) or die("Query Problem" . mysql_error() . "\n");
 		}
 	}
