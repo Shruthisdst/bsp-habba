@@ -145,13 +145,27 @@ if($num_rows > 0)
 	while($row = $result->fetch_assoc())
 	{
 		$text = $row['text'];
-		$list = preg_split("/ /", $text);
+		
 		$words = preg_split("/ /", $word);
 		foreach($words as $eachWord)
 		{
-			$text = preg_replace('/' . $eachWord . '/', '<span style="color: red">' . $eachWord . '</span>', $text);
+			//~ $text = preg_replace('/' . $eachWord . '/i', '<span style="color: red">' . $eachWord . '</span>', $text);
+			//~ echo $text;
+			$list = preg_split("/ /", $text);
+			if (in_array("$eachWord", $list))
+			{
+				foreach($list as $lines)
+				{
+					$lines = preg_replace('/' . $eachWord . '/i', '<span style="color: red">' . $eachWord . '</span>', $lines);
+					echo $lines;
+				}
+				
+			}
+			//~ var_dump(array_key_exists($eachWord, $list));
+			//~ var_dump($output);
+			
+			//~ 
 		}
-		echo $text;
 	}
 }
 ?>
