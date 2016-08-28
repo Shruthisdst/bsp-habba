@@ -123,14 +123,12 @@
 <?php
 include("connect.php");
 
-$word = $_GET['word'];
-//~ echo $word . "\n";
-$wordList = preg_replace("/ /", " | ", $word);
+$searchWord = $_GET['word'];
 
-$query = "select * from habba where text regexp '". $wordList . "'";
+$query = "select * from habba where text regexp '" . $searchWord . "'";
 $result = $db->query($query); 
 $num_results = $result ? $result->num_rows : 0;
-
+$fl = 1;
 if($num_results > 0)
 {
 	echo '<h3>' . $num_results;
@@ -144,30 +142,38 @@ if($num_rows > 0)
 {
 	while($row = $result->fetch_assoc())
 	{
+		$book_id = $row['book_id'];
+		$entry_id = $row['entry_id'];
+		$book_title = $row['book_title'];
 		$text = $row['text'];
+		echo '<h3>' . $book_title . '</h3>';
+
+		$doc = new DOMDocument();
+		libxml_use_internal_errors(true);
+		$text = mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8');
+		$doc->loadHTML($text);
 		
-		$words = preg_split("/ /", $word);
-		foreach($words as $eachWord)
+		$xpath = new DOMXpath($doc);
+		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+		if (!is_null($elements))
 		{
-			//~ $text = preg_replace('/' . $eachWord . '/i', '<span style="color: red">' . $eachWord . '</span>', $text);
-			//~ echo $text;
-			$list = preg_split("/ /", $text);
-			if (in_array("$eachWord", $list))
+			foreach ($elements as $element)
 			{
-				foreach($list as $lines)
+				echo "<br/>[". $element->nodeName. "]";
+				$nodes = $element->childNodes;
+				foreach ($nodes as $node)
 				{
-					$lines = preg_replace('/' . $eachWord . '/i', '<span style="color: red">' . $eachWord . '</span>', $lines);
-					echo $lines;
+					$res = $node->nodeValue;
+					$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
+					echo $res;
 				}
-				
 			}
-			//~ var_dump(array_key_exists($eachWord, $list));
-			//~ var_dump($output);
-			
-			//~ 
 		}
 	}
 }
+if($result){$result->free();}
+$db->close();
+
 ?>
 	</div>
 </div>
