@@ -128,7 +128,7 @@ $searchWord = $_GET['word'];
 $query = "select * from habba where text regexp '" . $searchWord . "'";
 $result = $db->query($query); 
 $num_results = $result ? $result->num_rows : 0;
-$fl = 1;
+
 if($num_results > 0)
 {
 	echo '<h3>' . $num_results;
