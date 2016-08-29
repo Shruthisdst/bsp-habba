@@ -159,13 +159,15 @@ if($num_rows > 0)
 		{
 			foreach ($elements as $element)
 			{
-				echo "<br/>[". $element->nodeName. "]";
+				//~ echo "<br/>[". $element->nodeName. "]";
+				echo "<br />";
 				$nodes = $element->childNodes;
+				$id = $element->getAttribute('id');
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
-					echo $res;
+					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $res);
+					echo $res . "<br />";
 				}
 			}
 		}
