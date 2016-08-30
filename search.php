@@ -166,8 +166,18 @@ if($num_rows > 0)
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $res);
-					echo $res . "<br />";
+					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $res);
+					//~ echo $res . "<br />";
+					$words = preg_split("/ /", $res);
+					$chunks = array_chunk($words, 10);
+					$chunk = $chunks[2];
+					echo ".........";
+					foreach($chunk as $line)
+					{
+						$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $line);
+						echo $line . " ";
+					}
+					echo ".........<br />";
 				}
 			}
 		}
