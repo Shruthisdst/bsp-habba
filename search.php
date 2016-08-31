@@ -146,7 +146,7 @@ if($num_rows > 0)
 		$entry_id = $row['entry_id'];
 		$book_title = $row['book_title'];
 		$text = $row['text'];
-		echo '<h3>' . $book_title . '</h3>';
+		echo '<h3>' . $book_title . '</h3><br />';
 
 		$doc = new DOMDocument();
 		libxml_use_internal_errors(true);
@@ -157,29 +157,37 @@ if($num_rows > 0)
 		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 		if (!is_null($elements))
 		{
+			echo "<ol>";
 			foreach ($elements as $element)
 			{
 				//~ echo "<br/>[". $element->nodeName. "]";
-				echo "<br />";
+				echo "<li>";
 				$nodes = $element->childNodes;
 				$id = $element->getAttribute('id');
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $res);
-					//~ echo $res . "<br />";
+					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?' . $searchWord . '">' . $searchWord . '</a>', $res);
+					echo $res;
 					$words = preg_split("/ /", $res);
 					$chunks = array_chunk($words, 10);
-					$chunk = $chunks[2];
-					echo ".........";
-					foreach($chunk as $line)
+					
+					foreach($chunks as $chunk)
 					{
-						$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $line);
-						echo $line . " ";
+						//~ print_r(array_values($chunk));
 					}
-					echo ".........<br />";
+					//~ $chunk = $chunks[2];
+					//~ echo ".........";
+					//~ foreach($chunk as $line)
+					//~ {
+						//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $line);
+						//~ echo $line . " ";
+					//~ }
+					//~ echo ".........<br />";
 				}
+				echo "</li>";
 			}
+			echo "</ol>";
 		}
 	}
 }
