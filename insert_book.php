@@ -44,8 +44,8 @@ foreach($books as $book)
 			
 			preg_match('#<div class="HabbaTitle" id="(.*?)">(.*?)<\/div>#', $text, $match);
 			$book_title = $match[2];
-			echo $book_title . "\n";
-			//~ echo $file . "\n";
+			//~ echo $book_title . "\n";
+			echo $file . "\n";
 			$query = "INSERT INTO habba VALUES('$bookid', '$name[0]', '$book_title', '$text')";
 			mysql_query($query) or die("Query Problem" . mysql_error() . "\n");
 		}

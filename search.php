@@ -160,22 +160,29 @@ if($num_rows > 0)
 			echo "<ol>";
 			foreach ($elements as $element)
 			{
-				//~ echo "<br/>[". $element->nodeName. "]";
+				
 				echo "<li>";
 				$nodes = $element->childNodes;
 				$id = $element->getAttribute('id');
+				if($id == "")
+				{
+					$parentElement = $element->parentNode;
+					$id = $parentElement->getAttribute('id');
+				}
+				
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?' . $searchWord . '">' . $searchWord . '</a>', $res);
+					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . rawurldecode($searchWord) . '#' . $id . '">' . $searchWord . '</a>', $res);
+					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?' . $searchWord . '">' . $searchWord . '</a>', $res);
 					echo $res;
-					$words = preg_split("/ /", $res);
-					$chunks = array_chunk($words, 10);
-					
-					foreach($chunks as $chunk)
-					{
+					//~ $words = preg_split("/ /", $res);
+					//~ $chunks = array_chunk($words, 10);
+					//~ 
+					//~ foreach($chunks as $chunk)
+					//~ {
 						//~ print_r(array_values($chunk));
-					}
+					//~ }
 					//~ $chunk = $chunks[2];
 					//~ echo ".........";
 					//~ foreach($chunk as $line)
