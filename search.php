@@ -122,6 +122,7 @@
 	<div class="row">
 <?php
 include("connect.php");
+include("common.php");
 
 $searchWord = $_GET['word'];
 
@@ -162,6 +163,7 @@ if($num_rows > 0)
 			{
 				
 				echo "<li>";
+				//~ echo "<br/>[". $element->nodeName. "]";
 				$nodes = $element->childNodes;
 				$id = $element->getAttribute('id');
 				if($id == "")
@@ -173,24 +175,35 @@ if($num_rows > 0)
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . rawurldecode($searchWord) . '#' . $id . '">' . $searchWord . '</a>', $res);
-					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?' . $searchWord . '">' . $searchWord . '</a>', $res);
-					echo $res;
-					//~ $words = preg_split("/ /", $res);
-					//~ $chunks = array_chunk($words, 10);
+					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
+					//~ echo $res;
+					
+					$words = preg_split("/ /", $res);
+					$chunks = array_chunk($words, 10);
+					var_dump(array_search($value, array_keys($array)));
+					//~ $pos = stripos($res, $searchWord);
+					//~ while ($key_name = current($words))
+					//~ {
+						//~ if ($key_name == $searchWord)
+						//~ {
+							//~ echo key($words) . '<br />';
+						//~ }
+						//~ next($words);
+					//~ }
+					
 					//~ 
 					//~ foreach($chunks as $chunk)
 					//~ {
 						//~ print_r(array_values($chunk));
 					//~ }
-					//~ $chunk = $chunks[2];
-					//~ echo ".........";
-					//~ foreach($chunk as $line)
-					//~ {
-						//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html#' . $id . '">' . $searchWord . '</a>', $line);
-						//~ echo $line . " ";
-					//~ }
-					//~ echo ".........<br />";
+					$chunk = $chunks[2];
+					echo "......... ";
+					foreach($chunk as $line)
+					{
+						$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
+						echo $line . " ";
+					}
+					echo ".........<br />";
 				}
 				echo "</li>";
 			}
