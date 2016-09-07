@@ -179,10 +179,21 @@ if($num_rows > 0)
 					//~ echo $res;
 					
 					$words = preg_split("/ /", $res);
+					//~ print_r($words);
 					$chunks = array_chunk($words, 10);
-					var_dump(array_search($value, array_keys($array)));
-					//~ $pos = stripos($res, $searchWord);
-					//~ while ($key_name = current($words))
+					$matches = array ();
+					foreach ($words as $str) 
+					{
+						if (preg_match ('/' . $searchWord .'/', $str, $m))
+						{
+							var_dump($matches[] = $m[0]);
+						}
+					}
+					
+					print_r($chunks);
+					//~ print_r(array_keys($chunks, $searchWord));
+					
+					//~ while($key_name = current($words))
 					//~ {
 						//~ if ($key_name == $searchWord)
 						//~ {
@@ -190,20 +201,19 @@ if($num_rows > 0)
 						//~ }
 						//~ next($words);
 					//~ }
-					
-					//~ 
+
 					//~ foreach($chunks as $chunk)
 					//~ {
 						//~ print_r(array_values($chunk));
 					//~ }
-					$chunk = $chunks[2];
-					echo "......... ";
-					foreach($chunk as $line)
-					{
-						$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
-						echo $line . " ";
-					}
-					echo ".........<br />";
+					//~ $chunk = $chunks[2];
+					//~ echo "......... ";
+					//~ foreach($chunk as $line)
+					//~ {
+						//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
+						//~ echo $line . " ";
+					//~ }
+					//~ echo ".........<br />";
 				}
 				echo "</li>";
 			}
