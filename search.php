@@ -175,45 +175,42 @@ if($num_rows > 0)
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
-					//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-					//~ echo $res;
+
+					//~ $output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
+					//~ echo $output . "<br />";
 					
-					$words = preg_split("/ /", $res);
-					//~ print_r($words);
+					$words = preg_split('/ /', $res);
+					
 					$chunks = array_chunk($words, 10);
-					$matches = array ();
-					foreach ($words as $str) 
+					foreach($chunks as $chunk)
 					{
-						if (preg_match ('/' . $searchWord .'/', $str, $m))
+						
+						//~ for($i=0; $i<count($chunk);$i++)
+						//~ {
+						   //~ $match_val = levenshtein($searchWord,$chunk[$i]);
+						   //~ $match_array[$i] = $match_val;
+						//~ }
+						//~ asort($match_array);
+						//~ foreach ($match_array as $key1=>$val)
+						//~ {
+						   //~ $temp[$key1] = $chunk[$key1];
+						//~ }
+						//~ print_r($temp);
+						
+						$key = array_keys($chunk, $searchWord);
+						foreach($key as $k)
 						{
-							var_dump($matches[] = $m[0]);
+							echo ".............. ";
+							foreach ($chunk as $line)
+							{
+								$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
+								echo $line . " ";
+							}
+							echo "..............<br />";
 						}
 					}
 					
-					print_r($chunks);
-					//~ print_r(array_keys($chunks, $searchWord));
 					
-					//~ while($key_name = current($words))
-					//~ {
-						//~ if ($key_name == $searchWord)
-						//~ {
-							//~ echo key($words) . '<br />';
-						//~ }
-						//~ next($words);
-					//~ }
-
-					//~ foreach($chunks as $chunk)
-					//~ {
-						//~ print_r(array_values($chunk));
-					//~ }
-					//~ $chunk = $chunks[2];
-					//~ echo "......... ";
-					//~ foreach($chunk as $line)
-					//~ {
-						//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
-						//~ echo $line . " ";
-					//~ }
-					//~ echo ".........<br />";
 				}
 				echo "</li>";
 			}
