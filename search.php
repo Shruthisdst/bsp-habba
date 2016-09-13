@@ -125,8 +125,7 @@ include("connect.php");
 include("common.php");
 
 $searchWord = $_GET['word'];
-$searchWord = preg_replace('/^[\s]+/', '', $searchWord);
-$searchWord = preg_replace('/[\s]+$/', '', $searchWord);
+$searchWord = trim($searchWord);
 
 $query = "select * from habba where text regexp '" . $searchWord . "'";
 $result = $db->query($query); 
