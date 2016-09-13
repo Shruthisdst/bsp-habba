@@ -146,7 +146,7 @@ if($num_rows > 0)
 		$entry_id = $row['entry_id'];
 		$book_title = $row['book_title'];
 		$text = $row['text'];
-		echo '<h3>' . $book_title . '</h3><br />';
+		echo '<h3 class="resTitle">' . $book_title . '</h3><br />';
 
 		$doc = new DOMDocument();
 		libxml_use_internal_errors(true);
@@ -157,10 +157,8 @@ if($num_rows > 0)
 		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 		if (!is_null($elements))
 		{
-			//~ echo "<ol>";
 			foreach ($elements as $element)
 			{
-				
 				//~ echo "<br/>[". $element->nodeName. "]";
 				$nodes = $element->childNodes;
 				$id = $element->getAttribute('id');
@@ -169,7 +167,6 @@ if($num_rows > 0)
 					$parentElement = $element->parentNode;
 					$id = $parentElement->getAttribute('id');
 				}
-				//~ echo "<li>";
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
@@ -194,14 +191,15 @@ if($num_rows > 0)
 								{
 									if($key < 10)
 									{
+										echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 										for($i=0;$i<10;$i++)
 										{
 											
 											$line = $words[$i];
-											$line = $line . " ";
 											//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
-											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $line . '</a>';
+											echo $line . " ";
 										}
+										echo '</a>';
 										echo " ................<br />";
 									}
 									else
@@ -218,23 +216,29 @@ if($num_rows > 0)
 										$left = $key-10;
 										
 										echo "................ ";
+										echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 										for($j=$left;$j<=$key;$j++)
 										{
 											$line = $words[$j];
+											$leftLine = $line . " ";
 											//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
-											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $line . '</a>' . " ";
+											echo $leftLine;
 										}
 										for($k=$key+1;$k<=$right-1;$k++)
 										{
-											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $words[$k] . '</a>' . " ";
+											$rightLine = $words[$k];
+											$rightLine = $rightLine . " ";
+											echo $rightLine;
 										}
+										echo '</a>';
 										echo " ................<br />";
 									}
 								}
 								else
 								{
 									//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-									echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>' . " ";
+									$res = $res . " ";
+									echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
 									echo " ................<br />";
 								}
 								$fl = 0;
@@ -245,9 +249,7 @@ if($num_rows > 0)
 					}
 					
 				}
-				//~ echo "</li>";
 			}
-			//~ echo "</ol>";
 		}
 	}
 }
