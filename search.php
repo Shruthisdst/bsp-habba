@@ -138,7 +138,6 @@ if($num_results > 0)
 }
 $result = $db->query($query);
 $num_rows = $result ? $result->num_rows : 0;
-$temp = '';
 if($num_rows > 0)
 {
 	while($row = $result->fetch_assoc())
@@ -158,10 +157,10 @@ if($num_rows > 0)
 		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 		if (!is_null($elements))
 		{
-			echo "<ol>";
+			//~ echo "<ol>";
 			foreach ($elements as $element)
 			{
-				echo "<li>";
+				
 				//~ echo "<br/>[". $element->nodeName. "]";
 				$nodes = $element->childNodes;
 				$id = $element->getAttribute('id');
@@ -170,7 +169,7 @@ if($num_rows > 0)
 					$parentElement = $element->parentNode;
 					$id = $parentElement->getAttribute('id');
 				}
-				
+				//~ echo "<li>";
 				foreach ($nodes as $node)
 				{
 					$res = $node->nodeValue;
@@ -180,45 +179,75 @@ if($num_rows > 0)
 					
 					$words = preg_split('/ /', $res);
 					$count = count($words);
+					$fl = 1;
 					
 					foreach($words as $wd)
 					{
-						$found = stristr($wd, $searchWord);
+						$found = strstr($wd, $searchWord);
 						$key = array_search($found, $words);
 						if($found)
 						{
-							if($count > 10)
+							if($fl == 1)
 							{
-								if($key < 10)
+								echo '<div class="result">';
+								if($count > 10)
 								{
-									echo "................ ";
-									for($i=0;$i<10;$i++)
+									if($key < 10)
 									{
-										
-										$line = $words[$i];
-										$line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
-										echo $line . " ";
+										for($i=0;$i<10;$i++)
+										{
+											
+											$line = $words[$i];
+											$line = $line . " ";
+											//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
+											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $line . '</a>';
+										}
+										echo " ................<br />";
 									}
-									echo "................<br />";
+									else
+									{
+										$location = $count-10;
+										if($key > $location)
+										{
+											$right = $key;
+										}
+										else
+										{
+											$right = $key+10;
+										}
+										$left = $key-10;
+										
+										echo "................ ";
+										for($j=$left;$j<=$key;$j++)
+										{
+											$line = $words[$j];
+											//~ $line = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $line);
+											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $line . '</a>' . " ";
+										}
+										for($k=$key+1;$k<=$right-1;$k++)
+										{
+											echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $words[$k] . '</a>' . " ";
+										}
+										echo " ................<br />";
+									}
 								}
 								else
 								{
-									//~ echo $words[$key] . "<br />";
+									//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
+									echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>' . " ";
+									echo " ................<br />";
 								}
+								$fl = 0;
+								echo '</div>';
 							}
-							else
-							{
-								$res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-								echo "................ ";
-								echo $res . " ";
-								echo "................<br />";
-							}
+							
 						}
 					}
+					
 				}
-				echo "</li>";
+				//~ echo "</li>";
 			}
-			echo "</ol>";
+			//~ echo "</ol>";
 		}
 	}
 }
