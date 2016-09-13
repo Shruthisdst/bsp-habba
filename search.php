@@ -125,6 +125,8 @@ include("connect.php");
 include("common.php");
 
 $searchWord = $_GET['word'];
+$searchWord = preg_replace('/^[\s]+/', '', $searchWord);
+$searchWord = preg_replace('/[\s]+$/', '', $searchWord);
 
 $query = "select * from habba where text regexp '" . $searchWord . "'";
 $result = $db->query($query); 
@@ -180,7 +182,12 @@ if($num_rows > 0)
 					
 					foreach($words as $wd)
 					{
-						$found = strstr($wd, $searchWord);
+						$words = preg_split('/ /', $res);
+						$searchWords = preg_split('/ /', $searchWord);
+						foreach($searchWords as $eachWord)
+						{
+							$found = strstr($wd, $eachWord);
+						}
 						$key = array_search($found, $words);
 						if($found)
 						{
@@ -239,15 +246,12 @@ if($num_rows > 0)
 									//~ $res = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
 									$res = $res . " ";
 									echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
-									echo " ................<br />";
 								}
 								$fl = 0;
 								echo '</div>';
 							}
-							
 						}
 					}
-					
 				}
 			}
 		}
