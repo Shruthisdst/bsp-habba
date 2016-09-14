@@ -76,7 +76,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-primary-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#"><img src="images/logo.png" alt="Bharatha Samskruthi Prakashana" class="logo"></a></li>
                     <li class="active"><a href="books.html">Books</a></li>
@@ -115,87 +115,136 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-			<h2>ಭಾರತ ಸಂಸ್ಕೃತಿ ಪ್ರಕಾಶನ</h2>
-			<h3>ಭಾರತೀಯರ ಹಬ್ಬ-ಹರಿದಿನಗಳು</h3>
+			<h2>Bharatha Samskruthi Prakashana</h2>
+			<h3>Festivals of Bhārata</h3>
 		</div>
 	</div><hr />
 	<div class="row">
-		<div class="col-md-12" id="snippet">
-			<div class="covers">
-				<a href="books/001/001.html" class="box-shadow-outset"><img src="images/001/01.jpg" alt="ಅಕ್ಷಯ ತೃತೀಯಾ" title="ಅಕ್ಷಯ ತೃತೀಯಾ"/>
-					<p>ಅಕ್ಷಯ ತೃತೀಯಾ</p>
-				</a>
-				<a href="books/001/002.html" class="box-shadow-outset"><img src="images/001/02.jpg" alt="ಅನಂತಪದ್ಮನಾಭವ್ರತ" title="ಅನಂತಪದ್ಮನಾಭವ್ರತ"/>
-					<p>ಅನಂತಪದ್ಮನಾಭವ್ರತ</p>
-				</a>
-				<a href="books/001/003.html" class="box-shadow-outset"><img src="images/001/03.jpg" alt="ಚಾತುರ್ಮಾಸ್ಯ" title="ಚಾತುರ್ಮಾಸ್ಯ"/>
-					<p>ಚಾತುರ್ಮಾಸ್ಯ</p>
-				</a>
-				<a href="books/001/004.html" class="box-shadow-outset"><img src="images/001/04.jpg" alt="ದೀಪಾವಳಿ" title="ದೀಪಾವಳಿ"/>
-					<p>ದೀಪಾವಳಿ</p>
-				</a>
-				<a href="books/001/005.html" class="box-shadow-outset"><img src="images/001/05.jpg" alt="ಗಣೇಶ ಚತುರ್ಥೀ" title="ಗಣೇಶ ಚತುರ್ಥೀ"/>
-					<p>ಗಣೇಶ ಚತುರ್ಥೀ</p>
-				</a>
-				<a href="books/001/006.html" class="box-shadow-outset"><img src="images/001/06.jpg" alt="ಗೌರೀಹಬ್ಬ" title="ಗೌರೀಹಬ್ಬ"/>
-					<p>ಗೌರೀಹಬ್ಬ</p>
-				</a>
-				<a href="books/001/007.html" class="box-shadow-outset"><img src="images/001/07.jpg" alt="ಹನುಮಜ್ಜಯನ್ತೀ" title="ಹನುಮಜ್ಜಯನ್ತೀ"/>
-					<p>ಹನುಮಜ್ಜಯನ್ತೀ</p>
-				</a>
-				<a href="books/001/008.html" class="box-shadow-outset"><img src="images/001/08.jpg" alt="ಹೋಳಿಕೋತ್ಸವ" title="ಹೋಳಿಕೋತ್ಸವ"/>
-					<p>ಹೋಳಿಕೋತ್ಸವ</p>
-				</a>
-				<a href="books/001/009.html" class="box-shadow-outset"><img src="images/001/09.jpg" alt="ಶ್ರೀಗುರು-ಆಚಾರ್ಯರ ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು" title="ಶ್ರೀಗುರು-ಆಚಾರ್ಯರ ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು"/>
-					<p>ಜನ್ಮದಿನ ಮತ್ತು ಪುಣ್ಯತಿಥಿಗಳು</p>
-				</a>
-				<a href="books/001/010.html" class="box-shadow-outset"><img src="images/001/10.jpg" alt="ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ" title="ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ"/>
-					<p>ಶ್ರೀಕೃಷ್ಣಜಯನ್ತೀ-ಜನ್ಮಾಷ್ಟಮೀ</p>
-				</a>
-				<a href="books/001/011.html" class="box-shadow-outset"><img src="images/001/11.jpg" alt="ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ" title="ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ"/>
-					<p>ಕೃತ್ತಿಕಾದೀಪೋತ್ಸವ</p>
-				</a>
-				<a href="books/001/012.html" class="box-shadow-outset"><img src="images/001/12.jpg" alt="ಮಹಾಶಿವರಾತ್ರಿ" title="ಮಹಾಶಿವರಾತ್ರಿ"/>
-					<p>ಮಹಾಶಿವರಾತ್ರಿ</p>
-				</a>
-				<a href="books/001/013.html" class="box-shadow-outset"><img src="images/001/13.jpg" alt="ಮಕರ ಸಂಕ್ರಾಂತಿ" title="ಮಕರ ಸಂಕ್ರಾಂತಿ"/>
-					<p>ಮಕರ ಸಂಕ್ರಾಂತಿ</p>
-				</a>
-				<a href="books/001/014.html" class="box-shadow-outset"><img src="images/001/14.jpg" alt="ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ" title="ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ"/>
-					<p>ನಾಗಪೂಜೆ-ನಾಗರಪಂಚಮೀ</p>
-				</a>
-				<a href="books/001/015.html" class="box-shadow-outset"><img src="images/001/15.jpg" alt="ನರಸಿಹ್ಮ ಜಯನ್ತೀ" title="ನರಸಿಹ್ಮ ಜಯನ್ತೀ"/>
-					<p>ನರಸಿಹ್ಮ ಜಯನ್ತೀ</p>
-				</a>
-				<a href="books/001/016.html" class="box-shadow-outset"><img src="images/001/16.jpg" alt="ನವರಾತ್ರ ಮಹೋತ್ಸವ" title="ನವರಾತ್ರ ಮಹೋತ್ಸವ"/>
-					<p>ನವರಾತ್ರ ಮಹೋತ್ಸವ</p>
-				</a>
-				<a href="books/001/017.html" class="box-shadow-outset"><img src="images/001/17.jpg" alt="ಪ್ರಥಮೈಕಾದಶೀ" title="ಪ್ರಥಮೈಕಾದಶೀ"/>
-					<p>ಪ್ರಥಮೈಕಾದಶೀ</p>
-				</a>
-				<a href="books/001/018.html" class="box-shadow-outset"><img src="images/001/18.jpg" alt="ಶ್ರೀರಾಮನವಮೀ" title="ಶ್ರೀರಾಮನವಮೀ"/>
-					<p>ಶ್ರೀರಾಮನವಮೀ</p>
-				</a>
-				<a href="books/001/019.html" class="box-shadow-outset"><img src="images/001/19.jpg" alt="ರಥಸಪ್ತಮೀ" title="ರಥಸಪ್ತಮೀ"/>
-					<p>ರಥಸಪ್ತಮೀ</p>
-				</a>
-				<a href="books/001/020.html" class="box-shadow-outset"><img src="images/001/20.jpg" alt="ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ" title="ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ"/>
-					<p>ಸುಬ್ಬರಾಯನ ಷಷ್ಠೀ</p>
-				</a>
-				<a href="books/001/021.html" class="box-shadow-outset"><img src="images/001/21.jpg" alt="ಯುಗಾದಿ ಹಬ್ಬ" title="ಯುಗಾದಿ ಹಬ್ಬ"/>
-					<p>ಯುಗಾದಿ ಹಬ್ಬ</p>
-				</a>
-				<a href="books/001/022.html" class="box-shadow-outset"><img src="images/001/22.jpg" alt="ಉಪಾಕರ್ಮ" title="ಉಪಾಕರ್ಮ"/>
-					<p>ಉಪಾಕರ್ಮ</p>
-				</a>
-				<a href="books/001/023.html" class="box-shadow-outset"><img src="images/001/23.jpg" alt="ಉತ್ಥಾನದ್ವಾದಶೀ" title="ಉತ್ಥಾನದ್ವಾದಶೀ"/>
-					<p>ಉತ್ಥಾನದ್ವಾದಶೀ</p>
-				</a>
-				<a href="books/001/024.html" class="box-shadow-outset"><img src="images/001/24.jpg" alt="ವರಮಹಾಲಕ್ಷ್ಮೀವ್ರತ" title="ವರಮಹಾಲಕ್ಷ್ಮೀವ್ರತ"/>
-					<p>ವರಮಹಾಲಕ್ಷ್ಮೀವ್ರತ</p>
-				</a>
-			</div>
-		</div>
+<?php
+include("connect.php");
+
+$searchWord = $_GET['word'];
+$searchWord = trim($searchWord);
+
+$query = "select * from habba where text regexp '" . $searchWord . "'";
+$result = $db->query($query); 
+$num_results = $result ? $result->num_rows : 0;
+
+if($num_results > 0)
+{
+	echo '<h3>' . $num_results;
+	echo ($num_results > 1) ? ' results' : ' result';
+	echo '</h3>';
+}
+$result = $db->query($query);
+$num_rows = $result ? $result->num_rows : 0;
+if($num_rows > 0)
+{
+	while($row = $result->fetch_assoc())
+	{
+		$book_id = $row['book_id'];
+		$entry_id = $row['entry_id'];
+		$book_title = $row['book_title'];
+		$text = $row['text'];
+		echo '<h3 class="resTitle">' . $book_title . '</h3><br />';
+
+		$doc = new DOMDocument();
+		libxml_use_internal_errors(true);
+		$text = mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8');
+		$doc->loadHTML($text);
+		
+		$xpath = new DOMXpath($doc);
+		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+		if (!is_null($elements))
+		{
+			foreach ($elements as $element)
+			{
+				//~ echo "<br/>[". $element->nodeName. "]";
+				$nodes = $element->childNodes;
+				$id = $element->getAttribute('id');
+				if($id == "")
+				{
+					$parentElement = $element->parentNode;
+					$id = $parentElement->getAttribute('id');
+				}
+				foreach ($nodes as $node)
+				{
+					$res = $node->nodeValue;
+					
+					//~ $output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
+					$words = preg_split('/ /', $res);
+					$count = count($words);
+					
+					for($key=0;$key<sizeof($words);$key++)
+					{
+						if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
+						{
+							echo '<div class="result">';
+							if($count > 10)
+							{
+								if($key < 10)
+								{
+									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									for($i=0;$i<10;$i++)
+									{
+										$line = $words[$i];
+										$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
+										echo $line . " ";
+									}
+									echo '</a>';
+									echo " ................<br />";
+								}
+								else
+								{
+									$location = $count-10;
+									$left = $key-10;
+									if($key > $location)
+									{
+										$right = $key;
+									}
+									else
+									{
+										$right = $key+10;
+									}
+									echo "................ ";
+									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									for($j=$left;$j<=$key;$j++)
+									{
+										$line = $words[$j];
+										$leftLine = $line . " ";
+										$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
+										echo $leftLine;
+									}
+									for($k=$key+1;$k<=$right-1;$k++)
+									{
+										$rightLine = $words[$k];
+										$rightLine = $rightLine . " ";
+										$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+										echo $rightLine;
+									}
+									echo '</a>';
+									echo " ................<br />";
+								}
+							}
+							else
+							{
+								$res = $res . " ";
+								$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
+								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
+							}
+							echo '</div>';
+							break;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+if($result){$result->free();}
+$db->close();
+
+?>
 	</div>
 </div>
 
