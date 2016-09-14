@@ -1,6 +1,6 @@
 .navbar-default .logo{
 	height: 65px;
-	transition: height 0.3s ease;
+	transition: height 0.5s ease;
 }
 
 @media(min-width:768px) {
@@ -14,8 +14,8 @@
 		transition: height 0.3s ease;
 	}
 	.navbar-nav>li>a{
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 }
 
