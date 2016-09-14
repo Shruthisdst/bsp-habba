@@ -122,7 +122,6 @@
 	<div class="row">
 <?php
 include("connect.php");
-include("common.php");
 
 $searchWord = $_GET['word'];
 $searchWord = trim($searchWord);
@@ -198,6 +197,7 @@ if($num_rows > 0)
 								else
 								{
 									$location = $count-10;
+									$left = $key-10;
 									if($key > $location)
 									{
 										$right = $key;
@@ -206,8 +206,6 @@ if($num_rows > 0)
 									{
 										$right = $key+10;
 									}
-									$left = $key-10;
-									
 									echo "................ ";
 									echo '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 									for($j=$left;$j<=$key;$j++)
