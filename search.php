@@ -172,16 +172,9 @@ if($num_rows > 0)
 				{
 					$res = $node->nodeValue;
 					
-					$output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-					//~ if($output != $fl)
-					//~ {
-						//~ echo $output . "<br /><br /><br />";
-						//~ $output = $fl;
-					//~ }
-					
+					//~ $output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
 					$words = preg_split('/ /', $res);
 					$count = count($words);
-					
 					
 					for($key=0;$key<sizeof($words);$key++)
 					{
