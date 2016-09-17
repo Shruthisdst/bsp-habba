@@ -155,7 +155,6 @@ if($num_rows > 0)
 			foreach($elements as $element)
 			{
 				$nodeName = $element->nodeName;
-				
 				$id = $element->getAttribute('id');
 				if($id == "")
 				{
@@ -185,7 +184,7 @@ if($num_rows > 0)
 								if($key < 10)
 								{
 									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-									for($i=0;$i<10;$i++)
+									for($i=0;$i<=10;$i++)
 									{
 										$line = $words[$i];
 										$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
@@ -198,14 +197,6 @@ if($num_rows > 0)
 								{
 									$location = $count-10;
 									$left = $key-10;
-									if($key > $location)
-									{
-										$right = $key;
-									}
-									else
-									{
-										$right = $key+10;
-									}
 									echo "................ ";
 									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 									for($j=$left;$j<=$key;$j++)
@@ -215,15 +206,30 @@ if($num_rows > 0)
 										$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
 										echo $leftLine;
 									}
-									for($k=$key+1;$k<=$right-1;$k++)
+									if($key > $location)
 									{
-										$rightLine = $words[$k];
-										$rightLine = $rightLine . " ";
-										$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
-										echo $rightLine;
+										for($k=$key+1;$k<=$count-1;$k++)
+										{
+											$rightLine = $words[$k];
+											$rightLine = $rightLine . " ";
+											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+											echo $rightLine;
+										}
+										echo '</a>';
 									}
-									echo '</a>';
-									echo " ................<br />";
+									else
+									{
+										$right = $key+10;
+										for($k=$key+1;$k<=$right-1;$k++)
+										{
+											$rightLine = $words[$k];
+											$rightLine = $rightLine . " ";
+											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+											echo $rightLine;
+										}
+										echo '</a>';
+										echo " ................<br />";
+									}
 								}
 							}
 							else
