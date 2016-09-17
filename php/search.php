@@ -187,7 +187,7 @@ if($num_rows > 0)
 									for($i=0;$i<=10;$i++)
 									{
 										$line = $words[$i];
-										$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
+										$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
 										echo $line . " ";
 									}
 									echo '</a>';
@@ -203,7 +203,7 @@ if($num_rows > 0)
 									{
 										$line = $words[$j];
 										$leftLine = $line . " ";
-										$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
+										$leftLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $leftLine);
 										echo $leftLine;
 									}
 									if($key > $location)
@@ -212,7 +212,7 @@ if($num_rows > 0)
 										{
 											$rightLine = $words[$k];
 											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
 											echo $rightLine;
 										}
 										echo '</a>';
@@ -224,7 +224,7 @@ if($num_rows > 0)
 										{
 											$rightLine = $words[$k];
 											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
 											echo $rightLine;
 										}
 										echo '</a>';
@@ -235,7 +235,7 @@ if($num_rows > 0)
 							else
 							{
 								$res = $res . " ";
-								$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
+								$res = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $res);
 								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
 							}
 							echo '</div>';
