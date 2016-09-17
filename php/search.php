@@ -165,151 +165,78 @@ if($num_rows > 0)
 				if(($nodeName == 'i') || ($nodeName == 'strong'))
 				{
 					$parentElement = $element->parentNode;
-					if($id != $temp)
-					{
-						$res = $parentElement->nodeValue;
-						
-						//~ $output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-						$words = preg_split('/ /', $res);
-						$count = count($words);
-						
-						for($key=0;$key<sizeof($words);$key++)
-						{
-							if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
-							{
-								echo '<div class="result">';
-								if($count > 10)
-								{
-									if($key < 10)
-									{
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										for($i=0;$i<10;$i++)
-										{
-											$line = $words[$i];
-											$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
-											echo $line . " ";
-										}
-										echo '</a>';
-										echo " ................<br />";
-									}
-									else
-									{
-										$location = $count-10;
-										$left = $key-10;
-										if($key > $location)
-										{
-											$right = $key;
-										}
-										else
-										{
-											$right = $key+10;
-										}
-										echo "................ ";
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										for($j=$left;$j<=$key;$j++)
-										{
-											$line = $words[$j];
-											$leftLine = $line . " ";
-											$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
-											echo $leftLine;
-										}
-										for($k=$key+1;$k<=$right-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo '</a>';
-										echo " ................<br />";
-									}
-								}
-								else
-								{
-									$res = $res . " ";
-									$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
-								}
-								echo '</div>';
-								break;
-							}
-						}
-						$temp = $id;
-					}
+					$res = $parentElement->nodeValue;
 				}
 				else
 				{
-					//~ $nodes = $element->childNodes;
-					//~ foreach ($nodes as $node)
+					$res = $element->nodeValue;
+				}
+				if($id != $temp)
+				{
+					$words = preg_split('/ /', $res);
+					$count = count($words);
+					for($key=0;$key<sizeof($words);$key++)
 					{
-						$res = $element->nodeValue;
-						
-						//~ $output = preg_replace('/' . $searchWord . '/', '<a href="books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $searchWord . '</a>', $res);
-						$words = preg_split('/ /', $res);
-						$count = count($words);
-						
-						for($key=0;$key<sizeof($words);$key++)
+						if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
 						{
-							if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
+							echo '<div class="result">';
+							if($count > 10)
 							{
-								echo '<div class="result">';
-								if($count > 10)
+								if($key < 10)
 								{
-									if($key < 10)
+									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									for($i=0;$i<10;$i++)
 									{
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										for($i=0;$i<10;$i++)
-										{
-											$line = $words[$i];
-											$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
-											echo $line . " ";
-										}
-										echo '</a>';
-										echo " ................<br />";
+										$line = $words[$i];
+										$line = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $line);
+										echo $line . " ";
 									}
-									else
-									{
-										$location = $count-10;
-										$left = $key-10;
-										if($key > $location)
-										{
-											$right = $key;
-										}
-										else
-										{
-											$right = $key+10;
-										}
-										echo "................ ";
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										for($j=$left;$j<=$key;$j++)
-										{
-											$line = $words[$j];
-											$leftLine = $line . " ";
-											$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
-											echo $leftLine;
-										}
-										for($k=$key+1;$k<=$right-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo '</a>';
-										echo " ................<br />";
-									}
+									echo '</a>';
+									echo " ................<br />";
 								}
 								else
 								{
-									$res = $res . " ";
-									$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
+									$location = $count-10;
+									$left = $key-10;
+									if($key > $location)
+									{
+										$right = $key;
+									}
+									else
+									{
+										$right = $key+10;
+									}
+									echo "................ ";
+									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									for($j=$left;$j<=$key;$j++)
+									{
+										$line = $words[$j];
+										$leftLine = $line . " ";
+										$leftLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $leftLine);
+										echo $leftLine;
+									}
+									for($k=$key+1;$k<=$right-1;$k++)
+									{
+										$rightLine = $words[$k];
+										$rightLine = $rightLine . " ";
+										$rightLine = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $rightLine);
+										echo $rightLine;
+									}
+									echo '</a>';
+									echo " ................<br />";
 								}
-								echo '</div>';
-								break;
 							}
+							else
+							{
+								$res = $res . " ";
+								$res = preg_replace('/' . $searchWord . '/', '<span style="color: red">' . $searchWord . '</span>', $res);
+								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
+							}
+							echo '</div>';
+							break;
 						}
 					}
+					$temp = $id;
 				}
 			}
 		}
