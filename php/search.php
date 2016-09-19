@@ -149,7 +149,31 @@ if($num_rows > 0)
 		$doc->loadHTML($text);
 		$xpath = new DOMXpath($doc);
 		$temp = '';
-		$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+		if(preg_match('/[A-Za-z]/', $searchWord))
+		{
+			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+			if(preg_match('/^[a-z]/', $searchWord[0]))
+			{
+				if($elements->length == '0')
+				{
+					$searchWord = ucfirst($searchWord);
+					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+				}
+			}
+			else
+			{
+				if($elements->length == '0')
+				{
+					$searchWord = strtolower($searchWord);
+					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+				}
+			}
+			
+		}
+		else
+		{
+			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
+		}
 		if (!is_null($elements))
 		{
 			foreach($elements as $element)
@@ -159,7 +183,12 @@ if($num_rows > 0)
 				if($id == "")
 				{
 					$parentID = $element->parentNode;
+					$grandparentID = $parentID->parentNode;
 					$id = $parentID->getAttribute('id');
+					if($id == "")
+					{
+						$id = $grandparentID->getAttribute('id');
+					}
 				}
 				if(($nodeName == 'i') || ($nodeName == 'strong'))
 				{
@@ -170,6 +199,7 @@ if($num_rows > 0)
 				{
 					$res = $element->nodeValue;
 				}
+				
 				if($id != $temp)
 				{
 					$words = preg_split('/ /', $res);
