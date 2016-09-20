@@ -198,3 +198,7 @@ ol>li:before {
 .searchWord{
 	color: red;
 }
+.noResults{
+	color: red;
+	font-size: 1.5em;
+}
