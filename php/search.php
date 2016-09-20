@@ -193,7 +193,16 @@ if($num_rows > 0)
 				if(($nodeName == 'i') || ($nodeName == 'strong'))
 				{
 					$parentElement = $element->parentNode;
-					$res = $parentElement->nodeValue;
+					$nodeName = $parentElement->nodeName;
+					if(($nodeName == 'i') || ($nodeName == 'strong'))
+					{
+						$grandparentElement = $parentElement->parentNode;
+						$res = $grandparentElement->nodeValue;
+					}
+					else
+					{
+						$res = $parentElement->nodeValue;
+					}
 				}
 				else
 				{
@@ -277,6 +286,10 @@ if($num_rows > 0)
 			}
 		}
 	}
+}
+else
+{
+	echo "<span class='noResults'>No results to show!</span>";
 }
 if($result){$result->free();}
 $db->close();
