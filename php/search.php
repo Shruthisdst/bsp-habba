@@ -114,7 +114,7 @@ $(document).ready(function()
                                 </div>
                             </div>
                         </form>
-						<li><button id="kan"><i class="fa fa-keyboard-o" aria-hidden="true"></i></button></li>
+						<li><button id="kan">ಅ <i class="fa fa-keyboard-o" aria-hidden="true"></i></button></li>
                     </li>
                 </ul>
               
