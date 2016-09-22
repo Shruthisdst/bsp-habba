@@ -29,6 +29,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
     
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
+	<script type="text/javascript" src="js/devanagari_kbd.js" charset="UTF-8"></script>    
     
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -50,10 +52,21 @@
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightbox.css">
+    
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.ico">
+    <script>
+$(document).ready(function()
+{
+	$("#kannada").hide();
+	$("#kan").click(function()
+	{
+		$("#kannada").fadeIn();
+	});
+});
+</script>
 </head>
 <body>
     <!-- Navigation
@@ -95,14 +108,16 @@
                     <li id="searchForm">
                         <form class="navbar-form" role="search" action="search.php" method="get">
                             <div class="input-group add-on">
-                                <input type="text" class="form-control" placeholder="Word" name="word" id="word">
+                                <input type="text" class="form-control" placeholder="Word" name="word" onfocus="SetId('word')" id="word">
                                 <div class="input-group-btn">
                                     <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                                 </div>
                             </div>
                         </form>
+						<li><button id="kan"><i class="fa fa-keyboard-o" aria-hidden="true"></i></button></li>
                     </li>
                 </ul>
+              
             </div>
         </div>
     </div>
@@ -114,9 +129,10 @@
 			<h3>Festivals of Bhārata</h3>
 		</div>
 	</div><hr />
-	<div class="row">
+	<div class="row search">
 <?php
 include("connect.php");
+include("kannadaKeybord.php");
 
 $searchWord = $_GET['word'];
 $searchWord = trim($searchWord);
@@ -141,7 +157,14 @@ if($num_rows > 0)
 		$entry_id = $row['entry_id'];
 		$book_title = $row['book_title'];
 		$text = $row['text'];
-		echo '<h3 class="resTitle">' . $book_title . '</h3><br />';
+		$img = preg_replace('/^[0]/', '', $entry_id);
+		
+		echo '<br /><div class="row">
+				<div class="col-md-8">
+					<h3 class="resTitle">' . $book_title . '</h3><hr />
+				</div>
+				<br /><a class="box-shadow-outset" id="right"><img src="images/' . $book_id . '/' . $img . '.jpg" alt="' . $book_title . '" title="' . $book_title . '"/></a>
+			</div>';
 
 		$doc = new DOMDocument();
 		libxml_use_internal_errors(true);
@@ -160,7 +183,7 @@ if($num_rows > 0)
 					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 				}
 			}
-			else
+			elseif(preg_match('/^[A-Z]/', $searchWord[0]))
 			{
 				if($elements->length == '0')
 				{
@@ -168,7 +191,6 @@ if($num_rows > 0)
 					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 				}
 			}
-			
 		}
 		else
 		{
@@ -176,6 +198,8 @@ if($num_rows > 0)
 		}
 		if (!is_null($elements))
 		{
+			echo '<div class="row">
+				<div class="col-md-10" id="eachResult">';
 			foreach($elements as $element)
 			{
 				$nodeName = $element->nodeName;
@@ -208,9 +232,9 @@ if($num_rows > 0)
 				{
 					$res = $element->nodeValue;
 				}
-				
 				if($id != $temp)
 				{
+					
 					$words = preg_split('/ /', $res);
 					$count = count($words);
 					for($key=0;$key<sizeof($words);$key++)
@@ -222,22 +246,22 @@ if($num_rows > 0)
 							{
 								if($key < 10)
 								{
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									
 									for($i=0;$i<=10;$i++)
 									{
 										$line = $words[$i];
 										$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
 										echo $line . " ";
 									}
-									echo '</a>';
-									echo " ................<br />";
+									echo " ..........";
+									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
 								}
 								else
 								{
 									$location = $count-10;
 									$left = $key-10;
-									echo "................ ";
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+									echo ".......... ";
+									
 									for($j=$left;$j<=$key;$j++)
 									{
 										$line = $words[$j];
@@ -254,7 +278,8 @@ if($num_rows > 0)
 											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
 											echo $rightLine;
 										}
-										echo '</a>';
+										echo "..........";
+										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
 									}
 									else
 									{
@@ -266,24 +291,26 @@ if($num_rows > 0)
 											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
 											echo $rightLine;
 										}
-										echo '</a>';
-										echo " ................<br />";
+										echo " ..........";
+										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
 									}
 								}
 							}
 							else
 							{
-								$res = $res . " ";
 								$res = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $res);
-								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">' . $res . '</a>';
+								echo $res . " ..........";
+								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
 							}
 							echo '</div>';
 							break;
 						}
 					}
 					$temp = $id;
+					
 				}
 			}
+			echo '</div></div>';
 		}
 	}
 }
