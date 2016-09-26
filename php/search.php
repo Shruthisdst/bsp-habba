@@ -22,15 +22,13 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
     
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>    
-	<script type="text/javascript" src="js/devanagari_kbd.js" charset="UTF-8"></script>    
+    <script type="text/javascript" src="js/kannada_kbd.js" charset="UTF-8"></script>
     
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -52,21 +50,10 @@
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightbox.css">
-    
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <script>
-$(document).ready(function()
-{
-	$("#kannada").hide();
-	$("#kan").click(function()
-	{
-		$("#kannada").fadeIn();
-	});
-});
-</script>
 </head>
 <body>
     <!-- Navigation
@@ -104,224 +91,33 @@ $(document).ready(function()
                     <li><a>·</a></li>
                     <li><a href="english.html">English</a></li>
                     <li><a>·</a></li>
-                    <li><a>Search</a></li>
-                    <li id="searchForm">
-                        <form class="navbar-form" role="search" action="search.php" method="get">
-                            <div class="input-group add-on">
-                                <input type="text" class="form-control" placeholder="Word" name="word" onfocus="SetId('word')" id="word">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                                </div>
-                            </div>
-                        </form>
-						<li><button id="kan">ಅ <i class="fa fa-keyboard-o" aria-hidden="true"></i></button></li>
-                    </li>
+                    <li><a href="search.php">Search</a></li>
                 </ul>
-              
             </div>
         </div>
     </div>
-    
-<div class="container">
+<div class="container english">
     <div class="row">
         <div class="col-md-8">
 			<h2>Bharatha Samskruthi Prakashana</h2>
 			<h3>Festivals of Bhārata</h3>
 		</div>
 	</div><hr />
-	<div class="row search">
-<?php
-include("connect.php");
-include("kannadaKeybord.php");
-
-$searchWord = $_GET['word'];
-$searchWord = trim($searchWord);
-
-$query = "select * from habba where text regexp '" . $searchWord . "'";
-$result = $db->query($query); 
-$num_results = $result ? $result->num_rows : 0;
-
-if($num_results > 0)
-{
-	echo '<h3>' . $num_results;
-	echo ($num_results > 1) ? ' results' : ' result';
-	echo '</h3>';
-}
-$result = $db->query($query);
-$num_rows = $result ? $result->num_rows : 0;
-if($num_rows > 0)
-{
-	while($row = $result->fetch_assoc())
-	{
-		$book_id = $row['book_id'];
-		$entry_id = $row['entry_id'];
-		$book_title = $row['book_title'];
-		$text = $row['text'];
-		$img = preg_replace('/^[0]/', '', $entry_id);
-		
-		echo '<br /><div class="row">
-				<div class="col-md-8">
-					<h3 class="resTitle">' . $book_title . '</h3><hr />
+	<div class="row">
+		<div class="col-md-10" id="snippet">
+			<h3>Search</h3>
+			<form class="navbar-form" role="search" action="search_results.php" method="get">
+				<div class="input-group add-on">
+					<input type="text" class="form-control" placeholder="Enter word here" name="word" onfocus="SetId('word')" id="word"/>
 				</div>
-				<br /><a class="box-shadow-outset" id="right"><img src="images/' . $book_id . '/' . $img . '.jpg" alt="' . $book_title . '" title="' . $book_title . '"/></a>
-			</div>';
-
-		$doc = new DOMDocument();
-		libxml_use_internal_errors(true);
-		$text = mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8');
-		$doc->loadHTML($text);
-		$xpath = new DOMXpath($doc);
-		$temp = '';
-		if(preg_match('/[A-Za-z]/', $searchWord))
-		{
-			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-			if(preg_match('/^[a-z]/', $searchWord[0]))
-			{
-				if($elements->length == '0')
-				{
-					$searchWord = ucfirst($searchWord);
-					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-				}
-			}
-			elseif(preg_match('/^[A-Z]/', $searchWord[0]))
-			{
-				if($elements->length == '0')
-				{
-					$searchWord = strtolower($searchWord);
-					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-				}
-			}
-		}
-		else
-		{
-			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-		}
-		if (!is_null($elements))
-		{
-			echo '<div class="row">
-				<div class="col-md-10" id="eachResult">';
-			foreach($elements as $element)
-			{
-				$nodeName = $element->nodeName;
-				$id = $element->getAttribute('id');
-				if($id == "")
-				{
-					$parentID = $element->parentNode;
-					$grandparentID = $parentID->parentNode;
-					$id = $parentID->getAttribute('id');
-					if($id == "")
-					{
-						$id = $grandparentID->getAttribute('id');
-					}
-				}
-				if(($nodeName == 'i') || ($nodeName == 'strong'))
-				{
-					$parentElement = $element->parentNode;
-					$nodeName = $parentElement->nodeName;
-					if(($nodeName == 'i') || ($nodeName == 'strong'))
-					{
-						$grandparentElement = $parentElement->parentNode;
-						$res = $grandparentElement->nodeValue;
-					}
-					else
-					{
-						$res = $parentElement->nodeValue;
-					}
-				}
-				else
-				{
-					$res = $element->nodeValue;
-				}
-				if($id != $temp)
-				{
-					
-					$words = preg_split('/ /', $res);
-					$count = count($words);
-					for($key=0;$key<sizeof($words);$key++)
-					{
-						if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
-						{
-							echo '<div class="result">';
-							if($count > 10)
-							{
-								if($key < 10)
-								{
-									
-									for($i=0;$i<=10;$i++)
-									{
-										$line = $words[$i];
-										$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
-										echo $line . " ";
-									}
-									echo " ..........";
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
-								}
-								else
-								{
-									$location = $count-10;
-									$left = $key-10;
-									echo ".......... ";
-									
-									for($j=$left;$j<=$key;$j++)
-									{
-										$line = $words[$j];
-										$leftLine = $line . " ";
-										$leftLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $leftLine);
-										echo $leftLine;
-									}
-									if($key > $location)
-									{
-										for($k=$key+1;$k<=$count-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo "..........";
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
-									}
-									else
-									{
-										$right = $key+10;
-										for($k=$key+1;$k<=$right-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo " ..........";
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
-									}
-								}
-							}
-							else
-							{
-								$res = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $res);
-								echo $res . " ..........";
-								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">More</a>';
-							}
-							echo '</div>';
-							break;
-						}
-					}
-					$temp = $id;
-					
-				}
-			}
-			echo '</div></div>';
-		}
-	}
-}
-else
-{
-	echo "<span class='noResults'>No results to show!</span>";
-}
-if($result){$result->free();}
-$db->close();
-
-?>
+				<div class="submit">
+					<input type="submit" class="titlespan med" id="button_search" value="Search"/>
+					<input type="reset" class="titlespan med" id="button_reset" value="Reset"/>
+				</div>
+			</form>
+			<? include("kannadaKeybord.php"); ?>
+			<? include("specialKeyboard.php"); ?>
+		</div>
 	</div>
 </div>
 

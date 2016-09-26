@@ -10,7 +10,7 @@
 }
 
 .engHead{
-	margin: 0em 0em 1.5em 0em;
+	margin-bottom: 1.5em;
 	border-bottom: 1px solid #DEDEDE;
 	font-family: 'GentiumPlus-R';
 }
@@ -25,8 +25,18 @@
 }
 #lang{
 	float: right;
-	margin-top: 3em;
+	margin-top: 2.7em;
+	font-size: 1.1em;
 }
+#lang a:hover{
+	border-bottom: 1px dotted #3372df;
+}
+.kan{
+	font-family: 'Gubbi';
+	font-size: 1.2em;
+	margin: 0em 3em 0em 4em;
+}
+
 #right{
 	float: right;
 	margin-right: 3em;
@@ -186,13 +196,14 @@ ol>li:before {
 	font-size: 0.9em;
 }
 .search{
-	font-family: "GentiumPlus-R", "Gubbi";
+	font-family: "GentiumPlus-R" "Gubbi";
 }
 .result{
 	font-size: 1.1em;
 	margin: 10px 0;
-    padding: 20px 25px 20px 25px;
+    padding: 20px 25px 22px 25px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    font-family: "Gubbi" "GentiumPlus-R";
 }
 .resTitle{
 	color: #cc6600;
@@ -220,10 +231,10 @@ ol>li:before {
 	font-size: 1.5em;
 }
 #kannada{
-	margin: -19em 3.5em 0em 0em;
+	margin-top: -10em;
 	width: 290px;
 	float: right;
-	padding-top: 7.5em;
+	font-family: 'Gubbi';
 }
 .keys{
 	width: 38px;
@@ -231,7 +242,7 @@ ol>li:before {
 	float: left;
 	border-right: 1px solid #333;
 	border-bottom: 1px solid #333;
-	padding: 0px 0px 0px 0px;
+	padding: 0px;
 	text-align: center;
 	cursor:pointer;
 }
@@ -247,4 +258,30 @@ ol>li:before {
 }
 #kan{
 	color: #333;
+}
+#word{
+	margin: 2em 0em 2em 2em;
+	padding: 10px 0px 10px 5px;
+	font-size: 1em;
+	height: 3em;
+	border-radius: 5px;
+}
+.submit{
+	margin-left: 4em;
+}
+#button_search{
+	margin-right: 25px;
+}
+#kbd{
+	width: 290px;
+	float: left;
+	margin: 2.3em 0em 0em 2em;
+}
+.softkeyHead{
+	font-size: 1.1em;
+	font-family: 'GentiumPlus-R';
+}
+.more a{
+	font-size: 0.9em;
+	float: right;
 }

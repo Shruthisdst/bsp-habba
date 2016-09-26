@@ -1,4 +1,5 @@
 <div id="kannada">
+	<p class="softkeyHead">Input mode for Kannada</p>
 	<div class="keys tline lline" id="a" onclick="InsertText('ಅ')">ಅ</div>
 	<div class="keys tline" id="A" onclick="InsertText('ಆ')">ಆ</div>
 	<div class="keys tline" id="i" onclick="InsertText('ಇ')">ಇ</div>
@@ -55,7 +56,7 @@
 	<div class="keys tline" id="ukara" onclick="InsertText('ು')">ು</div>
 	<div class="keys tline" id="Ukara" onclick="InsertText('ೂ')">ೂ</div>
 	<div class="keys tline" id="Rkara" onclick="InsertText('ೃ')">ೃ</div>
-	<div class="keys tline" id="RRkara" onclick="InsertText('ೄ')"> ೄ</div>
+	<div class="keys tline" id="RRkara" onclick="InsertText('ೄ')">ೄ</div>
 	<div class="keys lline" id="ekara" onclick="InsertText('ೆ')">ೆ</div>
 	<div class="keys" id="Ekara" onclick="InsertText('ೇ')">ೇ</div>
 	<div class="keys" id="aikara" onclick="InsertText('ೈ')">ೈ</div>
