@@ -133,7 +133,7 @@ if($num_rows > 0)
 		$book_title = $row['book_title'];
 		$text = $row['text'];
 		$img = preg_replace('/^[0]/', '', $entry_id);
-		
+		echo ($book_id == '001') ? '<div class="kanFont">' : '<div class="engFont">';
 		echo '<br /><div class="row">
 				<div class="col-md-8">
 					<h3 class="resTitle">' . $book_title . '</h3><hr />
@@ -207,94 +207,33 @@ if($num_rows > 0)
 				{
 					$res = $element->nodeValue;
 				}
+				
 				if($id != $temp)
 				{
-					
 					$words = preg_split('/ /', $res);
-					$count = count($words);
-					for($key=0;$key<sizeof($words);$key++)
+					$searchList = preg_grep('/' . $searchWord . '/', $words);
+					$key = key($searchList);
+					$left = $key-10;
+					$left = ($left < 0) ? 0 : $left;
+					$output = array_slice($words, $left, 20);
+					echo '<div class="result">';
+					echo ".......... ";
+					foreach($output as $line)
 					{
-						if(($words[$key] == $searchWord) || (preg_match('/' . $searchWord . '/', $words[$key])))
-						{
-							echo '<div class="result">';
-							if($count > 10)
-							{
-								if($key < 10)
-								{
-									
-									for($i=0;$i<=10;$i++)
-									{
-										$line = $words[$i];
-										$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
-										echo $line . " ";
-									}
-									echo ' ..........<span class="more">';
-									echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-									echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-									echo '</a></span>';
-								}
-								else
-								{
-									$location = $count-10;
-									$left = $key-10;
-									echo '.......... ';
-									
-									for($j=$left;$j<=$key;$j++)
-									{
-										$line = $words[$j];
-										$leftLine = $line . " ";
-										$leftLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $leftLine);
-										echo $leftLine;
-									}
-									if($key > $location)
-									{
-										for($k=$key+1;$k<=$count-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo '..........<span class="more">';
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-										echo '</a></span>';
-									}
-									else
-									{
-										$right = $key+10;
-										for($k=$key+1;$k<=$right-1;$k++)
-										{
-											$rightLine = $words[$k];
-											$rightLine = $rightLine . " ";
-											$rightLine = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $rightLine);
-											echo $rightLine;
-										}
-										echo ' ..........<span class="more">';
-										echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-										echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-										echo '</a></span>';
-									}
-								}
-							}
-							else
-							{
-								$res = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $res);
-								echo $res . ' ..........<span class="more">';
-								echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-								echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-								echo '</a></span>';
-							}
-							echo '</div>';
-							break;
-						}
+						$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
+						echo $line . " ";
 					}
+					echo '..........<span class="more">';
+					echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+					echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
+					echo '</a></span>';
+					echo '</div>';
 					$temp = $id;
-					
 				}
 			}
 			echo '</div></div>';
 		}
+		echo '</div>';
 	}
 }
 else

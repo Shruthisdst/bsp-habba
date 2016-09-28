@@ -195,15 +195,13 @@ ol>li:before {
 .smalltext{
 	font-size: 0.9em;
 }
-.search{
-	font-family: "GentiumPlus-R" "Gubbi";
-}
+
 .result{
 	font-size: 1.1em;
 	margin: 10px 0;
-    padding: 20px 25px 22px 25px;
+    padding: 20px 25px 25px 25px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-    font-family: "Gubbi" "GentiumPlus-R";
+    
 }
 .resTitle{
 	color: #cc6600;
@@ -212,7 +210,12 @@ ol>li:before {
 	color: #333;
 	font-size: 16px;
 }
-
+.kanFont{
+	font-family: 'Gubbi';
+}
+.engFont{
+	font-family: 'GentiumPlus-R';
+}
 .result a{
 	color: #3372df;
 	font-size: 17px;
@@ -284,4 +287,5 @@ ol>li:before {
 .more a{
 	font-size: 0.9em;
 	float: right;
+	
 }
