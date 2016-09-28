@@ -225,13 +225,10 @@ if($num_rows > 0)
 					$output = implode(" ", $output);
 					$output = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $output);
 					echo '<div class="result">';
-					echo ".......... ";
-					echo $output;
-					echo '..........<span class="more">';
-					echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
+					echo '.......... ' . $output . '..........';
+					echo '<span class="more"><a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 					echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-					echo '</a></span>';
-					echo '</div>';
+					echo '</a></span></div>';
 					$temp = $id;
 				}
 			}
