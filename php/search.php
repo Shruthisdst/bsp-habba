@@ -115,8 +115,8 @@
 					<input type="reset" class="titlespan med" id="button_reset" value="Reset"/>
 				</div>
 			</form>
-			<? include("kannadaKeybord.php"); ?>
-			<? include("specialKeyboard.php"); ?>
+			<?php include("kannadaKeybord.php"); ?>
+			<?php include("specialKeyboard.php"); ?>
 		</div>
 	</div>
 </div>
