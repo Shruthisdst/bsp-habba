@@ -147,6 +147,7 @@ if($num_rows > 0)
 		$doc->loadHTML($text);
 		$xpath = new DOMXpath($doc);
 		$temp = '';
+
 		if(preg_match('/[A-Za-z]/', $searchWord))
 		{
 			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
@@ -171,6 +172,7 @@ if($num_rows > 0)
 		{
 			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
 		}
+
 		if (!is_null($elements))
 		{
 			echo '<div class="row">
@@ -189,6 +191,7 @@ if($num_rows > 0)
 						$id = $grandparentID->getAttribute('id');
 					}
 				}
+
 				if(($nodeName == 'i') || ($nodeName == 'strong'))
 				{
 					$parentElement = $element->parentNode;
@@ -207,7 +210,7 @@ if($num_rows > 0)
 				{
 					$res = $element->nodeValue;
 				}
-				
+
 				if($id != $temp)
 				{
 					$words = preg_split('/ /', $res);
@@ -216,13 +219,11 @@ if($num_rows > 0)
 					$left = $key-10;
 					$left = ($left < 0) ? 0 : $left;
 					$output = array_slice($words, $left, 20);
+					$output = implode(" ", $output);
+					$output = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $output);
 					echo '<div class="result">';
 					echo ".......... ";
-					foreach($output as $line)
-					{
-						$line = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $line);
-						echo $line . " ";
-					}
+					echo $output;
 					echo '..........<span class="more">';
 					echo '<a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
 					echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';

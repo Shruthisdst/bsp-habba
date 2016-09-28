@@ -232,6 +232,7 @@ ol>li:before {
 .noResults{
 	color: red;
 	font-size: 1.5em;
+	margin-left: 1em;
 }
 #kannada{
 	margin-top: -10em;
