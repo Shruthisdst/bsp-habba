@@ -217,8 +217,11 @@ if($num_rows > 0)
 					$searchList = preg_grep('/' . $searchWord . '/', $words);
 					$key = key($searchList);
 					$left = $key-10;
+					$right = $key+10;
 					$left = ($left < 0) ? 0 : $left;
-					$output = array_slice($words, $left, 20);
+					$right = ($right > count($words)) ? count($words) : $right;
+					$right = $right-$left;
+					$output = array_slice($words, $left, $right);
 					$output = implode(" ", $output);
 					$output = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $output);
 					echo '<div class="result">';
