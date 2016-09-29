@@ -134,12 +134,7 @@ if($num_rows > 0)
 		$text = $row['text'];
 		$img = preg_replace('/^[0]/', '', $entry_id);
 		echo ($book_id == '001') ? '<div class="kanFont">' : '<div class="engFont">';
-		echo '<br /><div class="row">
-				<div class="col-md-8">
-					<h3 class="resTitle">' . $book_title . '</h3><hr />
-				</div>
-				<br /><a class="box-shadow-outset" id="right"><img src="images/' . $book_id . '/' . $img . '.jpg" alt="' . $book_title . '" title="' . $book_title . '"/></a>
-			</div>';
+		
 
 		$doc = new DOMDocument();
 		libxml_use_internal_errors(true);
@@ -175,6 +170,12 @@ if($num_rows > 0)
 
 		if (!is_null($elements))
 		{
+			echo '<br /><div class="row">
+				<div class="col-md-8">
+					<h3 class="resTitle">' . $book_title . '</h3><hr />
+				</div>
+				<br /><a class="box-shadow-outset" id="right"><img src="images/' . $book_id . '/' . $img . '.jpg" alt="' . $book_title . '" title="' . $book_title . '"/></a>
+			</div>';
 			echo '<div class="row">
 				<div class="col-md-10" id="eachResult">';
 			foreach($elements as $element)
