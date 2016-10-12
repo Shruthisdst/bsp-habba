@@ -49,12 +49,10 @@
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/lightbox.css">
-    
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    
 </head>
 <body>
     <!-- Navigation
@@ -75,177 +73,49 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#"><img src="images/logo.png" alt="Bharatha Samskruthi Prakashana" class="logo"></a></li>
-                    <li class="active"><a href="books.html">Books</a></li>
-                    <li><a href="help.html">Help</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li class="active"><a href="#">Help</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
     <!-- End Navigation
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="container">
-        <div class="row">
-            <!-- Column 1 -->
-            <div class="col-md-12 text-center">
-               <ul class="list-inline sub-nav">
-                    <li><a href="kannada.html">Kannada</a></li>
-                    <li><a>·</a></li>
-                    <li><a href="english.html">English</a></li>
-                    <li><a>·</a></li>
-                    <li><a href="search.php">Search</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-<div class="container">
+<div class="container english">
     <div class="row">
         <div class="col-md-8">
+			<br />
 			<h2>Bharatha Samskruthi Prakashana</h2>
 			<h3>Festivals of Bhārata</h3>
 		</div>
 	</div><hr />
-	<div class="row search">
-<?php
-include("connect.php");
-
-$searchWord = $_GET['word'];
-$searchWord = trim($searchWord);
-
-$query = "select * from habba where text regexp '" . $searchWord . "'";
-$result = $db->query($query); 
-$num_results = $result ? $result->num_rows : 0;
-
-if($num_results > 0)
-{
-	echo '<h3>' . $num_results;
-	echo ($num_results > 1) ? ' results' : ' result';
-	echo '</h3>';
-}
-$result = $db->query($query);
-$num_rows = $result ? $result->num_rows : 0;
-if($num_rows > 0)
-{
-	while($row = $result->fetch_assoc())
-	{
-		$book_id = $row['book_id'];
-		$entry_id = $row['entry_id'];
-		$book_title = $row['book_title'];
-		$text = $row['text'];
-		$img = preg_replace('/^[0]/', '', $entry_id);
-		echo ($book_id == '001') ? '<div class="kanFont">' : '<div class="engFont">';
-		
-
-		$doc = new DOMDocument();
-		libxml_use_internal_errors(true);
-		$text = mb_convert_encoding($text, 'HTML-ENTITIES', 'UTF-8');
-		$doc->loadHTML($text);
-		$xpath = new DOMXpath($doc);
-		$temp = '';
-
-		if(preg_match('/[A-Za-z]/', $searchWord))
-		{
-			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-			if(preg_match('/^[a-z]/', $searchWord[0]))
-			{
-				if($elements->length == '0')
-				{
-					$searchWord = ucfirst($searchWord);
-					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-				}
-			}
-			elseif(preg_match('/^[A-Z]/', $searchWord[0]))
-			{
-				if($elements->length == '0')
-				{
-					$searchWord = strtolower($searchWord);
-					$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-				}
-			}
-		}
-		else
-		{
-			$elements = $xpath->query("//*[text()[contains(.,'$searchWord')]]");
-		}
-
-		if (!is_null($elements))
-		{
-			echo '<br /><div class="row">
-				<div class="col-md-8">
-					<h3 class="resTitle">' . $book_title . '</h3><hr />
-				</div>
-				<br /><a class="box-shadow-outset" id="right"><img src="images/' . $book_id . '/' . $img . '.jpg" alt="' . $book_title . '" title="' . $book_title . '"/></a>
-			</div>';
-			echo '<div class="row">
-				<div class="col-md-10" id="eachResult">';
-			foreach($elements as $element)
-			{
-				$nodeName = $element->nodeName;
-				$id = $element->getAttribute('id');
-				if($id == "")
-				{
-					$parentID = $element->parentNode;
-					$grandparentID = $parentID->parentNode;
-					$id = $parentID->getAttribute('id');
-					if($id == "")
-					{
-						$id = $grandparentID->getAttribute('id');
-					}
-				}
-
-				if(($nodeName == 'i') || ($nodeName == 'strong'))
-				{
-					$parentElement = $element->parentNode;
-					$nodeName = $parentElement->nodeName;
-					if(($nodeName == 'i') || ($nodeName == 'strong'))
-					{
-						$grandparentElement = $parentElement->parentNode;
-						$res = $grandparentElement->nodeValue;
-					}
-					else
-					{
-						$res = $parentElement->nodeValue;
-					}
-				}
-				else
-				{
-					$res = $element->nodeValue;
-				}
-
-				if($id != $temp)
-				{
-					$words = preg_split('/ /', $res);
-					$searchList = preg_grep('/' . $searchWord . '/', $words);
-					$key = key($searchList);
-					$left = $key-10;
-					$right = $key+10;
-					$left = ($left < 0) ? 0 : $left;
-					$right = ($right > count($words)) ? count($words) : $right;
-					$right = $right-$left;
-					$output = array_slice($words, $left, $right);
-					$output = implode(" ", $output);
-					$output = preg_replace('/' . $searchWord . '/', '<span class="searchWord">' . $searchWord . '</span>', $output);
-					echo '<div class="result">';
-					echo '.......... ' . $output . '..........';
-					echo '<span class="more"><a href="../books/' . $book_id . '/' . $entry_id .'.html?word=' . $searchWord . '#' . $id . '">';
-					echo ($book_id == '001') ? 'ಮುಂದೆ' : 'More';
-					echo '</a></span></div>';
-					$temp = $id;
-				}
-			}
-			echo '</div></div>';
-		}
-		echo '</div>';
-	}
-}
-else
-{
-	echo "<span class='noResults'>No results to show!</span>";
-}
-if($result){$result->free();}
-$db->close();
-
-?>
+	<div class="row">
+		<div class="col-md-10" id="snippet">
+			<h3>HELP</h3>
+			<p><strong>HOME:</strong> Home page contains introduction about Festivals of Bhārata both in Kannada and English.</p>
+			<p><strong>ABOUT:</strong> About page contains Preface of Publisher and also note on the author of the book.</p>
+			<p><strong>BOOKS:</strong> This page contains links to the following sections.</p>
+			<ol>
+				<li>
+					KANNADA: This page contains the list of books on festivals in Kannada language. Please click on coverpage to read entire book.</p>
+				</li>
+				<li>
+					ENGLISH: This page contains the list of books on festivals in English language. Please click on coverpage to read entire book.</p>
+				</li>
+				<li>
+					SEARCH: In search page, only <strong>single word</strong> can be given as an input. It will search that word both in Kannada and English books.
+					<ul>
+						<li>
+							The softkeyboard is provided for typing Kannada words. Another softkeyboard is provided for typing diacritical marks.
+							<p>Example: The following words that contains diacritical marks.<br />
+							ŚrīKṛshṇa, Dīpāvaḷi, Ekādaśī, uttarāshāḍhā and Dhanishṭhā etc...</p>
+						</li>
+						<li>After entering a single word in textbox, click on the "Search" button.</li>
+						<li>After clicking on the "Search" button, it shows the results as a paragraph that contains search word. Click on "More" link to reach full paragraph in a book.</li>
+					</ul>
+				</li>
+			</ol>
+		</div>
 	</div>
 </div>
 
