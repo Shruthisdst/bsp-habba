@@ -39,8 +39,10 @@
 
 #right{
 	float: right;
-	margin-right: 3em;
+	padding-left: 15px;
+	padding-bottom: 5px;
 }
+
 p{
 	text-align: left;
 	line-height: 1.6em;
@@ -65,10 +67,16 @@ ul li{
 	float: right;
 	font-weight: bold;
 }
+#bookList{
+	margin: 30px 0px 0px 38px;
+    padding: 20px 25px 40px 25px;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    min-height: 200px;
+    font-size: 16px;
+}
 .covers{
-	width:95%;
+	width:100%;
 	text-align:center;
-	margin: 0 auto;
 }
 .covers a {
 	display:inline-block;
@@ -76,12 +84,12 @@ ul li{
 	height:210px;
 }
 .covers img {
-	height:140px;
+	height:240px;
 }
 .covers p {
 	padding-top: 0.5em;
 	text-align:center;
-	font-size:1em;
+	font-size:1.2em;
 }
 .box-shadow-outset {
 	display: inline-block;
@@ -93,8 +101,9 @@ ul li{
 .box-shadow-outset img:hover, .box-shadow-outset img:focus, .box-shadow-outset img:active {
 	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.6);
 }
+
 #snippet{
-	margin: 50px 0px 0px 65px;
+	margin: 30px 0px 0px 72px;
     padding: 20px 25px 40px 25px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
     min-height: 200px;
@@ -147,7 +156,6 @@ ul li{
 	font-size: 0.9em;
 }
 .shloka{
-	font-size: 0.9em;
 	margin-left: 2em;
 	color: #262626;
 }
@@ -222,6 +230,13 @@ ol>li:before {
 }
 .result a:hover{
 	border-bottom: 1px dotted #3372df;
+}
+#resImg{
+	float: right;
+	margin-right: 3em;
+}
+#resImg img{
+	height:140px;
 }
 #eachResult{
 	margin: -5em 0em 1em 0em;
