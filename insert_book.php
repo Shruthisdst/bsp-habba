@@ -41,8 +41,12 @@ foreach($books as $book)
 			$text = file_get_contents($htmlFileName);
 			$text = str_replace("\n", "", $text);
 			$text = str_replace("\t", "", $text);
+			$text = str_replace("<div id=\"getFixed\">", "", $text);
+			$text = str_replace("<input type=\"button\" class=\"increase\" value=\" A+ \"/>", "", $text);
+			$text = str_replace("<input type=\"button\" class=\"decrease\" value=\" A- \"/>", "", $text);
+			$text = str_replace("<input type=\"button\" class=\"resetMe\" value=\" A \"/>", "", $text);
 			
-			preg_match('#<div class="HabbaTitle" id="(.*?)">(.*?)<\/div>#', $text, $match);
+			preg_match('#<div class="HabbaTitle" id="(.*?)">(.*?)#', $text, $match);
 			$book_title = $match[2];
 			//~ echo $book_title . "\n";
 			echo $file . "\n";
