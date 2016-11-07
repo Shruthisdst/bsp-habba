@@ -10,7 +10,6 @@ $(document).ready(function() {
             var tp = $(window).scrollTop();
 
             if(tp > 50) {
-//~ alert('hello');
                 $( '.navbar' ).removeClass( 'wider') ;
             }
             else if(tp < 50) {
@@ -166,7 +165,7 @@ $(document).ready(function(){
 });
 
  $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 350) {
           $('#getFixed').addClass('fixed');
       } else {
           $('#getFixed').removeClass('fixed');
