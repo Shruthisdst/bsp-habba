@@ -158,6 +158,7 @@ ul li{
 .shloka{
 	margin-left: 2em;
 	color: #262626;
+	font-weight: bold;
 }
 /*
 .gap{
@@ -303,5 +304,15 @@ ol>li:before {
 .more a{
 	font-size: 0.9em;
 	float: right;
-	
+}
+#getFixed{
+	color: #c00;
+	margin-top: 1em;
+	font: bold 10px arial;
+	float: right;
+}
+.fixed{
+	position: fixed;
+	top: 12em;
+	right: 0;
 }

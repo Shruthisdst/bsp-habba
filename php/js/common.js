@@ -4,12 +4,13 @@ $(document).ready(function() {
     isWider.next( '.container' ).addClass( 'push-down' );
 
     if(isWider.length) {
+		
         $( window ).scroll(function() {
-
-            var tp = $( 'body' ).scrollTop();
+		
+            var tp = $(window).scrollTop();
 
             if(tp > 50) {
-
+//~ alert('hello');
                 $( '.navbar' ).removeClass( 'wider') ;
             }
             else if(tp < 50) {
@@ -135,3 +136,39 @@ $("#footnote3").hover(
             } 
         ); 
 });
+
+$(document).ready(function(){
+	  var originalSize = $('#text').css('font-size');
+	 // reset
+	  $("#getFixed .resetMe").click(function(){
+		$('#text').css('font-size', originalSize); 
+
+	  });
+
+	  // Increase Font Size
+	  $("#getFixed .increase").click(function(){
+		var currentSize = $('#text').css('font-size');
+		var currentSize = parseFloat(currentSize)*1.2;
+		$('#text').css('font-size', currentSize);
+
+		return false;
+	  });
+
+	  // Decrease Font Size
+	  $("#getFixed .decrease").click(function(){
+		var currentFontSize = $('#text').css('font-size');
+		var currentSize = $('#text').css('font-size');
+		var currentSize = parseFloat(currentSize)*0.8;
+		$('#text').css('font-size', currentSize);
+
+		return false;
+	  });
+});
+
+ $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+          $('#getFixed').addClass('fixed');
+      } else {
+          $('#getFixed').removeClass('fixed');
+      }
+  });
