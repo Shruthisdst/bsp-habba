@@ -46,9 +46,9 @@ foreach($books as $book)
 			$text = str_replace("<input type=\"button\" class=\"decrease\" value=\" A- \"/>", "", $text);
 			$text = str_replace("<input type=\"button\" class=\"resetMe\" value=\" A \"/>", "", $text);
 			
-			preg_match('#<div class="HabbaTitle" id="(.*?)">(.*?)#', $text, $match);
+			preg_match('#<div class="HabbaTitle" id="(.*?)"><span>(.*?)<\/span>#', $text, $match);
 			$book_title = $match[2];
-			//~ echo $book_title . "\n";
+			echo $book_title . "\n";
 			echo $file . "\n";
 			$query = "INSERT INTO habba VALUES('$bookid', '$name[0]', '$book_title', '$text')";
 			mysql_query($query) or die("Query Problem" . mysql_error() . "\n");
