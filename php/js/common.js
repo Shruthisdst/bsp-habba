@@ -136,6 +136,8 @@ $("#footnote3").hover(
         ); 
 });
 
+// Font size zoom-in and zoom-out effects
+
 $(document).ready(function(){
 	  var originalSize = $('#text').css('font-size');
 	 // reset
@@ -167,7 +169,10 @@ $(document).ready(function(){
  $(window).scroll(function(){
       if ($(this).scrollTop() > 350) {
           $('#getFixed').addClass('fixed');
+          $( '#goTop' ).show();
+          
       } else {
           $('#getFixed').removeClass('fixed');
+           $( '#goTop' ).hide();
       }
   });

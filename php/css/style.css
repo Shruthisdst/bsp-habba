@@ -313,6 +313,11 @@ ol>li:before {
 }
 .fixed{
 	position: fixed;
-	top: 12em;
-	right: 0;
+	top: 0;
+	right: 6px;
+}
+#goTop{
+	display: none;
+	position: absolute;
+	top: 550px;
 }
