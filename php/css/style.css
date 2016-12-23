@@ -104,7 +104,7 @@ ul li{
 
 #snippet{
 	margin: 30px 0px 0px 72px;
-    padding: 20px 25px 40px 25px;
+    padding: 20px 30px 40px 30px;
     box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
     min-height: 200px;
     font-size: 16px;
@@ -320,4 +320,9 @@ ol>li:before {
 	display: none;
 	position: absolute;
 	top: 550px;
+}
+.pageNum{
+	color: red;
+	float: left;
+	margin-left: -1.5em;
 }
