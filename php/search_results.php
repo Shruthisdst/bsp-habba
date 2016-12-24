@@ -181,6 +181,7 @@ if($num_rows > 0)
 			{
 				$nodeName = $element->nodeName;
 				$id = $element->getAttribute('id');
+				
 				if($id == "")
 				{
 					$parentID = $element->parentNode;

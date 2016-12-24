@@ -42,7 +42,7 @@ $(document).ready(function() {
     var hloc = window.location.href;
     if(hloc.match('#')){
 
-        var jumpLoc = $( '#' + hloc.split("#")[1] ).offset().top - 170;
+        var jumpLoc = $( '#' + hloc.split("#")[1] ).offset().top - 10;
 
         $("html, body").animate({scrollTop: jumpLoc}, 1000);
     }

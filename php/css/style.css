@@ -119,7 +119,7 @@ ul li{
 	font-size: 1.2em;
 }
 .kannada h3{
-	font-size: 1.4em;
+	font-size: 1.5em;
 }
 .kannada #snippet h3{
 	font-size: 1.25em;
@@ -321,8 +321,12 @@ ol>li:before {
 	position: absolute;
 	top: 600px;
 }
-h3 .pageNum{
-	font-size: 0.7em;
+.kannada h3 .pageNum{
+	font-size: 0.8em;
+}
+.english h3 .pageNum{
+	margin-top: 5px;
+	font-size: 0.65em;
 }
 .pageNum{
 	color: red;
