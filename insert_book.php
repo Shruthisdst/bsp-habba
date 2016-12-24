@@ -46,6 +46,7 @@ foreach($books as $book)
 			$text = str_replace("<input type=\"button\" class=\"decrease\" value=\" A- \"/>", "", $text);
 			$text = str_replace("<input type=\"button\" class=\"resetMe\" value=\" A \"/>", "", $text);
 			$text = preg_replace("/<span class=\"pageNum\">(.*?)<\/span>/", "", $text);
+			$text = preg_replace("/<span class=\"pageNum left\">(.*?)<\/span>/", "", $text);
 			
 			preg_match('#<div class="HabbaTitle" id="(.*?)"><span>(.*?)<\/span>#', $text, $match);
 			$book_title = $match[2];
