@@ -52,6 +52,7 @@ p{
 }
 .gap{
 	margin-left: 3em;
+	font-size: 0.9em;
 }
 ol li{
 	padding-bottom: 1em;
@@ -323,6 +324,9 @@ ol>li:before {
 }
 .kannada h3 .pageNum{
 	font-size: 0.8em;
+}
+.kannada .pageNum{
+	letter-spacing: -1.5px;
 }
 .english h3 .pageNum{
 	margin-top: 5px;
